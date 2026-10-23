@@ -1,0 +1,10 @@
+# Course materials (slides, past exams, exercise books) belong to their authors: keep them local only.
+*.pdf
+
+# Build output and dependencies (each course's start script rebuilds them)
+node_modules/
+dist/
+*.tsbuildinfo
+__pycache__/
+.playwright-cli/
+.DS_Store

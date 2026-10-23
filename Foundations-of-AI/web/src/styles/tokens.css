@@ -1,0 +1,116 @@
+/* ============ design tokens (shared by the app and every visualizer) ============ */
+:root {
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif;
+  --mono: "SF Mono", ui-monospace, "JetBrains Mono", Menlo, Consolas, monospace;
+
+  --bg: #0e1116;
+  --panel: #161b22;
+  --panel-2: #1c232d;
+  --panel-3: #232c38;
+  --border: #2a3441;
+  --border-strong: #3a4757;
+  --text: #e6edf3;
+  --text-2: #b4c0cc;
+  --muted: #7d8a99;
+
+  --accent: #7c8cff;        /* primary / current node */
+  --accent-2: #a78bfa;
+  --accent-soft: rgba(124, 140, 255, .14);
+  --ok: #3fb950;            /* success / solution path */
+  --ok-soft: rgba(63, 185, 80, .14);
+  --bad: #f85149;           /* errors / conflicts */
+  --bad-soft: rgba(248, 81, 73, .14);
+  --warn: #e3b341;          /* frontier / attention */
+  --warn-soft: rgba(227, 179, 65, .16);
+  --info: #39c5cf;
+
+  /* visualization roles */
+  --v-node: #2b3544;
+  --v-node-stroke: #4b5a6e;
+  --v-edge: #4b5a6e;
+  --v-frontier: var(--warn);
+  --v-explored: #5b6b80;
+  --v-current: var(--accent);
+  --v-path: var(--ok);
+  --v-pruned: #4a5361;
+  --v-max: #7c8cff;
+  --v-min: #f778ba;
+  --v-chance: #39c5cf;
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --shadow: 0 8px 30px rgba(0, 0, 0, .35);
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  --bg: #f6f7fb;
+  --panel: #ffffff;
+  --panel-2: #f1f3f8;
+  --panel-3: #e7eaf1;
+  --border: #dde2ea;
+  --border-strong: #c5ccd8;
+  --text: #1b2330;
+  --text-2: #3d4a5c;
+  --muted: #6b7789;
+  --accent: #4f5fe8;
+  --accent-2: #7c4ddb;
+  --accent-soft: rgba(79, 95, 232, .10);
+  --ok: #1a7f37;
+  --ok-soft: rgba(26, 127, 55, .10);
+  --bad: #cf222e;
+  --bad-soft: rgba(207, 34, 46, .09);
+  --warn: #b7791f;
+  --warn-soft: rgba(183, 121, 31, .13);
+  --info: #0e8a96;
+  --v-node: #ffffff;
+  --v-node-stroke: #9aa5b5;
+  --v-edge: #a7b1c0;
+  --v-explored: #b9c2cf;
+  --v-pruned: #c9cfd8;
+  --v-max: #4f5fe8;
+  --v-min: #d6338a;
+  --v-chance: #0e8a96;
+  --shadow: 0 8px 30px rgba(20, 30, 50, .12);
+  color-scheme: light;
+}
+
+@layer base {
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.55 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+button { font: inherit; color: inherit; }
+code, pre, kbd { font-family: var(--mono); font-size: .92em; }
+}
+
+@layer components {
+/* generic controls usable by visualizers */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border-radius: var(--radius-sm);
+  background: var(--panel-2); border: 1px solid var(--border);
+  cursor: pointer; white-space: nowrap; transition: background .12s, border-color .12s;
+}
+.btn:hover { background: var(--panel-3); border-color: var(--border-strong); }
+.btn:disabled { opacity: .45; cursor: default; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ok { background: var(--ok); border-color: var(--ok); color: #fff; }
+.btn.ghost { background: transparent; border-color: transparent; }
+.btn.ghost:hover { background: var(--panel-2); }
+.btn.sm { padding: 3px 8px; font-size: 12.5px; }
+select, input[type="text"], input[type="number"], textarea {
+  font: inherit; color: var(--text); background: var(--panel-2);
+  border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 5px 8px;
+}
+select:focus, input:focus, textarea:focus { outline: 2px solid var(--accent-soft); border-color: var(--accent); }
+.chip {
+  display: inline-flex; align-items: center; gap: 4px; padding: 1px 8px; border-radius: 99px;
+  font-size: 12px; background: var(--panel-3); color: var(--text-2); border: 1px solid var(--border);
+}
+}
