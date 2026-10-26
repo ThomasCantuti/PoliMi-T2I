@@ -1,0 +1,152 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.1,
+    "end": 0.163
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.163,
+    "end": 0.428
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.428,
+    "end": 1.034
+  },
+  {
+    "id": "w3",
+    "text": "what",
+    "start": 1.606,
+    "end": 2.136
+  },
+  {
+    "id": "w4",
+    "text": "AI",
+    "start": 2.136,
+    "end": 2.489
+  },
+  {
+    "id": "w5",
+    "text": "is,",
+    "start": 2.489,
+    "end": 3.029
+  },
+  {
+    "id": "w6",
+    "text": "agents",
+    "start": 3.216,
+    "end": 3.813
+  },
+  {
+    "id": "w7",
+    "text": "and",
+    "start": 3.813,
+    "end": 4.005
+  },
+  {
+    "id": "w8",
+    "text": "environments,",
+    "start": 4.005,
+    "end": 4.835
+  },
+  {
+    "id": "w9",
+    "text": "rationality,",
+    "start": 4.923,
+    "end": 5.889
+  },
+  {
+    "id": "w10",
+    "text": "describing",
+    "start": 6.066,
+    "end": 6.288
+  },
+  {
+    "id": "w11",
+    "text": "a",
+    "start": 6.288,
+    "end": 6.436
+  },
+  {
+    "id": "w12",
+    "text": "task",
+    "start": 6.436,
+    "end": 6.818
+  },
+  {
+    "id": "w13",
+    "text": "with",
+    "start": 6.818,
+    "end": 7.249
+  },
+  {
+    "id": "w14",
+    "text": "PEAS,",
+    "start": 7.249,
+    "end": 8.284
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 8.388,
+    "end": 8.471
+  },
+  {
+    "id": "w16",
+    "text": "properties",
+    "start": 8.471,
+    "end": 8.976
+  },
+  {
+    "id": "w17",
+    "text": "of",
+    "start": 9.095,
+    "end": 9.187
+  },
+  {
+    "id": "w18",
+    "text": "an",
+    "start": 9.187,
+    "end": 9.242
+  },
+  {
+    "id": "w19",
+    "text": "environment,",
+    "start": 9.766,
+    "end": 10.097
+  },
+  {
+    "id": "w20",
+    "text": "and",
+    "start": 10.272,
+    "end": 10.412
+  },
+  {
+    "id": "w21",
+    "text": "the",
+    "start": 10.412,
+    "end": 10.611
+  },
+  {
+    "id": "w22",
+    "text": "four",
+    "start": 10.626,
+    "end": 10.906
+  },
+  {
+    "id": "w23",
+    "text": "agent",
+    "start": 10.906,
+    "end": 10.958
+  },
+  {
+    "id": "w24",
+    "text": "architectures.",
+    "start": 11.385,
+    "end": 12.395
+  }
+]

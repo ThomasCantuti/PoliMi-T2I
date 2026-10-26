@@ -10,6 +10,10 @@ That single choice decides completeness, optimality, time and memory.
 > **Key idea:** a search strategy *is* an ordering of the frontier (slides p. 112). FIFO queue →
 > breadth-first; priority queue on $g$ → uniform-cost; LIFO stack → depth-first.
 
+```fig search-order
+The same binary tree of depth 3 explored completely with three frontiers; each node is numbered by when it is expanded. FIFO queue: level by level (breadth-first). Priority queue on g (edge costs shown): cheapest path first (uniform-cost). LIFO stack: down the leftmost branch first, then backtrack (depth-first).
+```
+
 The five ingredients a strategy may use (p. 114): the states and the initial state, `actions(s)`,
 `result(s, a)`, the goal test `is_goal(s)`, and the step cost `cost(s, a, s')`. Nothing else: no
 estimate of the distance to the goal (that is *informed* search, next topic).
@@ -132,6 +136,11 @@ $O(b^d)$ (early test). **Memory is the real problem**: every generated node is k
 > **Exam trap:** BFS returns the **fewest actions**, not the cheapest path. With costs, a 2-step path
 > of cost 10 beats a 4-step path of cost 4.
 
+```viz search
+BFS vs UCS: fewest steps is not cheapest
+Breadth-first search on a graph with step costs: it returns the path with the fewest steps, S → C → G (cost 11), not the cheapest one, S → A → B → D → G (cost 6).
+```
+
 ## Uniform-cost search
 
 Generalizes BFS to arbitrary step costs: it **selects the node with the smallest path cost** $g(n)$
@@ -180,6 +189,11 @@ steps. With equal step costs this is $O(b^{d+1})$ and UCS behaves like BFS.
 
 > **Intuition:** UCS spreads like a wave of equal cost ("contours" of $g$) instead of equal depth.
 
+```viz search
+Uniform-cost search with a reached-table update
+Uniform-cost search on the same graph as the BFS example: nodes are selected in order of g, a state reached again through a cheaper path updates the reached table, and the goal is returned only when selected (cheapest path, cost 6).
+```
+
 ## Depth-first search
 
 Always selects the **deepest** node; at a dead end it backtracks to the deepest node not yet chosen
@@ -219,6 +233,11 @@ def depth_first_search_iterative(problem: Problem) -> Node:                     
 
 ```text
 frontier: ⟨1⟩ ⟨2,3⟩ ⟨4,5,3⟩ ⟨6,7,5,3⟩ ⟨7,5,3⟩ ⟨5,3⟩ ⟨3⟩ ⟨8,9⟩ ⟨11,12,9⟩ ⟨13,14,12,9⟩ ⟨14,12,9⟩ ⟨12,9⟩
+```
+
+```viz search
+DFS on the slides tree (p.143)
+The slides' tree with goal 12, left child first: depth-first search goes down to 6 and 7, backtracks through 5 and 3, then 8, 11, 13, 14 and finally 12.
 ```
 
 > **Exam trap:** sibling order. The drawing (and the recursive code) explore children **left to right**.
@@ -280,6 +299,11 @@ def iterative_deepening_search(problem: Problem) -> Node:
 Every time the limit grows, **the whole tree is regenerated** (p. 157–160). That sounds wasteful but is
 not: a node of level $i$ is generated $d + 1 - i$ times, and the last level dominates.
 
+```viz search
+Iterative deepening (slides p.157–159)
+Iterative deepening on the slides' binary tree (goal F): depth-limited search with L = 0, 1, 2, each round restarting from the root and regenerating the levels above the limit.
+```
+
 $$N(\text{IDS}) = d\,b + (d-1)\,b^2 + \dots + 1 \cdot b^d \qquad N(\text{BFS}) = b + b^2 + \dots + b^d$$
 
 | $b = 10$, $d = 5$ | nodes generated |
@@ -302,6 +326,10 @@ the two frontiers meet (p. 163–168).
 
 > **Intuition:** two balls of radius $d/2$ are much smaller than one ball of radius $d$:
 > $2\,b^{d/2} \ll b^d$ (for $b = 10, d = 6$: 2,000 vs 1,000,000).
+
+```fig search-bidir
+Left: one search from S whose ball of radius d = 6 reaches G, about b^d = 1,000,000 nodes for b = 10. Right: a forward search from S and a backward search from G, each of radius d/2, meeting in the middle: about 2·b^(d/2) = 2,000 nodes.
+```
 
 - Time and space $O(b^{d/2})$; one side must keep its reached states to detect the meeting.
 - Requires an **explicit goal state** and computable **predecessors** (reversible actions, e.g. the

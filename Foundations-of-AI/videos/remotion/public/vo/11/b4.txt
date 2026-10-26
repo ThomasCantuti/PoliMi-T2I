@@ -1,0 +1,1 @@
+The exam asks you to write the action schemas for a domain, draw a forward planning tree, and regress a goal through each relevant action.

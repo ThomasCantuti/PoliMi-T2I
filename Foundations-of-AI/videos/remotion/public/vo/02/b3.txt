@@ -1,0 +1,1 @@
+In this chapter: the five ingredients of a search problem, counting states, abstraction, different formulations of the same problem, and how search trees, tree search and graph search work.

@@ -15,13 +15,15 @@ export function TopicPage({ topic, tab }: { topic: Topic; tab: Tab }) {
   const problems = useCatalog(s => s.problems).filter(p => p.topic === topic.id);
   const solved = useSolvedCount(problems);
   const tabs: [Tab, typeof BookOpen, string][] = [['theory', BookOpen, 'Theory'], ['play', Play, 'Playground'], ['problems', Code, 'Problems']];
+  const figLog = useRef<string[]>([]);
 
   useEffect(() => {
-    useTutor.getState().setContext(() => ({ key: 'topic:' + topic.id, kind: 'topic', topic, title: topic.title, notes: theoryNow[topic.id] }));
-  }, [topic]);
+    figLog.current.length = 0;
+    useTutor.getState().setContext(() => ({ key: 'topic:' + topic.id, kind: 'topic', topic, title: topic.title, notes: theoryNow[topic.id], vizLog: figLog.current }));
+  }, [topic, tab]); // tab: coming back from the Playground restores the Theory context
 
   return (
-    <div className="mx-auto max-w-[1180px] px-6 pb-20 pt-8 lg:px-10">
+    <div className="mx-auto max-w-[1180px] px-4 pb-20 pt-8 sm:px-6 lg:px-10">
       <header className="flex items-start justify-between gap-6">
         <div>
           <div className="text-[12px] font-semibold uppercase tracking-[.1em] text-accent">Topic {topicIndex(topic.id)} · {/^\d/.test(topic.pages) ? `slides p. ${topic.pages}` : topic.pages}</div>
@@ -37,7 +39,7 @@ export function TopicPage({ topic, tab }: { topic: Topic; tab: Tab }) {
       <nav className="mt-6 flex gap-1 border-b border-line">
         {tabs.map(([k, Icon, label]) => (
           <a key={k} href={`#/t/${topic.id}/${k}`}
-            className={cn('relative flex items-center gap-2 px-3.5 py-2.5 text-[13.5px] font-medium transition-colors',
+            className={cn('relative flex items-center gap-2 px-2 py-2.5 text-[13.5px] font-medium transition-colors sm:px-3.5',
               tab === k ? 'text-fg' : 'text-muted hover:text-fg')}>
             <Icon size={15} />{label}
             {k === 'problems' && <span className="rounded-full bg-panel-3 px-1.5 text-[11px] tabular-nums">{problems.length}</span>}
@@ -47,7 +49,7 @@ export function TopicPage({ topic, tab }: { topic: Topic; tab: Tab }) {
       </nav>
 
       <div className="mt-6">
-        {tab === 'theory' && <Theory topic={topic} />}
+        {tab === 'theory' && <Theory topic={topic} log={figLog.current} />}
         {tab === 'play' && <Playground topic={topic} />}
         {tab === 'problems' && <ProblemList problems={problems} />}
       </div>
@@ -55,7 +57,7 @@ export function TopicPage({ topic, tab }: { topic: Topic; tab: Tab }) {
   );
 }
 
-function Theory({ topic }: { topic: Topic }) {
+function Theory({ topic, log }: { topic: Topic; log: string[] }) {
   const [text, setText] = useState<string | null>(null);
   const [active, setActive] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -73,9 +75,10 @@ function Theory({ topic }: { topic: Topic }) {
   if (text === null) return <div className="h-96 animate-pulse rounded-2xl bg-panel" />;
   if (!text) return <Empty icon={BookOpen}>Theory for this topic is not available yet.</Empty>;
   return (
-    <div className="grid gap-10 xl:grid-cols-[minmax(0,760px)_220px]">
+    <div className="grid grid-cols-[minmax(0,1fr)] gap-10 xl:grid-cols-[minmax(0,760px)_220px]">
       <div>
-        <div ref={ref}><Markdown text={text} className="text-[15px]" /></div>
+        <ChapterVideo id={topic.id} />
+        <div ref={ref}><Markdown text={text} className="text-[15px]" onEvent={t => { log.push(t); if (log.length > 60) log.shift(); }} /></div>
         <div className="card mt-12 flex flex-wrap items-center justify-between gap-4 p-5">
           <div><b>Ready to practice?</b><p className="text-[13px] text-muted">Watch it run in the playground, then predict the steps yourself.</p></div>
           <div className="flex gap-2">
@@ -94,6 +97,20 @@ function Theory({ topic }: { topic: Topic }) {
       </aside>
     </div>
   );
+}
+
+// The chapter's intro video (content/videos/<id>.mp4, made in videos/remotion). Played from a blob URL because
+// server.py answers no HTTP range requests, which Safari needs to play (and every browser to seek) a plain src.
+function ChapterVideo({ id }: { id: string }) {
+  const [src, setSrc] = useState<string | null>(null);
+  useEffect(() => {
+    let url = '', live = true;
+    fetch(`/content/videos/${id}.mp4`).then(r => (r.ok ? r.blob() : null)).then(b => {
+      if (b && live) setSrc(url = URL.createObjectURL(b));
+    });
+    return () => { live = false; setSrc(null); if (url) URL.revokeObjectURL(url); };
+  }, [id]);
+  return src ? <video className="mb-8 aspect-video w-full rounded-2xl border border-line bg-black" src={src} controls /> : null;
 }
 
 function Playground({ topic }: { topic: Topic }) {

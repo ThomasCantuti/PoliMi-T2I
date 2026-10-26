@@ -1,0 +1,464 @@
+[
+  {
+    "id": "w0",
+    "text": "A",
+    "start": 0.08,
+    "end": 0.088
+  },
+  {
+    "id": "w1",
+    "text": "state",
+    "start": 0.088,
+    "end": 0.396
+  },
+  {
+    "id": "w2",
+    "text": "is",
+    "start": 0.404,
+    "end": 0.534
+  },
+  {
+    "id": "w3",
+    "text": "a",
+    "start": 0.534,
+    "end": 0.599
+  },
+  {
+    "id": "w4",
+    "text": "list",
+    "start": 0.599,
+    "end": 0.858
+  },
+  {
+    "id": "w5",
+    "text": "of",
+    "start": 0.858,
+    "end": 0.988
+  },
+  {
+    "id": "w6",
+    "text": "facts",
+    "start": 0.988,
+    "end": 1.312
+  },
+  {
+    "id": "w7",
+    "text": "that",
+    "start": 1.312,
+    "end": 1.572
+  },
+  {
+    "id": "w8",
+    "text": "are",
+    "start": 1.572,
+    "end": 1.766
+  },
+  {
+    "id": "w9",
+    "text": "true",
+    "start": 1.766,
+    "end": 2.026
+  },
+  {
+    "id": "w10",
+    "text": "right",
+    "start": 2.026,
+    "end": 2.147
+  },
+  {
+    "id": "w11",
+    "text": "now.",
+    "start": 2.609,
+    "end": 2.707
+  },
+  {
+    "id": "w12",
+    "text": "An",
+    "start": 3.295,
+    "end": 3.371
+  },
+  {
+    "id": "w13",
+    "text": "action",
+    "start": 3.371,
+    "end": 3.817
+  },
+  {
+    "id": "w14",
+    "text": "is",
+    "start": 3.817,
+    "end": 3.968
+  },
+  {
+    "id": "w15",
+    "text": "a",
+    "start": 3.968,
+    "end": 4.044
+  },
+  {
+    "id": "w16",
+    "text": "recipe",
+    "start": 4.044,
+    "end": 4.473
+  },
+  {
+    "id": "w17",
+    "text": "card:",
+    "start": 4.523,
+    "end": 5.036
+  },
+  {
+    "id": "w18",
+    "text": "if",
+    "start": 5.446,
+    "end": 5.522
+  },
+  {
+    "id": "w19",
+    "text": "these",
+    "start": 5.522,
+    "end": 5.903
+  },
+  {
+    "id": "w20",
+    "text": "facts",
+    "start": 5.903,
+    "end": 6.25
+  },
+  {
+    "id": "w21",
+    "text": "hold,",
+    "start": 6.368,
+    "end": 6.74
+  },
+  {
+    "id": "w22",
+    "text": "erase",
+    "start": 6.74,
+    "end": 7.121
+  },
+  {
+    "id": "w23",
+    "text": "these",
+    "start": 7.121,
+    "end": 7.502
+  },
+  {
+    "id": "w24",
+    "text": "and",
+    "start": 7.502,
+    "end": 7.595
+  },
+  {
+    "id": "w25",
+    "text": "write",
+    "start": 7.595,
+    "end": 8.153
+  },
+  {
+    "id": "w26",
+    "text": "these.",
+    "start": 8.153,
+    "end": 8.678
+  },
+  {
+    "id": "w27",
+    "text": "Because",
+    "start": 9.235,
+    "end": 9.538
+  },
+  {
+    "id": "w28",
+    "text": "the",
+    "start": 9.538,
+    "end": 9.704
+  },
+  {
+    "id": "w29",
+    "text": "cards",
+    "start": 9.704,
+    "end": 9.98
+  },
+  {
+    "id": "w30",
+    "text": "are",
+    "start": 9.98,
+    "end": 10.109
+  },
+  {
+    "id": "w31",
+    "text": "readable,",
+    "start": 10.237,
+    "end": 10.697
+  },
+  {
+    "id": "w32",
+    "text": "the",
+    "start": 10.697,
+    "end": 10.853
+  },
+  {
+    "id": "w33",
+    "text": "planner",
+    "start": 10.872,
+    "end": 11.24
+  },
+  {
+    "id": "w34",
+    "text": "can",
+    "start": 11.295,
+    "end": 11.414
+  },
+  {
+    "id": "w35",
+    "text": "reason",
+    "start": 11.414,
+    "end": 11.571
+  },
+  {
+    "id": "w36",
+    "text": "about",
+    "start": 11.745,
+    "end": 12.021
+  },
+  {
+    "id": "w37",
+    "text": "them.",
+    "start": 12.178,
+    "end": 12.463
+  },
+  {
+    "id": "w38",
+    "text": "Search",
+    "start": 13.052,
+    "end": 13.373
+  },
+  {
+    "id": "w39",
+    "text": "forward",
+    "start": 13.373,
+    "end": 13.855
+  },
+  {
+    "id": "w40",
+    "text": "from",
+    "start": 13.855,
+    "end": 14.005
+  },
+  {
+    "id": "w41",
+    "text": "the",
+    "start": 14.146,
+    "end": 14.327
+  },
+  {
+    "id": "w42",
+    "text": "current",
+    "start": 14.327,
+    "end": 14.808
+  },
+  {
+    "id": "w43",
+    "text": "state,",
+    "start": 14.808,
+    "end": 15.15
+  },
+  {
+    "id": "w44",
+    "text": "or",
+    "start": 15.15,
+    "end": 15.24
+  },
+  {
+    "id": "w45",
+    "text": "backward",
+    "start": 15.29,
+    "end": 15.601
+  },
+  {
+    "id": "w46",
+    "text": "from",
+    "start": 15.822,
+    "end": 16.093
+  },
+  {
+    "id": "w47",
+    "text": "the",
+    "start": 16.264,
+    "end": 16.294
+  },
+  {
+    "id": "w48",
+    "text": "goal,",
+    "start": 16.294,
+    "end": 16.585
+  },
+  {
+    "id": "w49",
+    "text": "asking",
+    "start": 16.725,
+    "end": 16.977
+  },
+  {
+    "id": "w50",
+    "text": "which",
+    "start": 16.977,
+    "end": 17.208
+  },
+  {
+    "id": "w51",
+    "text": "card",
+    "start": 17.208,
+    "end": 17.386
+  },
+  {
+    "id": "w52",
+    "text": "could",
+    "start": 17.386,
+    "end": 17.616
+  },
+  {
+    "id": "w53",
+    "text": "have",
+    "start": 17.639,
+    "end": 17.646
+  },
+  {
+    "id": "w54",
+    "text": "produced",
+    "start": 17.735,
+    "end": 18.24
+  },
+  {
+    "id": "w55",
+    "text": "it.",
+    "start": 18.24,
+    "end": 18.604
+  },
+  {
+    "id": "w56",
+    "text": "Or",
+    "start": 19.155,
+    "end": 19.272
+  },
+  {
+    "id": "w57",
+    "text": "turn",
+    "start": 19.272,
+    "end": 19.972
+  },
+  {
+    "id": "w58",
+    "text": "\"a",
+    "start": 20.053,
+    "end": 20.062
+  },
+  {
+    "id": "w59",
+    "text": "plan",
+    "start": 20.062,
+    "end": 20.403
+  },
+  {
+    "id": "w60",
+    "text": "of",
+    "start": 20.466,
+    "end": 20.609
+  },
+  {
+    "id": "w61",
+    "text": "length",
+    "start": 20.609,
+    "end": 21.157
+  },
+  {
+    "id": "w62",
+    "text": "L",
+    "start": 21.157,
+    "end": 21.476
+  },
+  {
+    "id": "w63",
+    "text": "exists\"",
+    "start": 21.476,
+    "end": 21.794
+  },
+  {
+    "id": "w64",
+    "text": "into",
+    "start": 21.794,
+    "end": 22.163
+  },
+  {
+    "id": "w65",
+    "text": "logic",
+    "start": 22.163,
+    "end": 22.333
+  },
+  {
+    "id": "w66",
+    "text": "and",
+    "start": 22.333,
+    "end": 22.926
+  },
+  {
+    "id": "w67",
+    "text": "hand",
+    "start": 22.926,
+    "end": 23.213
+  },
+  {
+    "id": "w68",
+    "text": "it",
+    "start": 23.267,
+    "end": 23.438
+  },
+  {
+    "id": "w69",
+    "text": "to",
+    "start": 23.438,
+    "end": 23.617
+  },
+  {
+    "id": "w70",
+    "text": "a",
+    "start": 23.617,
+    "end": 23.707
+  },
+  {
+    "id": "w71",
+    "text": "SAT",
+    "start": 23.707,
+    "end": 23.922
+  },
+  {
+    "id": "w72",
+    "text": "solver.",
+    "start": 23.976,
+    "end": 24.856
+  },
+  {
+    "id": "w73",
+    "text": "One",
+    "start": 25.464,
+    "end": 25.625
+  },
+  {
+    "id": "w74",
+    "text": "planner,",
+    "start": 25.625,
+    "end": 26.295
+  },
+  {
+    "id": "w75",
+    "text": "any",
+    "start": 26.295,
+    "end": 26.576
+  },
+  {
+    "id": "w76",
+    "text": "domain.",
+    "start": 26.576,
+    "end": 27.179
+  }
+]

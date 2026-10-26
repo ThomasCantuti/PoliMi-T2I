@@ -1,0 +1,1 @@
+The exam asks you to translate English into logic, convert it to C-N-F, prove a query by resolution, and run D-P-L-L step by step.

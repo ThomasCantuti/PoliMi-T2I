@@ -1,0 +1,1 @@
+Open the box: variables, their possible values, and constraints between them. Now search can do what you'd do by hand. Color one region. Cross that color off in its neighbors. Pick the region with the fewest colors left. And the moment some region has no color left, undo the last choice. Backtracking, filtering, ordering: that's the whole chapter.

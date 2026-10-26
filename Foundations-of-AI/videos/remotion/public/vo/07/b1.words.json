@@ -1,0 +1,272 @@
+[
+  {
+    "id": "w0",
+    "text": "Search",
+    "start": 0.06,
+    "end": 0.442
+  },
+  {
+    "id": "w1",
+    "text": "computed",
+    "start": 0.519,
+    "end": 1.097
+  },
+  {
+    "id": "w2",
+    "text": "a",
+    "start": 1.108,
+    "end": 1.185
+  },
+  {
+    "id": "w3",
+    "text": "fixed",
+    "start": 1.185,
+    "end": 1.578
+  },
+  {
+    "id": "w4",
+    "text": "sequence",
+    "start": 1.578,
+    "end": 2.244
+  },
+  {
+    "id": "w5",
+    "text": "of",
+    "start": 2.244,
+    "end": 2.419
+  },
+  {
+    "id": "w6",
+    "text": "actions",
+    "start": 2.419,
+    "end": 3.02
+  },
+  {
+    "id": "w7",
+    "text": "before",
+    "start": 3.063,
+    "end": 3.445
+  },
+  {
+    "id": "w8",
+    "text": "moving,",
+    "start": 3.445,
+    "end": 3.991
+  },
+  {
+    "id": "w9",
+    "text": "because",
+    "start": 4.045,
+    "end": 4.451
+  },
+  {
+    "id": "w10",
+    "text": "nothing",
+    "start": 4.451,
+    "end": 4.866
+  },
+  {
+    "id": "w11",
+    "text": "else",
+    "start": 4.999,
+    "end": 5.147
+  },
+  {
+    "id": "w12",
+    "text": "changed",
+    "start": 5.147,
+    "end": 5.593
+  },
+  {
+    "id": "w13",
+    "text": "the",
+    "start": 5.593,
+    "end": 5.78
+  },
+  {
+    "id": "w14",
+    "text": "world.",
+    "start": 5.78,
+    "end": 6.281
+  },
+  {
+    "id": "w15",
+    "text": "Add",
+    "start": 6.973,
+    "end": 7.107
+  },
+  {
+    "id": "w16",
+    "text": "an",
+    "start": 7.107,
+    "end": 7.179
+  },
+  {
+    "id": "w17",
+    "text": "opponent",
+    "start": 7.233,
+    "end": 7.77
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 7.77,
+    "end": 7.886
+  },
+  {
+    "id": "w19",
+    "text": "the",
+    "start": 8.047,
+    "end": 8.11
+  },
+  {
+    "id": "w20",
+    "text": "plan",
+    "start": 8.155,
+    "end": 8.414
+  },
+  {
+    "id": "w21",
+    "text": "breaks",
+    "start": 8.414,
+    "end": 8.773
+  },
+  {
+    "id": "w22",
+    "text": "after",
+    "start": 8.773,
+    "end": 9.166
+  },
+  {
+    "id": "w23",
+    "text": "your",
+    "start": 9.166,
+    "end": 9.48
+  },
+  {
+    "id": "w24",
+    "text": "first",
+    "start": 9.48,
+    "end": 9.874
+  },
+  {
+    "id": "w25",
+    "text": "move:",
+    "start": 9.874,
+    "end": 10.429
+  },
+  {
+    "id": "w26",
+    "text": "what",
+    "start": 10.937,
+    "end": 11.127
+  },
+  {
+    "id": "w27",
+    "text": "you",
+    "start": 11.127,
+    "end": 11.318
+  },
+  {
+    "id": "w28",
+    "text": "should",
+    "start": 11.318,
+    "end": 11.698
+  },
+  {
+    "id": "w29",
+    "text": "do",
+    "start": 11.698,
+    "end": 11.79
+  },
+  {
+    "id": "w30",
+    "text": "next",
+    "start": 11.93,
+    "end": 12.071
+  },
+  {
+    "id": "w31",
+    "text": "depends",
+    "start": 12.071,
+    "end": 12.509
+  },
+  {
+    "id": "w32",
+    "text": "on",
+    "start": 12.509,
+    "end": 12.625
+  },
+  {
+    "id": "w33",
+    "text": "what",
+    "start": 12.634,
+    "end": 12.832
+  },
+  {
+    "id": "w34",
+    "text": "they",
+    "start": 12.898,
+    "end": 13.13
+  },
+  {
+    "id": "w35",
+    "text": "did.",
+    "start": 13.13,
+    "end": 13.56
+  },
+  {
+    "id": "w36",
+    "text": "You",
+    "start": 14.18,
+    "end": 14.33
+  },
+  {
+    "id": "w37",
+    "text": "need",
+    "start": 14.33,
+    "end": 14.599
+  },
+  {
+    "id": "w38",
+    "text": "a",
+    "start": 14.599,
+    "end": 14.654
+  },
+  {
+    "id": "w39",
+    "text": "strategy,",
+    "start": 14.709,
+    "end": 15.357
+  },
+  {
+    "id": "w40",
+    "text": "an",
+    "start": 15.679,
+    "end": 15.851
+  },
+  {
+    "id": "w41",
+    "text": "answer",
+    "start": 15.851,
+    "end": 16.376
+  },
+  {
+    "id": "w42",
+    "text": "to",
+    "start": 16.376,
+    "end": 16.548
+  },
+  {
+    "id": "w43",
+    "text": "every",
+    "start": 16.548,
+    "end": 16.969
+  },
+  {
+    "id": "w44",
+    "text": "reply.",
+    "start": 17.074,
+    "end": 17.685
+  }
+]

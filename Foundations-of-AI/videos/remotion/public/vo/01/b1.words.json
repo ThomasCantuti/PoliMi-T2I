@@ -1,0 +1,338 @@
+[
+  {
+    "id": "w0",
+    "text": "This",
+    "start": 0.06,
+    "end": 0.215
+  },
+  {
+    "id": "w1",
+    "text": "course",
+    "start": 0.298,
+    "end": 0.65
+  },
+  {
+    "id": "w2",
+    "text": "builds",
+    "start": 0.722,
+    "end": 1.178
+  },
+  {
+    "id": "w3",
+    "text": "one",
+    "start": 1.178,
+    "end": 1.385
+  },
+  {
+    "id": "w4",
+    "text": "thing:",
+    "start": 1.385,
+    "end": 1.82
+  },
+  {
+    "id": "w5",
+    "text": "an",
+    "start": 1.916,
+    "end": 2.025
+  },
+  {
+    "id": "w6",
+    "text": "agent.",
+    "start": 2.025,
+    "end": 2.537
+  },
+  {
+    "id": "w7",
+    "text": "It",
+    "start": 3.14,
+    "end": 3.207
+  },
+  {
+    "id": "w8",
+    "text": "perceives",
+    "start": 3.207,
+    "end": 3.764
+  },
+  {
+    "id": "w9",
+    "text": "the",
+    "start": 3.764,
+    "end": 3.947
+  },
+  {
+    "id": "w10",
+    "text": "world,",
+    "start": 3.947,
+    "end": 4.38
+  },
+  {
+    "id": "w11",
+    "text": "decides,",
+    "start": 4.38,
+    "end": 4.946
+  },
+  {
+    "id": "w12",
+    "text": "acts,",
+    "start": 4.946,
+    "end": 5.262
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 5.279,
+    "end": 5.379
+  },
+  {
+    "id": "w14",
+    "text": "then",
+    "start": 5.412,
+    "end": 5.528
+  },
+  {
+    "id": "w15",
+    "text": "does",
+    "start": 5.703,
+    "end": 5.894
+  },
+  {
+    "id": "w16",
+    "text": "it",
+    "start": 5.894,
+    "end": 6.077
+  },
+  {
+    "id": "w17",
+    "text": "again.",
+    "start": 6.077,
+    "end": 6.81
+  },
+  {
+    "id": "w18",
+    "text": "Every",
+    "start": 7.604,
+    "end": 7.821
+  },
+  {
+    "id": "w19",
+    "text": "chapter",
+    "start": 7.875,
+    "end": 8.271
+  },
+  {
+    "id": "w20",
+    "text": "after",
+    "start": 8.271,
+    "end": 8.577
+  },
+  {
+    "id": "w21",
+    "text": "this",
+    "start": 8.577,
+    "end": 8.758
+  },
+  {
+    "id": "w22",
+    "text": "one",
+    "start": 8.875,
+    "end": 9.019
+  },
+  {
+    "id": "w23",
+    "text": "is",
+    "start": 9.019,
+    "end": 9.118
+  },
+  {
+    "id": "w24",
+    "text": "a",
+    "start": 9.118,
+    "end": 9.172
+  },
+  {
+    "id": "w25",
+    "text": "different",
+    "start": 9.262,
+    "end": 9.596
+  },
+  {
+    "id": "w26",
+    "text": "answer",
+    "start": 9.596,
+    "end": 9.767
+  },
+  {
+    "id": "w27",
+    "text": "to",
+    "start": 10.073,
+    "end": 10.145
+  },
+  {
+    "id": "w28",
+    "text": "the",
+    "start": 10.145,
+    "end": 10.353
+  },
+  {
+    "id": "w29",
+    "text": "same",
+    "start": 10.353,
+    "end": 10.578
+  },
+  {
+    "id": "w30",
+    "text": "question:",
+    "start": 10.632,
+    "end": 11.434
+  },
+  {
+    "id": "w31",
+    "text": "how",
+    "start": 11.886,
+    "end": 11.999
+  },
+  {
+    "id": "w32",
+    "text": "should",
+    "start": 12.059,
+    "end": 12.475
+  },
+  {
+    "id": "w33",
+    "text": "it",
+    "start": 12.475,
+    "end": 12.61
+  },
+  {
+    "id": "w34",
+    "text": "decide?",
+    "start": 12.61,
+    "end": 13.154
+  },
+  {
+    "id": "w35",
+    "text": "By",
+    "start": 13.806,
+    "end": 13.88
+  },
+  {
+    "id": "w36",
+    "text": "searching,",
+    "start": 13.88,
+    "end": 14.611
+  },
+  {
+    "id": "w37",
+    "text": "by",
+    "start": 14.905,
+    "end": 15.029
+  },
+  {
+    "id": "w38",
+    "text": "satisfying",
+    "start": 15.029,
+    "end": 15.541
+  },
+  {
+    "id": "w39",
+    "text": "constraints,",
+    "start": 15.718,
+    "end": 16.575
+  },
+  {
+    "id": "w40",
+    "text": "by",
+    "start": 16.637,
+    "end": 16.69
+  },
+  {
+    "id": "w41",
+    "text": "playing",
+    "start": 16.69,
+    "end": 17.106
+  },
+  {
+    "id": "w42",
+    "text": "against",
+    "start": 17.106,
+    "end": 17.521
+  },
+  {
+    "id": "w43",
+    "text": "an",
+    "start": 17.521,
+    "end": 17.636
+  },
+  {
+    "id": "w44",
+    "text": "opponent,",
+    "start": 17.636,
+    "end": 18.272
+  },
+  {
+    "id": "w45",
+    "text": "by",
+    "start": 18.614,
+    "end": 18.722
+  },
+  {
+    "id": "w46",
+    "text": "learning",
+    "start": 18.79,
+    "end": 19.153
+  },
+  {
+    "id": "w47",
+    "text": "from",
+    "start": 19.29,
+    "end": 19.653
+  },
+  {
+    "id": "w48",
+    "text": "rewards,",
+    "start": 19.82,
+    "end": 20.447
+  },
+  {
+    "id": "w49",
+    "text": "by",
+    "start": 20.513,
+    "end": 20.589
+  },
+  {
+    "id": "w50",
+    "text": "reasoning",
+    "start": 20.589,
+    "end": 21.228
+  },
+  {
+    "id": "w51",
+    "text": "with",
+    "start": 21.228,
+    "end": 21.514
+  },
+  {
+    "id": "w52",
+    "text": "logic,",
+    "start": 21.514,
+    "end": 21.733
+  },
+  {
+    "id": "w53",
+    "text": "and",
+    "start": 21.866,
+    "end": 22.076
+  },
+  {
+    "id": "w54",
+    "text": "with",
+    "start": 22.076,
+    "end": 22.362
+  },
+  {
+    "id": "w55",
+    "text": "probability.",
+    "start": 22.362,
+    "end": 23.381
+  }
+]

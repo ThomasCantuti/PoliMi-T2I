@@ -1,0 +1,428 @@
+[
+  {
+    "id": "w0",
+    "text": "Start",
+    "start": 0.07,
+    "end": 0.418
+  },
+  {
+    "id": "w1",
+    "text": "simple.",
+    "start": 0.46,
+    "end": 0.88
+  },
+  {
+    "id": "w2",
+    "text": "A",
+    "start": 1.357,
+    "end": 1.384
+  },
+  {
+    "id": "w3",
+    "text": "thermostat",
+    "start": 1.384,
+    "end": 1.923
+  },
+  {
+    "id": "w4",
+    "text": "decides",
+    "start": 1.923,
+    "end": 2.309
+  },
+  {
+    "id": "w5",
+    "text": "from",
+    "start": 2.345,
+    "end": 2.48
+  },
+  {
+    "id": "w6",
+    "text": "the",
+    "start": 2.48,
+    "end": 2.597
+  },
+  {
+    "id": "w7",
+    "text": "current",
+    "start": 2.651,
+    "end": 2.902
+  },
+  {
+    "id": "w8",
+    "text": "reading",
+    "start": 2.911,
+    "end": 3.235
+  },
+  {
+    "id": "w9",
+    "text": "only.",
+    "start": 3.298,
+    "end": 4.133
+  },
+  {
+    "id": "w10",
+    "text": "A",
+    "start": 4.621,
+    "end": 4.658
+  },
+  {
+    "id": "w11",
+    "text": "robot",
+    "start": 4.658,
+    "end": 5.12
+  },
+  {
+    "id": "w12",
+    "text": "vacuum",
+    "start": 5.177,
+    "end": 5.62
+  },
+  {
+    "id": "w13",
+    "text": "with",
+    "start": 5.62,
+    "end": 5.78
+  },
+  {
+    "id": "w14",
+    "text": "a",
+    "start": 5.827,
+    "end": 5.846
+  },
+  {
+    "id": "w15",
+    "text": "map",
+    "start": 5.846,
+    "end": 6.166
+  },
+  {
+    "id": "w16",
+    "text": "remembers",
+    "start": 6.289,
+    "end": 6.816
+  },
+  {
+    "id": "w17",
+    "text": "where",
+    "start": 6.816,
+    "end": 7.005
+  },
+  {
+    "id": "w18",
+    "text": "it",
+    "start": 7.137,
+    "end": 7.259
+  },
+  {
+    "id": "w19",
+    "text": "has",
+    "start": 7.259,
+    "end": 7.504
+  },
+  {
+    "id": "w20",
+    "text": "been.",
+    "start": 7.504,
+    "end": 7.938
+  },
+  {
+    "id": "w21",
+    "text": "A",
+    "start": 8.504,
+    "end": 8.52
+  },
+  {
+    "id": "w22",
+    "text": "navigator",
+    "start": 8.58,
+    "end": 9.095
+  },
+  {
+    "id": "w23",
+    "text": "imagines",
+    "start": 9.095,
+    "end": 9.568
+  },
+  {
+    "id": "w24",
+    "text": "the",
+    "start": 9.568,
+    "end": 9.737
+  },
+  {
+    "id": "w25",
+    "text": "future",
+    "start": 9.771,
+    "end": 10.042
+  },
+  {
+    "id": "w26",
+    "text": "and",
+    "start": 10.101,
+    "end": 10.278
+  },
+  {
+    "id": "w27",
+    "text": "checks",
+    "start": 10.278,
+    "end": 10.388
+  },
+  {
+    "id": "w28",
+    "text": "whether",
+    "start": 10.938,
+    "end": 11.09
+  },
+  {
+    "id": "w29",
+    "text": "it",
+    "start": 11.09,
+    "end": 11.216
+  },
+  {
+    "id": "w30",
+    "text": "reaches",
+    "start": 11.216,
+    "end": 11.563
+  },
+  {
+    "id": "w31",
+    "text": "the",
+    "start": 11.563,
+    "end": 11.631
+  },
+  {
+    "id": "w32",
+    "text": "destination.",
+    "start": 11.681,
+    "end": 12.788
+  },
+  {
+    "id": "w33",
+    "text": "A",
+    "start": 13.427,
+    "end": 13.471
+  },
+  {
+    "id": "w34",
+    "text": "taxi",
+    "start": 13.585,
+    "end": 13.83
+  },
+  {
+    "id": "w35",
+    "text": "driver",
+    "start": 13.9,
+    "end": 14.365
+  },
+  {
+    "id": "w36",
+    "text": "also",
+    "start": 14.365,
+    "end": 14.707
+  },
+  {
+    "id": "w37",
+    "text": "weighs",
+    "start": 14.707,
+    "end": 15.225
+  },
+  {
+    "id": "w38",
+    "text": "how",
+    "start": 15.225,
+    "end": 15.418
+  },
+  {
+    "id": "w39",
+    "text": "good",
+    "start": 15.479,
+    "end": 15.76
+  },
+  {
+    "id": "w40",
+    "text": "each",
+    "start": 15.76,
+    "end": 15.848
+  },
+  {
+    "id": "w41",
+    "text": "future",
+    "start": 16.348,
+    "end": 16.655
+  },
+  {
+    "id": "w42",
+    "text": "is:",
+    "start": 16.69,
+    "end": 17.015
+  },
+  {
+    "id": "w43",
+    "text": "fast,",
+    "start": 17.435,
+    "end": 17.87
+  },
+  {
+    "id": "w44",
+    "text": "or",
+    "start": 17.87,
+    "end": 18.081
+  },
+  {
+    "id": "w45",
+    "text": "safe?",
+    "start": 18.081,
+    "end": 18.918
+  },
+  {
+    "id": "w46",
+    "text": "Each",
+    "start": 19.498,
+    "end": 19.954
+  },
+  {
+    "id": "w47",
+    "text": "one",
+    "start": 19.954,
+    "end": 20.229
+  },
+  {
+    "id": "w48",
+    "text": "adds",
+    "start": 20.301,
+    "end": 20.33
+  },
+  {
+    "id": "w49",
+    "text": "a",
+    "start": 20.539,
+    "end": 20.597
+  },
+  {
+    "id": "w50",
+    "text": "single",
+    "start": 20.727,
+    "end": 20.944
+  },
+  {
+    "id": "w51",
+    "text": "box",
+    "start": 20.995,
+    "end": 21.132
+  },
+  {
+    "id": "w52",
+    "text": "to",
+    "start": 21.132,
+    "end": 21.255
+  },
+  {
+    "id": "w53",
+    "text": "the",
+    "start": 21.255,
+    "end": 21.414
+  },
+  {
+    "id": "w54",
+    "text": "one",
+    "start": 21.465,
+    "end": 21.544
+  },
+  {
+    "id": "w55",
+    "text": "before.",
+    "start": 21.928,
+    "end": 22.195
+  },
+  {
+    "id": "w56",
+    "text": "Whatever",
+    "start": 22.741,
+    "end": 23.344
+  },
+  {
+    "id": "w57",
+    "text": "is",
+    "start": 23.344,
+    "end": 23.493
+  },
+  {
+    "id": "w58",
+    "text": "inside,",
+    "start": 23.493,
+    "end": 24.088
+  },
+  {
+    "id": "w59",
+    "text": "an",
+    "start": 24.303,
+    "end": 24.47
+  },
+  {
+    "id": "w60",
+    "text": "agent",
+    "start": 24.47,
+    "end": 24.892
+  },
+  {
+    "id": "w61",
+    "text": "is",
+    "start": 24.892,
+    "end": 25.019
+  },
+  {
+    "id": "w62",
+    "text": "judged",
+    "start": 25.019,
+    "end": 25.137
+  },
+  {
+    "id": "w63",
+    "text": "by",
+    "start": 25.695,
+    "end": 25.735
+  },
+  {
+    "id": "w64",
+    "text": "what",
+    "start": 25.735,
+    "end": 26.029
+  },
+  {
+    "id": "w65",
+    "text": "its",
+    "start": 26.078,
+    "end": 26.215
+  },
+  {
+    "id": "w66",
+    "text": "actions",
+    "start": 26.313,
+    "end": 26.901
+  },
+  {
+    "id": "w67",
+    "text": "do",
+    "start": 26.95,
+    "end": 27.087
+  },
+  {
+    "id": "w68",
+    "text": "to",
+    "start": 27.087,
+    "end": 27.254
+  },
+  {
+    "id": "w69",
+    "text": "the",
+    "start": 27.254,
+    "end": 27.597
+  },
+  {
+    "id": "w70",
+    "text": "world.",
+    "start": 27.597,
+    "end": 27.989
+  }
+]

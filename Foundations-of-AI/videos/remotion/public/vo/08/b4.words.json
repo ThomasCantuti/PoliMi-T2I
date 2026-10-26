@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.1,
+    "end": 0.221
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.221,
+    "end": 0.508
+  },
+  {
+    "id": "w2",
+    "text": "gives",
+    "start": 0.508,
+    "end": 0.863
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.863,
+    "end": 1.072
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 1.072,
+    "end": 1.08
+  },
+  {
+    "id": "w5",
+    "text": "partial",
+    "start": 1.15,
+    "end": 1.644
+  },
+  {
+    "id": "w6",
+    "text": "tree",
+    "start": 1.644,
+    "end": 1.957
+  },
+  {
+    "id": "w7",
+    "text": "with",
+    "start": 1.957,
+    "end": 2.364
+  },
+  {
+    "id": "w8",
+    "text": "win",
+    "start": 2.39,
+    "end": 2.625
+  },
+  {
+    "id": "w9",
+    "text": "counts:",
+    "start": 2.677,
+    "end": 3.31
+  },
+  {
+    "id": "w10",
+    "text": "compute",
+    "start": 3.876,
+    "end": 4.645
+  },
+  {
+    "id": "w11",
+    "text": "UCB1,",
+    "start": 4.645,
+    "end": 5.657
+  },
+  {
+    "id": "w12",
+    "text": "choose",
+    "start": 6.031,
+    "end": 6.471
+  },
+  {
+    "id": "w13",
+    "text": "where",
+    "start": 6.495,
+    "end": 6.71
+  },
+  {
+    "id": "w14",
+    "text": "to",
+    "start": 6.838,
+    "end": 6.942
+  },
+  {
+    "id": "w15",
+    "text": "expand,",
+    "start": 7.397,
+    "end": 7.469
+  },
+  {
+    "id": "w16",
+    "text": "and",
+    "start": 7.68,
+    "end": 7.794
+  },
+  {
+    "id": "w17",
+    "text": "update",
+    "start": 7.794,
+    "end": 8.229
+  },
+  {
+    "id": "w18",
+    "text": "the",
+    "start": 8.229,
+    "end": 8.447
+  },
+  {
+    "id": "w19",
+    "text": "statistics",
+    "start": 8.447,
+    "end": 9.183
+  },
+  {
+    "id": "w20",
+    "text": "after",
+    "start": 9.183,
+    "end": 9.545
+  },
+  {
+    "id": "w21",
+    "text": "each",
+    "start": 9.545,
+    "end": 9.836
+  },
+  {
+    "id": "w22",
+    "text": "playout.",
+    "start": 9.836,
+    "end": 10.603
+  }
+]

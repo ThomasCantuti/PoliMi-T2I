@@ -1,0 +1,1 @@
+Search can solve any problem, but each new domain needs its own successor function and its own heuristic, and the states are opaque. Logic describes states and rules in sentences a program can read. Planning puts the two together.

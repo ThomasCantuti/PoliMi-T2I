@@ -1,0 +1,440 @@
+[
+  {
+    "id": "w0",
+    "text": "So",
+    "start": 0.07,
+    "end": 0.166
+  },
+  {
+    "id": "w1",
+    "text": "stop",
+    "start": 0.166,
+    "end": 0.482
+  },
+  {
+    "id": "w2",
+    "text": "scoring",
+    "start": 0.482,
+    "end": 1.034
+  },
+  {
+    "id": "w3",
+    "text": "positions",
+    "start": 1.034,
+    "end": 1.752
+  },
+  {
+    "id": "w4",
+    "text": "by",
+    "start": 1.752,
+    "end": 1.857
+  },
+  {
+    "id": "w5",
+    "text": "hand:",
+    "start": 1.901,
+    "end": 2.269
+  },
+  {
+    "id": "w6",
+    "text": "play",
+    "start": 2.636,
+    "end": 2.807
+  },
+  {
+    "id": "w7",
+    "text": "them",
+    "start": 2.807,
+    "end": 3.038
+  },
+  {
+    "id": "w8",
+    "text": "out",
+    "start": 3.038,
+    "end": 3.21
+  },
+  {
+    "id": "w9",
+    "text": "at",
+    "start": 3.21,
+    "end": 3.321
+  },
+  {
+    "id": "w10",
+    "text": "random,",
+    "start": 3.321,
+    "end": 3.672
+  },
+  {
+    "id": "w11",
+    "text": "many",
+    "start": 3.672,
+    "end": 3.886
+  },
+  {
+    "id": "w12",
+    "text": "times,",
+    "start": 3.955,
+    "end": 4.237
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 4.237,
+    "end": 4.383
+  },
+  {
+    "id": "w14",
+    "text": "count",
+    "start": 4.828,
+    "end": 4.854
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 4.88,
+    "end": 5.085
+  },
+  {
+    "id": "w16",
+    "text": "wins.",
+    "start": 5.085,
+    "end": 5.642
+  },
+  {
+    "id": "w17",
+    "text": "Noisy,",
+    "start": 6.181,
+    "end": 6.635
+  },
+  {
+    "id": "w18",
+    "text": "but",
+    "start": 6.684,
+    "end": 6.899
+  },
+  {
+    "id": "w19",
+    "text": "averages",
+    "start": 6.899,
+    "end": 7.526
+  },
+  {
+    "id": "w20",
+    "text": "converge.",
+    "start": 7.526,
+    "end": 8.401
+  },
+  {
+    "id": "w21",
+    "text": "Then",
+    "start": 8.94,
+    "end": 9.109
+  },
+  {
+    "id": "w22",
+    "text": "spend",
+    "start": 9.109,
+    "end": 9.402
+  },
+  {
+    "id": "w23",
+    "text": "the",
+    "start": 9.402,
+    "end": 9.57
+  },
+  {
+    "id": "w24",
+    "text": "next",
+    "start": 9.57,
+    "end": 9.801
+  },
+  {
+    "id": "w25",
+    "text": "simulation",
+    "start": 9.801,
+    "end": 10.387
+  },
+  {
+    "id": "w26",
+    "text": "where",
+    "start": 10.387,
+    "end": 10.68
+  },
+  {
+    "id": "w27",
+    "text": "it",
+    "start": 10.68,
+    "end": 10.751
+  },
+  {
+    "id": "w28",
+    "text": "matters",
+    "start": 10.751,
+    "end": 11.266
+  },
+  {
+    "id": "w29",
+    "text": "most.",
+    "start": 11.266,
+    "end": 11.648
+  },
+  {
+    "id": "w30",
+    "text": "Each",
+    "start": 12.075,
+    "end": 12.246
+  },
+  {
+    "id": "w31",
+    "text": "move",
+    "start": 12.305,
+    "end": 12.544
+  },
+  {
+    "id": "w32",
+    "text": "is",
+    "start": 12.603,
+    "end": 12.722
+  },
+  {
+    "id": "w33",
+    "text": "a",
+    "start": 12.722,
+    "end": 12.791
+  },
+  {
+    "id": "w34",
+    "text": "slot",
+    "start": 12.791,
+    "end": 13.072
+  },
+  {
+    "id": "w35",
+    "text": "machine:",
+    "start": 13.072,
+    "end": 13.787
+  },
+  {
+    "id": "w36",
+    "text": "play",
+    "start": 14.217,
+    "end": 14.357
+  },
+  {
+    "id": "w37",
+    "text": "the",
+    "start": 14.357,
+    "end": 14.506
+  },
+  {
+    "id": "w38",
+    "text": "one",
+    "start": 14.506,
+    "end": 14.656
+  },
+  {
+    "id": "w39",
+    "text": "that",
+    "start": 14.656,
+    "end": 14.857
+  },
+  {
+    "id": "w40",
+    "text": "has",
+    "start": 14.857,
+    "end": 15.007
+  },
+  {
+    "id": "w41",
+    "text": "paid",
+    "start": 15.007,
+    "end": 15.209
+  },
+  {
+    "id": "w42",
+    "text": "best,",
+    "start": 15.209,
+    "end": 15.454
+  },
+  {
+    "id": "w43",
+    "text": "unless",
+    "start": 15.454,
+    "end": 15.7
+  },
+  {
+    "id": "w44",
+    "text": "another",
+    "start": 15.7,
+    "end": 15.981
+  },
+  {
+    "id": "w45",
+    "text": "has",
+    "start": 16.078,
+    "end": 16.218
+  },
+  {
+    "id": "w46",
+    "text": "been",
+    "start": 16.218,
+    "end": 16.49
+  },
+  {
+    "id": "w47",
+    "text": "tried",
+    "start": 16.49,
+    "end": 16.833
+  },
+  {
+    "id": "w48",
+    "text": "so",
+    "start": 16.833,
+    "end": 16.964
+  },
+  {
+    "id": "w49",
+    "text": "rarely",
+    "start": 16.964,
+    "end": 17.359
+  },
+  {
+    "id": "w50",
+    "text": "that",
+    "start": 17.429,
+    "end": 17.64
+  },
+  {
+    "id": "w51",
+    "text": "it",
+    "start": 17.649,
+    "end": 17.781
+  },
+  {
+    "id": "w52",
+    "text": "might",
+    "start": 17.781,
+    "end": 18.0
+  },
+  {
+    "id": "w53",
+    "text": "be",
+    "start": 18.123,
+    "end": 18.255
+  },
+  {
+    "id": "w54",
+    "text": "better.",
+    "start": 18.377,
+    "end": 18.93
+  },
+  {
+    "id": "w55",
+    "text": "UCB1",
+    "start": 19.629,
+    "end": 20.171
+  },
+  {
+    "id": "w56",
+    "text": "balances",
+    "start": 20.171,
+    "end": 20.98
+  },
+  {
+    "id": "w57",
+    "text": "the",
+    "start": 20.98,
+    "end": 21.255
+  },
+  {
+    "id": "w58",
+    "text": "two.",
+    "start": 21.255,
+    "end": 21.902
+  },
+  {
+    "id": "w59",
+    "text": "Select,",
+    "start": 22.483,
+    "end": 23.003
+  },
+  {
+    "id": "w60",
+    "text": "expand,",
+    "start": 23.248,
+    "end": 24.014
+  },
+  {
+    "id": "w61",
+    "text": "simulate,",
+    "start": 24.122,
+    "end": 25.072
+  },
+  {
+    "id": "w62",
+    "text": "backpropagate,",
+    "start": 25.186,
+    "end": 25.645
+  },
+  {
+    "id": "w63",
+    "text": "and",
+    "start": 25.645,
+    "end": 25.818
+  },
+  {
+    "id": "w64",
+    "text": "repeat:",
+    "start": 25.825,
+    "end": 26.364
+  },
+  {
+    "id": "w65",
+    "text": "the",
+    "start": 26.903,
+    "end": 27.036
+  },
+  {
+    "id": "w66",
+    "text": "tree",
+    "start": 27.036,
+    "end": 27.284
+  },
+  {
+    "id": "w67",
+    "text": "grows",
+    "start": 27.342,
+    "end": 27.628
+  },
+  {
+    "id": "w68",
+    "text": "where",
+    "start": 27.628,
+    "end": 27.952
+  },
+  {
+    "id": "w69",
+    "text": "the",
+    "start": 27.952,
+    "end": 28.143
+  },
+  {
+    "id": "w70",
+    "text": "good",
+    "start": 28.162,
+    "end": 28.419
+  },
+  {
+    "id": "w71",
+    "text": "moves",
+    "start": 28.419,
+    "end": 28.744
+  },
+  {
+    "id": "w72",
+    "text": "are.",
+    "start": 28.744,
+    "end": 29.077
+  }
+]

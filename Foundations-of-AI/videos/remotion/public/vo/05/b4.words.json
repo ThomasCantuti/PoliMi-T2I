@@ -1,0 +1,164 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.08,
+    "end": 0.3
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.3,
+    "end": 0.653
+  },
+  {
+    "id": "w2",
+    "text": "gives",
+    "start": 0.68,
+    "end": 1.173
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 1.209,
+    "end": 1.473
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 1.473,
+    "end": 1.57
+  },
+  {
+    "id": "w5",
+    "text": "small",
+    "start": 1.57,
+    "end": 2.064
+  },
+  {
+    "id": "w6",
+    "text": "CSP",
+    "start": 2.064,
+    "end": 2.39
+  },
+  {
+    "id": "w7",
+    "text": "and",
+    "start": 2.434,
+    "end": 2.54
+  },
+  {
+    "id": "w8",
+    "text": "asks",
+    "start": 2.602,
+    "end": 2.937
+  },
+  {
+    "id": "w9",
+    "text": "for",
+    "start": 3.007,
+    "end": 3.069
+  },
+  {
+    "id": "w10",
+    "text": "the",
+    "start": 3.078,
+    "end": 3.148
+  },
+  {
+    "id": "w11",
+    "text": "backtracking",
+    "start": 3.148,
+    "end": 3.739
+  },
+  {
+    "id": "w12",
+    "text": "tree",
+    "start": 3.783,
+    "end": 4.03
+  },
+  {
+    "id": "w13",
+    "text": "with",
+    "start": 4.03,
+    "end": 4.18
+  },
+  {
+    "id": "w14",
+    "text": "forward",
+    "start": 4.321,
+    "end": 4.594
+  },
+  {
+    "id": "w15",
+    "text": "checking",
+    "start": 4.656,
+    "end": 4.982
+  },
+  {
+    "id": "w16",
+    "text": "and",
+    "start": 5.053,
+    "end": 5.732
+  },
+  {
+    "id": "w17",
+    "text": "MRV,",
+    "start": 5.732,
+    "end": 6.684
+  },
+  {
+    "id": "w18",
+    "text": "or",
+    "start": 7.278,
+    "end": 7.499
+  },
+  {
+    "id": "w19",
+    "text": "a",
+    "start": 7.499,
+    "end": 7.562
+  },
+  {
+    "id": "w20",
+    "text": "full",
+    "start": 7.668,
+    "end": 7.868
+  },
+  {
+    "id": "w21",
+    "text": "run",
+    "start": 8.142,
+    "end": 8.395
+  },
+  {
+    "id": "w22",
+    "text": "of",
+    "start": 8.395,
+    "end": 8.617
+  },
+  {
+    "id": "w23",
+    "text": "AC-3,",
+    "start": 8.617,
+    "end": 9.387
+  },
+  {
+    "id": "w24",
+    "text": "arc",
+    "start": 9.787,
+    "end": 10.064
+  },
+  {
+    "id": "w25",
+    "text": "by",
+    "start": 10.1,
+    "end": 10.261
+  },
+  {
+    "id": "w26",
+    "text": "arc.",
+    "start": 10.261,
+    "end": 10.923
+  }
+]

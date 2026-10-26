@@ -1,0 +1,446 @@
+[
+  {
+    "id": "w0",
+    "text": "You",
+    "start": 0.07,
+    "end": 0.324
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.324,
+    "end": 0.618
+  },
+  {
+    "id": "w2",
+    "text": "MAX.",
+    "start": 0.618,
+    "end": 0.933
+  },
+  {
+    "id": "w3",
+    "text": "For",
+    "start": 1.395,
+    "end": 1.516
+  },
+  {
+    "id": "w4",
+    "text": "each",
+    "start": 1.516,
+    "end": 1.767
+  },
+  {
+    "id": "w5",
+    "text": "move",
+    "start": 1.767,
+    "end": 2.148
+  },
+  {
+    "id": "w6",
+    "text": "you",
+    "start": 2.148,
+    "end": 2.185
+  },
+  {
+    "id": "w7",
+    "text": "imagine",
+    "start": 2.66,
+    "end": 2.995
+  },
+  {
+    "id": "w8",
+    "text": "MIN's",
+    "start": 2.995,
+    "end": 3.376
+  },
+  {
+    "id": "w9",
+    "text": "best",
+    "start": 3.413,
+    "end": 3.748
+  },
+  {
+    "id": "w10",
+    "text": "reply,",
+    "start": 3.748,
+    "end": 4.194
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 4.47,
+    "end": 4.617
+  },
+  {
+    "id": "w12",
+    "text": "worst",
+    "start": 4.617,
+    "end": 4.88
+  },
+  {
+    "id": "w13",
+    "text": "case",
+    "start": 5.012,
+    "end": 5.128
+  },
+  {
+    "id": "w14",
+    "text": "for",
+    "start": 5.128,
+    "end": 5.522
+  },
+  {
+    "id": "w15",
+    "text": "you,",
+    "start": 5.522,
+    "end": 5.599
+  },
+  {
+    "id": "w16",
+    "text": "and",
+    "start": 5.88,
+    "end": 6.029
+  },
+  {
+    "id": "w17",
+    "text": "you",
+    "start": 6.029,
+    "end": 6.231
+  },
+  {
+    "id": "w18",
+    "text": "pick",
+    "start": 6.231,
+    "end": 6.345
+  },
+  {
+    "id": "w19",
+    "text": "the",
+    "start": 6.494,
+    "end": 6.635
+  },
+  {
+    "id": "w20",
+    "text": "move",
+    "start": 6.635,
+    "end": 7.1
+  },
+  {
+    "id": "w21",
+    "text": "whose",
+    "start": 7.1,
+    "end": 7.311
+  },
+  {
+    "id": "w22",
+    "text": "worst",
+    "start": 7.311,
+    "end": 7.644
+  },
+  {
+    "id": "w23",
+    "text": "case",
+    "start": 7.644,
+    "end": 7.917
+  },
+  {
+    "id": "w24",
+    "text": "is",
+    "start": 7.917,
+    "end": 8.048
+  },
+  {
+    "id": "w25",
+    "text": "best.",
+    "start": 8.048,
+    "end": 8.566
+  },
+  {
+    "id": "w26",
+    "text": "That's",
+    "start": 9.111,
+    "end": 9.436
+  },
+  {
+    "id": "w27",
+    "text": "minimax:",
+    "start": 9.436,
+    "end": 10.088
+  },
+  {
+    "id": "w28",
+    "text": "values",
+    "start": 10.522,
+    "end": 10.877
+  },
+  {
+    "id": "w29",
+    "text": "flow",
+    "start": 10.877,
+    "end": 11.152
+  },
+  {
+    "id": "w30",
+    "text": "up",
+    "start": 11.152,
+    "end": 11.209
+  },
+  {
+    "id": "w31",
+    "text": "from",
+    "start": 11.209,
+    "end": 11.637
+  },
+  {
+    "id": "w32",
+    "text": "the",
+    "start": 11.637,
+    "end": 11.766
+  },
+  {
+    "id": "w33",
+    "text": "end",
+    "start": 11.766,
+    "end": 11.944
+  },
+  {
+    "id": "w34",
+    "text": "of",
+    "start": 11.984,
+    "end": 12.106
+  },
+  {
+    "id": "w35",
+    "text": "the",
+    "start": 12.106,
+    "end": 12.308
+  },
+  {
+    "id": "w36",
+    "text": "game.",
+    "start": 12.308,
+    "end": 12.809
+  },
+  {
+    "id": "w37",
+    "text": "Alpha-beta",
+    "start": 13.419,
+    "end": 13.878
+  },
+  {
+    "id": "w38",
+    "text": "gets",
+    "start": 14.028,
+    "end": 14.17
+  },
+  {
+    "id": "w39",
+    "text": "the",
+    "start": 14.276,
+    "end": 14.461
+  },
+  {
+    "id": "w40",
+    "text": "same",
+    "start": 14.611,
+    "end": 14.691
+  },
+  {
+    "id": "w41",
+    "text": "answer",
+    "start": 14.77,
+    "end": 15.106
+  },
+  {
+    "id": "w42",
+    "text": "while",
+    "start": 15.168,
+    "end": 15.424
+  },
+  {
+    "id": "w43",
+    "text": "skipping",
+    "start": 15.424,
+    "end": 15.901
+  },
+  {
+    "id": "w44",
+    "text": "branches",
+    "start": 16.352,
+    "end": 16.44
+  },
+  {
+    "id": "w45",
+    "text": "that",
+    "start": 16.52,
+    "end": 16.705
+  },
+  {
+    "id": "w46",
+    "text": "cannot",
+    "start": 16.705,
+    "end": 17.05
+  },
+  {
+    "id": "w47",
+    "text": "change",
+    "start": 17.085,
+    "end": 17.465
+  },
+  {
+    "id": "w48",
+    "text": "it.",
+    "start": 17.465,
+    "end": 17.81
+  },
+  {
+    "id": "w49",
+    "text": "Real",
+    "start": 18.474,
+    "end": 18.731
+  },
+  {
+    "id": "w50",
+    "text": "games",
+    "start": 18.731,
+    "end": 19.132
+  },
+  {
+    "id": "w51",
+    "text": "are",
+    "start": 19.132,
+    "end": 19.23
+  },
+  {
+    "id": "w52",
+    "text": "too",
+    "start": 19.23,
+    "end": 19.701
+  },
+  {
+    "id": "w53",
+    "text": "deep",
+    "start": 19.701,
+    "end": 19.932
+  },
+  {
+    "id": "w54",
+    "text": "to",
+    "start": 19.932,
+    "end": 20.092
+  },
+  {
+    "id": "w55",
+    "text": "search",
+    "start": 20.092,
+    "end": 20.573
+  },
+  {
+    "id": "w56",
+    "text": "to",
+    "start": 20.573,
+    "end": 20.733
+  },
+  {
+    "id": "w57",
+    "text": "the",
+    "start": 20.733,
+    "end": 20.973
+  },
+  {
+    "id": "w58",
+    "text": "end,",
+    "start": 20.973,
+    "end": 21.222
+  },
+  {
+    "id": "w59",
+    "text": "so",
+    "start": 21.614,
+    "end": 21.702
+  },
+  {
+    "id": "w60",
+    "text": "programs",
+    "start": 21.702,
+    "end": 22.358
+  },
+  {
+    "id": "w61",
+    "text": "stop",
+    "start": 22.358,
+    "end": 22.446
+  },
+  {
+    "id": "w62",
+    "text": "at",
+    "start": 22.446,
+    "end": 22.706
+  },
+  {
+    "id": "w63",
+    "text": "a",
+    "start": 22.706,
+    "end": 22.965
+  },
+  {
+    "id": "w64",
+    "text": "depth",
+    "start": 22.965,
+    "end": 23.327
+  },
+  {
+    "id": "w65",
+    "text": "limit",
+    "start": 23.327,
+    "end": 23.777
+  },
+  {
+    "id": "w66",
+    "text": "and",
+    "start": 23.846,
+    "end": 23.963
+  },
+  {
+    "id": "w67",
+    "text": "score",
+    "start": 23.963,
+    "end": 24.286
+  },
+  {
+    "id": "w68",
+    "text": "the",
+    "start": 24.286,
+    "end": 24.354
+  },
+  {
+    "id": "w69",
+    "text": "position",
+    "start": 24.521,
+    "end": 24.677
+  },
+  {
+    "id": "w70",
+    "text": "with",
+    "start": 25.157,
+    "end": 25.235
+  },
+  {
+    "id": "w71",
+    "text": "an",
+    "start": 25.235,
+    "end": 25.362
+  },
+  {
+    "id": "w72",
+    "text": "evaluation",
+    "start": 25.362,
+    "end": 26.008
+  },
+  {
+    "id": "w73",
+    "text": "function.",
+    "start": 26.008,
+    "end": 26.752
+  }
+]

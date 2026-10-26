@@ -1,0 +1,1 @@
+Search computed a fixed sequence of actions before moving, because nothing else changed the world. Add an opponent and the plan breaks after your first move: what you should do next depends on what they did. You need a strategy, an answer to every reply.

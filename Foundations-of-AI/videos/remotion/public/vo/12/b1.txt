@@ -1,0 +1,1 @@
+Logic answers true, false, or "I don't know". The alarm goes off: logic can say "burglary or earthquake", but not which is more likely, and the agent has to act anyway. Back in chapter one, the utility-based agent already weighed outcomes by their probabilities. Now you'll see where those probabilities come from.

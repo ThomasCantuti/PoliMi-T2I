@@ -1,0 +1,314 @@
+[
+  {
+    "id": "w0",
+    "text": "Logic",
+    "start": 0.17,
+    "end": 0.463
+  },
+  {
+    "id": "w1",
+    "text": "answers",
+    "start": 0.496,
+    "end": 1.213
+  },
+  {
+    "id": "w2",
+    "text": "true,",
+    "start": 1.213,
+    "end": 1.626
+  },
+  {
+    "id": "w3",
+    "text": "false,",
+    "start": 1.833,
+    "end": 2.561
+  },
+  {
+    "id": "w4",
+    "text": "or",
+    "start": 2.851,
+    "end": 3.025
+  },
+  {
+    "id": "w5",
+    "text": "\"I",
+    "start": 3.049,
+    "end": 3.073
+  },
+  {
+    "id": "w6",
+    "text": "don't",
+    "start": 3.073,
+    "end": 3.295
+  },
+  {
+    "id": "w7",
+    "text": "know\".",
+    "start": 3.315,
+    "end": 3.573
+  },
+  {
+    "id": "w8",
+    "text": "The",
+    "start": 4.104,
+    "end": 4.209
+  },
+  {
+    "id": "w9",
+    "text": "alarm",
+    "start": 4.209,
+    "end": 4.646
+  },
+  {
+    "id": "w10",
+    "text": "goes",
+    "start": 4.646,
+    "end": 4.998
+  },
+  {
+    "id": "w11",
+    "text": "off:",
+    "start": 4.998,
+    "end": 5.426
+  },
+  {
+    "id": "w12",
+    "text": "logic",
+    "start": 5.857,
+    "end": 6.168
+  },
+  {
+    "id": "w13",
+    "text": "can",
+    "start": 6.168,
+    "end": 6.46
+  },
+  {
+    "id": "w14",
+    "text": "say",
+    "start": 6.46,
+    "end": 6.751
+  },
+  {
+    "id": "w15",
+    "text": "\"burglary",
+    "start": 6.751,
+    "end": 7.525
+  },
+  {
+    "id": "w16",
+    "text": "or",
+    "start": 7.525,
+    "end": 7.656
+  },
+  {
+    "id": "w17",
+    "text": "earthquake\",",
+    "start": 7.706,
+    "end": 8.902
+  },
+  {
+    "id": "w18",
+    "text": "but",
+    "start": 8.962,
+    "end": 9.048
+  },
+  {
+    "id": "w19",
+    "text": "not",
+    "start": 9.048,
+    "end": 9.135
+  },
+  {
+    "id": "w20",
+    "text": "which",
+    "start": 9.135,
+    "end": 9.221
+  },
+  {
+    "id": "w21",
+    "text": "is",
+    "start": 9.455,
+    "end": 9.61
+  },
+  {
+    "id": "w22",
+    "text": "more",
+    "start": 9.749,
+    "end": 9.887
+  },
+  {
+    "id": "w23",
+    "text": "likely,",
+    "start": 9.887,
+    "end": 10.449
+  },
+  {
+    "id": "w24",
+    "text": "and",
+    "start": 10.449,
+    "end": 10.596
+  },
+  {
+    "id": "w25",
+    "text": "the",
+    "start": 10.596,
+    "end": 10.674
+  },
+  {
+    "id": "w26",
+    "text": "agent",
+    "start": 10.778,
+    "end": 10.864
+  },
+  {
+    "id": "w27",
+    "text": "has",
+    "start": 10.977,
+    "end": 11.141
+  },
+  {
+    "id": "w28",
+    "text": "to",
+    "start": 11.288,
+    "end": 11.357
+  },
+  {
+    "id": "w29",
+    "text": "act",
+    "start": 11.357,
+    "end": 11.634
+  },
+  {
+    "id": "w30",
+    "text": "anyway.",
+    "start": 11.686,
+    "end": 12.698
+  },
+  {
+    "id": "w31",
+    "text": "Back",
+    "start": 13.382,
+    "end": 13.538
+  },
+  {
+    "id": "w32",
+    "text": "in",
+    "start": 13.538,
+    "end": 13.706
+  },
+  {
+    "id": "w33",
+    "text": "chapter",
+    "start": 13.706,
+    "end": 14.291
+  },
+  {
+    "id": "w34",
+    "text": "one,",
+    "start": 14.291,
+    "end": 14.709
+  },
+  {
+    "id": "w35",
+    "text": "the",
+    "start": 15.067,
+    "end": 15.161
+  },
+  {
+    "id": "w36",
+    "text": "utility-based",
+    "start": 15.289,
+    "end": 15.973
+  },
+  {
+    "id": "w37",
+    "text": "agent",
+    "start": 16.281,
+    "end": 16.504
+  },
+  {
+    "id": "w38",
+    "text": "already",
+    "start": 16.504,
+    "end": 16.803
+  },
+  {
+    "id": "w39",
+    "text": "weighed",
+    "start": 17.35,
+    "end": 17.461
+  },
+  {
+    "id": "w40",
+    "text": "outcomes",
+    "start": 17.461,
+    "end": 18.0
+  },
+  {
+    "id": "w41",
+    "text": "by",
+    "start": 18.009,
+    "end": 18.146
+  },
+  {
+    "id": "w42",
+    "text": "their",
+    "start": 18.146,
+    "end": 18.265
+  },
+  {
+    "id": "w43",
+    "text": "probabilities.",
+    "start": 18.847,
+    "end": 19.616
+  },
+  {
+    "id": "w44",
+    "text": "Now",
+    "start": 20.146,
+    "end": 20.168
+  },
+  {
+    "id": "w45",
+    "text": "you'll",
+    "start": 20.168,
+    "end": 20.543
+  },
+  {
+    "id": "w46",
+    "text": "see",
+    "start": 20.543,
+    "end": 20.736
+  },
+  {
+    "id": "w47",
+    "text": "where",
+    "start": 20.736,
+    "end": 21.058
+  },
+  {
+    "id": "w48",
+    "text": "those",
+    "start": 21.058,
+    "end": 21.358
+  },
+  {
+    "id": "w49",
+    "text": "probabilities",
+    "start": 21.39,
+    "end": 22.204
+  },
+  {
+    "id": "w50",
+    "text": "come",
+    "start": 22.204,
+    "end": 22.462
+  },
+  {
+    "id": "w51",
+    "text": "from.",
+    "start": 22.462,
+    "end": 22.933
+  }
+]

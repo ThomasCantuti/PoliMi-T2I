@@ -1,0 +1,506 @@
+[
+  {
+    "id": "w0",
+    "text": "A",
+    "start": 0.02,
+    "end": 0.069
+  },
+  {
+    "id": "w1",
+    "text": "sentence",
+    "start": 0.069,
+    "end": 0.582
+  },
+  {
+    "id": "w2",
+    "text": "is",
+    "start": 0.582,
+    "end": 0.688
+  },
+  {
+    "id": "w3",
+    "text": "a",
+    "start": 0.737,
+    "end": 0.785
+  },
+  {
+    "id": "w4",
+    "text": "constraint",
+    "start": 0.785,
+    "end": 1.437
+  },
+  {
+    "id": "w5",
+    "text": "on",
+    "start": 1.437,
+    "end": 1.567
+  },
+  {
+    "id": "w6",
+    "text": "possible",
+    "start": 1.567,
+    "end": 1.958
+  },
+  {
+    "id": "w7",
+    "text": "worlds.",
+    "start": 2.08,
+    "end": 2.707
+  },
+  {
+    "id": "w8",
+    "text": "\"If",
+    "start": 3.244,
+    "end": 3.386
+  },
+  {
+    "id": "w9",
+    "text": "it",
+    "start": 3.386,
+    "end": 3.556
+  },
+  {
+    "id": "w10",
+    "text": "rains,",
+    "start": 3.556,
+    "end": 4.151
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 4.389,
+    "end": 4.612
+  },
+  {
+    "id": "w12",
+    "text": "street",
+    "start": 4.612,
+    "end": 5.058
+  },
+  {
+    "id": "w13",
+    "text": "is",
+    "start": 5.058,
+    "end": 5.206
+  },
+  {
+    "id": "w14",
+    "text": "wet\"",
+    "start": 5.206,
+    "end": 5.429
+  },
+  {
+    "id": "w15",
+    "text": "rules",
+    "start": 5.429,
+    "end": 5.793
+  },
+  {
+    "id": "w16",
+    "text": "out",
+    "start": 5.793,
+    "end": 5.809
+  },
+  {
+    "id": "w17",
+    "text": "one",
+    "start": 5.809,
+    "end": 6.247
+  },
+  {
+    "id": "w18",
+    "text": "kind",
+    "start": 6.247,
+    "end": 6.544
+  },
+  {
+    "id": "w19",
+    "text": "of",
+    "start": 6.544,
+    "end": 6.693
+  },
+  {
+    "id": "w20",
+    "text": "world:",
+    "start": 6.693,
+    "end": 7.205
+  },
+  {
+    "id": "w21",
+    "text": "rain",
+    "start": 7.654,
+    "end": 7.828
+  },
+  {
+    "id": "w22",
+    "text": "with",
+    "start": 7.843,
+    "end": 8.04
+  },
+  {
+    "id": "w23",
+    "text": "a",
+    "start": 8.04,
+    "end": 8.124
+  },
+  {
+    "id": "w24",
+    "text": "dry",
+    "start": 8.124,
+    "end": 8.29
+  },
+  {
+    "id": "w25",
+    "text": "street.",
+    "start": 8.464,
+    "end": 9.198
+  },
+  {
+    "id": "w26",
+    "text": "A",
+    "start": 9.841,
+    "end": 9.886
+  },
+  {
+    "id": "w27",
+    "text": "knowledge",
+    "start": 9.886,
+    "end": 10.516
+  },
+  {
+    "id": "w28",
+    "text": "base",
+    "start": 10.516,
+    "end": 10.791
+  },
+  {
+    "id": "w29",
+    "text": "is",
+    "start": 10.791,
+    "end": 10.925
+  },
+  {
+    "id": "w30",
+    "text": "the",
+    "start": 10.925,
+    "end": 11.129
+  },
+  {
+    "id": "w31",
+    "text": "set",
+    "start": 11.129,
+    "end": 11.333
+  },
+  {
+    "id": "w32",
+    "text": "of",
+    "start": 11.333,
+    "end": 11.466
+  },
+  {
+    "id": "w33",
+    "text": "worlds",
+    "start": 11.466,
+    "end": 11.884
+  },
+  {
+    "id": "w34",
+    "text": "that",
+    "start": 11.884,
+    "end": 11.981
+  },
+  {
+    "id": "w35",
+    "text": "survive",
+    "start": 12.15,
+    "end": 12.221
+  },
+  {
+    "id": "w36",
+    "text": "all",
+    "start": 12.7,
+    "end": 12.851
+  },
+  {
+    "id": "w37",
+    "text": "its",
+    "start": 12.851,
+    "end": 13.056
+  },
+  {
+    "id": "w38",
+    "text": "sentences,",
+    "start": 13.056,
+    "end": 13.872
+  },
+  {
+    "id": "w39",
+    "text": "and",
+    "start": 14.293,
+    "end": 14.412
+  },
+  {
+    "id": "w40",
+    "text": "a",
+    "start": 14.412,
+    "end": 14.429
+  },
+  {
+    "id": "w41",
+    "text": "fact",
+    "start": 14.463,
+    "end": 14.667
+  },
+  {
+    "id": "w42",
+    "text": "follows",
+    "start": 14.667,
+    "end": 15.058
+  },
+  {
+    "id": "w43",
+    "text": "when",
+    "start": 15.075,
+    "end": 15.322
+  },
+  {
+    "id": "w44",
+    "text": "it",
+    "start": 15.322,
+    "end": 15.458
+  },
+  {
+    "id": "w45",
+    "text": "is",
+    "start": 15.458,
+    "end": 15.594
+  },
+  {
+    "id": "w46",
+    "text": "true",
+    "start": 15.594,
+    "end": 15.857
+  },
+  {
+    "id": "w47",
+    "text": "in",
+    "start": 15.857,
+    "end": 15.993
+  },
+  {
+    "id": "w48",
+    "text": "every",
+    "start": 15.993,
+    "end": 16.325
+  },
+  {
+    "id": "w49",
+    "text": "one",
+    "start": 16.325,
+    "end": 16.512
+  },
+  {
+    "id": "w50",
+    "text": "of",
+    "start": 16.529,
+    "end": 16.665
+  },
+  {
+    "id": "w51",
+    "text": "them.",
+    "start": 16.665,
+    "end": 17.099
+  },
+  {
+    "id": "w52",
+    "text": "You",
+    "start": 17.756,
+    "end": 17.927
+  },
+  {
+    "id": "w53",
+    "text": "can",
+    "start": 17.936,
+    "end": 18.126
+  },
+  {
+    "id": "w54",
+    "text": "check",
+    "start": 18.144,
+    "end": 18.487
+  },
+  {
+    "id": "w55",
+    "text": "that",
+    "start": 18.487,
+    "end": 18.731
+  },
+  {
+    "id": "w56",
+    "text": "by",
+    "start": 18.821,
+    "end": 18.893
+  },
+  {
+    "id": "w57",
+    "text": "enumerating",
+    "start": 18.893,
+    "end": 19.652
+  },
+  {
+    "id": "w58",
+    "text": "worlds,",
+    "start": 19.652,
+    "end": 20.166
+  },
+  {
+    "id": "w59",
+    "text": "or",
+    "start": 20.382,
+    "end": 20.538
+  },
+  {
+    "id": "w60",
+    "text": "by",
+    "start": 20.538,
+    "end": 20.661
+  },
+  {
+    "id": "w61",
+    "text": "rewriting",
+    "start": 20.825,
+    "end": 21.227
+  },
+  {
+    "id": "w62",
+    "text": "sentences",
+    "start": 21.227,
+    "end": 21.794
+  },
+  {
+    "id": "w63",
+    "text": "with",
+    "start": 21.794,
+    "end": 22.04
+  },
+  {
+    "id": "w64",
+    "text": "sound",
+    "start": 22.04,
+    "end": 22.352
+  },
+  {
+    "id": "w65",
+    "text": "rules",
+    "start": 22.352,
+    "end": 22.713
+  },
+  {
+    "id": "w66",
+    "text": "like",
+    "start": 22.729,
+    "end": 23.115
+  },
+  {
+    "id": "w67",
+    "text": "resolution.",
+    "start": 23.115,
+    "end": 24.42
+  },
+  {
+    "id": "w68",
+    "text": "Both",
+    "start": 25.125,
+    "end": 25.461
+  },
+  {
+    "id": "w69",
+    "text": "come",
+    "start": 25.461,
+    "end": 25.82
+  },
+  {
+    "id": "w70",
+    "text": "down",
+    "start": 25.82,
+    "end": 26.178
+  },
+  {
+    "id": "w71",
+    "text": "to",
+    "start": 26.178,
+    "end": 26.358
+  },
+  {
+    "id": "w72",
+    "text": "one",
+    "start": 26.458,
+    "end": 26.626
+  },
+  {
+    "id": "w73",
+    "text": "test:",
+    "start": 26.626,
+    "end": 27.164
+  },
+  {
+    "id": "w74",
+    "text": "the",
+    "start": 27.636,
+    "end": 27.856
+  },
+  {
+    "id": "w75",
+    "text": "knowledge",
+    "start": 27.856,
+    "end": 28.417
+  },
+  {
+    "id": "w76",
+    "text": "base",
+    "start": 28.417,
+    "end": 28.922
+  },
+  {
+    "id": "w77",
+    "text": "plus",
+    "start": 28.922,
+    "end": 29.105
+  },
+  {
+    "id": "w78",
+    "text": "the",
+    "start": 29.206,
+    "end": 29.335
+  },
+  {
+    "id": "w79",
+    "text": "negated",
+    "start": 29.335,
+    "end": 29.739
+  },
+  {
+    "id": "w80",
+    "text": "query",
+    "start": 29.987,
+    "end": 30.207
+  },
+  {
+    "id": "w81",
+    "text": "has",
+    "start": 30.225,
+    "end": 30.437
+  },
+  {
+    "id": "w82",
+    "text": "no",
+    "start": 30.437,
+    "end": 30.584
+  },
+  {
+    "id": "w83",
+    "text": "model.",
+    "start": 30.584,
+    "end": 31.125
+  }
+]

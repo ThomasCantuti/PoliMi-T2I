@@ -112,6 +112,11 @@ $$R_1: \neg P_{1,1} \quad R_2: B_{1,1} \Leftrightarrow (P_{1,2} \vee P_{2,1}) \q
 $KB = R_1 \wedge \dots \wedge R_5$ entails $\neg P_{1,2}$ and $P_{2,2} \vee P_{3,1}$, but neither $P_{2,2}$ nor
 $\neg P_{2,2}$: the agent does not know whether $[2,2]$ has a pit.
 
+```fig logic-models
+The 8 possible worlds for pits in [1,2], [2,2] and [3,1] ([1,1] and [2,1] are visited and safe). KB is true in 3 of them: no pit in [1,2], and a pit in [2,2] or [3,1].
+All 3 models of KB are models of ¬P1,2, so KB ⊨ ¬P1,2. Two of them have a pit in [2,2] and one has none, so KB entails neither ¬P2,2 nor P2,2.
+```
+
 **Model checking: TT-ENTAILS** (§7.4.4). Enumerate all models; check $\alpha$ in those where KB is true.
 
 ```text
@@ -234,6 +239,10 @@ $KB \models R$? Write the numbered CNF, add the **negated** query, resolve until
 
 $KB \wedge \neg R$ is unsatisfiable, so $KB \models R$ by the refutation theorem (and the soundness of resolution).
 
+```fig logic-resolution
+The proof above as a derivation tree: ¬R (5) with ¬P ∨ ¬Q ∨ R (2) on R gives ¬P ∨ ¬Q (6); with P (1) on P gives ¬Q (7); with ¬T ∨ Q (3b) on Q gives ¬T (8); with T (4) on T gives the empty clause (9).
+```
+
 **Properties.** Resolution is **sound**. It is **refutation-complete** (ground resolution theorem): if a set
 of clauses is unsatisfiable, its **resolution closure** $RC(S)$ contains the empty clause. It is *not*
 complete for generating every entailed sentence ($A \models A \vee B$ cannot be derived directly) — that is
@@ -307,6 +316,12 @@ AIMA example: $P \Rightarrow Q$, $L \wedge M \Rightarrow P$, $B \wedge L \Righta
 $A \wedge B \Rightarrow L$, $A$, $B$. Query $Q$: popped in the order $A, B, L, M, P, Q$ ($A \wedge B \Rightarrow L$ fires
 after $B$; $B \wedge L \Rightarrow M$ after $L$; $L \wedge M \Rightarrow P$ after $M$).
 
+```fig logic-fc
+The rules as a graph, each with its counter of unproved premises (P ⇒ Q: 1, L ∧ M ⇒ P: 2, B ∧ L ⇒ M: 2, A ∧ P ⇒ L: 2, A ∧ B ⇒ L: 2). Queue A, B.
+Pop A: A ∧ P ⇒ L and A ∧ B ⇒ L go to 1. Pop B: A ∧ B ⇒ L reaches 0, L is queued. Pop L: B ∧ L ⇒ M reaches 0, M is queued.
+Pop M: L ∧ M ⇒ P reaches 0, P is queued. Pop P: P ⇒ Q and A ∧ P ⇒ L reach 0, Q and L are queued. Pop Q: the query, return true.
+```
+
 - **Sound** (each step is Modus Ponens) and **complete for definite clauses**: at the fixed point, the model
   that makes true exactly the inferred symbols satisfies every clause, so any atom entailed is inferred.
 - Time **linear** in the size of the KB (each premise symbol is counted down once).
@@ -336,22 +351,10 @@ Exam 3 Feb 2025: KB $(B \wedge C) \Rightarrow A$, $J \Rightarrow B$, $P \Rightar
 $K \Rightarrow B$, $M \Rightarrow F$, $F \Rightarrow G$, $H \Rightarrow A$, $M \Rightarrow D$, $P \Rightarrow F$, $M \Rightarrow K$, $P$;
 goal $A$:
 
-```text
-A
-├── rule (B ∧ C) ⇒ A      [AND]
-│   ├── B
-│   │   ├── J  ✗              (no rule for J)
-│   │   └── K
-│   │       └── M  ✗          (no rule for M)
-│   │   → B fails
-│   └── C  (not expanded: B already failed)
-└── rule G ⇒ A
-    └── G
-        ├── K  ✗              (already failed: not expanded again)
-        └── F
-            ├── M  ✗
-            └── P  ✓          (fact)
-→ G, A proved; H ⇒ A is never tried
+```fig logic-bc
+AND-OR tree for goal A. Rule (B ∧ C) ⇒ A [AND]: B tries J ⇒ B (J ✗, no rule for J) and K ⇒ B (K tries M ⇒ K: M ✗, no rule for M; K ✗), so B fails and C is drawn but not expanded.
+Rule G ⇒ A: G tries K ⇒ G (K ✗, already failed: not expanded again) and F ⇒ G; F tries M ⇒ F (M ✗) and P ⇒ F (P ✓, fact).
+So F, G and A are proved; H ⇒ A is never tried.
 ```
 
 BC is sound and complete for definite clauses, and often **much cheaper** than FC: it only touches facts
@@ -406,6 +409,11 @@ $(A \vee B) \wedge (\neg A \vee \neg D) \wedge (C \vee D) \wedge (B \vee C) \wed
 
 Satisfiable, model $\{\neg A, B, \neg C, D\}$. At the root no symbol is pure and no clause is unit, so DPLL
 must split.
+
+```fig logic-dpll
+The table above, row by row: the seven clauses reduced by the partial model, and the search tree. Split on A: unit ¬D, unit C, ¬A ∨ ¬C becomes false (dead end).
+Backtrack to ¬A: unit B, unit ¬C, unit D: every clause is true, model {¬A, B, ¬C, D}.
+```
 
 > **Exam trap:** the course does not fix the order among applicable heuristics or the split variable/value:
 > the official solutions sometimes pick a unit clause while a pure symbol exists (row 4 above: $D$ is pure),

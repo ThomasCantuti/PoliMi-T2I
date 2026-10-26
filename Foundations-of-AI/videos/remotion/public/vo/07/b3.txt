@@ -1,0 +1,1 @@
+In this chapter: minimax, alpha-beta pruning and move ordering, evaluation functions, games with dice, and games with more than two players.

@@ -1,0 +1,446 @@
+[
+  {
+    "id": "w0",
+    "text": "A",
+    "start": 0.07,
+    "end": 0.088
+  },
+  {
+    "id": "w1",
+    "text": "Bayesian",
+    "start": 0.088,
+    "end": 0.615
+  },
+  {
+    "id": "w2",
+    "text": "network",
+    "start": 0.615,
+    "end": 1.017
+  },
+  {
+    "id": "w3",
+    "text": "is",
+    "start": 1.097,
+    "end": 1.222
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 1.222,
+    "end": 1.258
+  },
+  {
+    "id": "w5",
+    "text": "causal",
+    "start": 1.347,
+    "end": 1.722
+  },
+  {
+    "id": "w6",
+    "text": "story",
+    "start": 1.722,
+    "end": 2.151
+  },
+  {
+    "id": "w7",
+    "text": "drawn",
+    "start": 2.151,
+    "end": 2.651
+  },
+  {
+    "id": "w8",
+    "text": "with",
+    "start": 2.695,
+    "end": 3.097
+  },
+  {
+    "id": "w9",
+    "text": "arrows.",
+    "start": 3.097,
+    "end": 3.776
+  },
+  {
+    "id": "w10",
+    "text": "Each",
+    "start": 4.303,
+    "end": 4.507
+  },
+  {
+    "id": "w11",
+    "text": "node",
+    "start": 4.507,
+    "end": 4.791
+  },
+  {
+    "id": "w12",
+    "text": "answers",
+    "start": 4.791,
+    "end": 5.227
+  },
+  {
+    "id": "w13",
+    "text": "one",
+    "start": 5.307,
+    "end": 5.475
+  },
+  {
+    "id": "w14",
+    "text": "local",
+    "start": 5.555,
+    "end": 5.866
+  },
+  {
+    "id": "w15",
+    "text": "question:",
+    "start": 5.866,
+    "end": 6.692
+  },
+  {
+    "id": "w16",
+    "text": "how",
+    "start": 7.029,
+    "end": 7.196
+  },
+  {
+    "id": "w17",
+    "text": "likely",
+    "start": 7.196,
+    "end": 7.688
+  },
+  {
+    "id": "w18",
+    "text": "is",
+    "start": 7.688,
+    "end": 7.846
+  },
+  {
+    "id": "w19",
+    "text": "this,",
+    "start": 7.846,
+    "end": 8.329
+  },
+  {
+    "id": "w20",
+    "text": "given",
+    "start": 8.664,
+    "end": 9.013
+  },
+  {
+    "id": "w21",
+    "text": "its",
+    "start": 9.066,
+    "end": 9.234
+  },
+  {
+    "id": "w22",
+    "text": "direct",
+    "start": 9.234,
+    "end": 9.659
+  },
+  {
+    "id": "w23",
+    "text": "causes?",
+    "start": 9.659,
+    "end": 10.328
+  },
+  {
+    "id": "w24",
+    "text": "Multiply",
+    "start": 10.843,
+    "end": 11.376
+  },
+  {
+    "id": "w25",
+    "text": "the",
+    "start": 11.376,
+    "end": 11.601
+  },
+  {
+    "id": "w26",
+    "text": "local",
+    "start": 11.619,
+    "end": 11.999
+  },
+  {
+    "id": "w27",
+    "text": "answers",
+    "start": 11.999,
+    "end": 12.541
+  },
+  {
+    "id": "w28",
+    "text": "along",
+    "start": 12.541,
+    "end": 12.929
+  },
+  {
+    "id": "w29",
+    "text": "the",
+    "start": 12.929,
+    "end": 13.164
+  },
+  {
+    "id": "w30",
+    "text": "story",
+    "start": 13.164,
+    "end": 13.579
+  },
+  {
+    "id": "w31",
+    "text": "and",
+    "start": 13.661,
+    "end": 13.787
+  },
+  {
+    "id": "w32",
+    "text": "you",
+    "start": 13.787,
+    "end": 13.995
+  },
+  {
+    "id": "w33",
+    "text": "get",
+    "start": 13.995,
+    "end": 14.203
+  },
+  {
+    "id": "w34",
+    "text": "the",
+    "start": 14.203,
+    "end": 14.41
+  },
+  {
+    "id": "w35",
+    "text": "probability",
+    "start": 14.41,
+    "end": 15.187
+  },
+  {
+    "id": "w36",
+    "text": "of",
+    "start": 15.187,
+    "end": 15.323
+  },
+  {
+    "id": "w37",
+    "text": "a",
+    "start": 15.323,
+    "end": 15.386
+  },
+  {
+    "id": "w38",
+    "text": "whole",
+    "start": 15.386,
+    "end": 15.738
+  },
+  {
+    "id": "w39",
+    "text": "scenario.",
+    "start": 15.738,
+    "end": 16.578
+  },
+  {
+    "id": "w40",
+    "text": "Add",
+    "start": 17.299,
+    "end": 17.373
+  },
+  {
+    "id": "w41",
+    "text": "scenarios",
+    "start": 17.409,
+    "end": 18.007
+  },
+  {
+    "id": "w42",
+    "text": "together",
+    "start": 18.007,
+    "end": 18.66
+  },
+  {
+    "id": "w43",
+    "text": "and",
+    "start": 18.697,
+    "end": 18.816
+  },
+  {
+    "id": "w44",
+    "text": "you",
+    "start": 18.816,
+    "end": 18.945
+  },
+  {
+    "id": "w45",
+    "text": "get",
+    "start": 18.945,
+    "end": 19.083
+  },
+  {
+    "id": "w46",
+    "text": "any",
+    "start": 19.147,
+    "end": 19.258
+  },
+  {
+    "id": "w47",
+    "text": "probability",
+    "start": 19.258,
+    "end": 19.901
+  },
+  {
+    "id": "w48",
+    "text": "you",
+    "start": 19.901,
+    "end": 20.186
+  },
+  {
+    "id": "w49",
+    "text": "want.",
+    "start": 20.186,
+    "end": 20.683
+  },
+  {
+    "id": "w50",
+    "text": "Divide",
+    "start": 21.267,
+    "end": 21.537
+  },
+  {
+    "id": "w51",
+    "text": "two",
+    "start": 21.537,
+    "end": 21.714
+  },
+  {
+    "id": "w52",
+    "text": "of",
+    "start": 21.714,
+    "end": 21.832
+  },
+  {
+    "id": "w53",
+    "text": "them",
+    "start": 21.832,
+    "end": 22.152
+  },
+  {
+    "id": "w54",
+    "text": "and",
+    "start": 22.203,
+    "end": 22.355
+  },
+  {
+    "id": "w55",
+    "text": "you",
+    "start": 22.355,
+    "end": 22.515
+  },
+  {
+    "id": "w56",
+    "text": "get",
+    "start": 22.549,
+    "end": 22.709
+  },
+  {
+    "id": "w57",
+    "text": "a",
+    "start": 22.709,
+    "end": 22.768
+  },
+  {
+    "id": "w58",
+    "text": "conditional",
+    "start": 22.768,
+    "end": 23.409
+  },
+  {
+    "id": "w59",
+    "text": "one.",
+    "start": 23.409,
+    "end": 23.738
+  },
+  {
+    "id": "w60",
+    "text": "And",
+    "start": 24.332,
+    "end": 24.415
+  },
+  {
+    "id": "w61",
+    "text": "the",
+    "start": 24.443,
+    "end": 24.601
+  },
+  {
+    "id": "w62",
+    "text": "arrows",
+    "start": 24.601,
+    "end": 24.963
+  },
+  {
+    "id": "w63",
+    "text": "tell",
+    "start": 24.963,
+    "end": 25.205
+  },
+  {
+    "id": "w64",
+    "text": "you",
+    "start": 25.205,
+    "end": 25.363
+  },
+  {
+    "id": "w65",
+    "text": "which",
+    "start": 25.391,
+    "end": 25.679
+  },
+  {
+    "id": "w66",
+    "text": "variables",
+    "start": 25.679,
+    "end": 26.255
+  },
+  {
+    "id": "w67",
+    "text": "can",
+    "start": 26.255,
+    "end": 26.441
+  },
+  {
+    "id": "w68",
+    "text": "influence",
+    "start": 26.441,
+    "end": 27.054
+  },
+  {
+    "id": "w69",
+    "text": "which,",
+    "start": 27.129,
+    "end": 27.779
+  },
+  {
+    "id": "w70",
+    "text": "given",
+    "start": 28.148,
+    "end": 28.431
+  },
+  {
+    "id": "w71",
+    "text": "what",
+    "start": 28.439,
+    "end": 28.73
+  },
+  {
+    "id": "w72",
+    "text": "you've",
+    "start": 28.73,
+    "end": 29.174
+  },
+  {
+    "id": "w73",
+    "text": "observed.",
+    "start": 29.174,
+    "end": 29.781
+  }
+]

@@ -1,0 +1,1 @@
+In this chapter: what AI is, agents and environments, rationality, describing a task with PEAS, the properties of an environment, and the four agent architectures.

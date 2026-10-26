@@ -1,0 +1,1 @@
+In the exam you'll rank task environments by their properties, or design a simple reflex agent for a robot that looks for light. After this chapter, both take a few minutes.

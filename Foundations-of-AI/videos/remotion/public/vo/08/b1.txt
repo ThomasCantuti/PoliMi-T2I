@@ -1,0 +1,1 @@
+Alpha-beta needs two things: a branching factor small enough to search deep, and an evaluation function for the positions where it stops. Go has about 250 moves per position, against 20 to 35 in chess, and nobody knows how to score a Go position by hand.

@@ -1,0 +1,1 @@
+The exam asks you to translate English into logic, convert it to CNF, prove a query by resolution, and run DPLL step by step.

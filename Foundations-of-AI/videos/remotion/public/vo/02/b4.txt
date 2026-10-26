@@ -1,0 +1,1 @@
+Exams often open with exactly this: formulate a puzzle as a search problem, then give its branching factor and the size of its state space.

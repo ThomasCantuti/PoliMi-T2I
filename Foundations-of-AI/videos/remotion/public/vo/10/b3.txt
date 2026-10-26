@@ -1,0 +1,1 @@
+In this chapter: propositional logic, entailment, CNF and resolution, forward and backward chaining, and the SAT solvers DPLL and WalkSAT.

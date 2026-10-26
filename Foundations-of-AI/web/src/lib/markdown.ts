@@ -68,7 +68,21 @@ const math: MarkedExtension = {
   },
 };
 
-const trusted = new Marked({ gfm: true }, math);
+// ```fig <name>``` mounts web/src/figs/<name>.ts (Markdown.tsx); the body is its text alternative (screen readers, tutor, fallback).
+// ```viz <visualizer>``` embeds a Playground preset (figs/playground.ts): first line = preset name, the rest = text alternative.
+const figs: MarkedExtension = {
+  renderer: {
+    code({ text, lang }: Tokens.Code) {
+      const m = /^(fig|viz)\s+([\w-]+)/.exec(lang ?? '');
+      if (!m) return false;
+      if (m[1] === 'fig') return `<div class="fig-mount" data-fig="${m[2]}"><p class="fig-alt">${esc(text)}</p></div>\n`;
+      const [preset, ...alt] = text.split('\n');
+      return `<div class="fig-mount" data-fig="playground" data-viz="${m[2]}" data-preset="${esc(preset.trim())}"><p class="fig-alt">${esc(alt.join('\n') || preset)}</p></div>\n`;
+    },
+  },
+};
+
+const trusted = new Marked({ gfm: true }, math, figs);
 // LLM output: raw HTML is displayed as text.
 const untrusted = new Marked({ gfm: true }, math, { renderer: { html: ({ text }: Tokens.HTML | Tokens.Tag) => esc(text) } });
 

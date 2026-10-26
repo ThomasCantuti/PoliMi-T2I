@@ -40,6 +40,10 @@ and easier to define precisely than human behaviour. AI was born at the **Dartmo
 - **Agent program**: the concrete code that implements $f$ on a physical **architecture**. It receives
   **one** percept at a time; anything else it needs must be kept in persistent variables.
 
+```fig agents-loop
+The agent receives percepts from the environment through its sensors; the agent program (which implements the agent function f: P* → A) chooses an action; the actuators perform it on the environment.
+```
+
 > **Exam trap:** agent *function* (a mapping, possibly infinite table) ≠ agent *program* (finite code).
 > Two different programs can implement the same function.
 
@@ -142,6 +146,10 @@ the vacuum world ($|P| = 4$) with $T = 10$, astronomically many for a taxi.
 
 ## The four agent architectures (slides p. 35–51)
 
+```fig agents-arch
+Four steps, each adding boxes inside the agent. 1 Simple reflex: sensors → what the world is like now → condition–action rules → what action I should do now → actuators. 2 Model-based reflex: adds the internal state, how the world evolves and what my actions do (transition model), and the sensor model. 3 Goal-based: replaces the rules with goals and adds "what it will be like if I do action a". 4 Utility-based: replaces the goals with a utility and adds "how happy I will be in such a state".
+```
+
 ### 1. Simple reflex agent (slides p. 36–41)
 
 Acts on the **current percept only**, through **condition–action rules** (if *condition* then *action*).
@@ -209,6 +217,10 @@ importance of the goals. More expensive in computation.
 ## Worked example: reflex vs model-based in the vacuum world
 
 Both squares dirty, start in `A`. Score per step: +1 per clean square, −1 per move.
+
+```fig agents-vacuum
+The two agents side by side for six steps. They act the same until t = 4: at (B, Clean) the reflex agent moves Left (−1) because it cannot know A is clean, while the model-based agent remembers A is clean and does NoOp. Totals: reflex 6, model-based 9.
+```
 
 | t | reflex: percept → action | points | model-based: percept → action | points |
 |---|---|---|---|---|

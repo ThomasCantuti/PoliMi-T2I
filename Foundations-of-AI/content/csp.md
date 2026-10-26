@@ -87,12 +87,9 @@ ones (**binarization**): $Alldiff$ over $k$ variables = $\binom{k}{2}$ pairwise 
 need auxiliary variables. A binary CSP is drawn as a **constraint graph**: nodes = variables, edges =
 constraints.
 
-```text
-       NT --- Q
-      /  \   / \
-    WA -- SA -- NSW        T
-            \   /
-              V
+```fig csp-graph
+The map of Australia turned into its constraint graph: one node per region, one edge per shared border.
+Edges: WA–NT, WA–SA, NT–SA, NT–Q, SA–Q, SA–NSW, SA–V, Q–NSW, NSW–V (9). T has no edges.
 ```
 
 The graph structure can speed up search: it shows at once that **Tasmania is an independent subproblem**.
@@ -166,6 +163,11 @@ Worked example (p. 280–283):
 After V = B the domain of SA is empty: {WA = R, Q = G, V = B} cannot be part of a solution, and we backtrack
 **without ever trying SA**.
 
+```viz csp
+Australia – backtracking + forward checking (slides p. 280–283)
+Backtracking with forward checking on Australia, order WA, Q, V, …: after WA = R, Q = G, V = B the domain of SA is empty.
+```
+
 **Complexity** (p. 284): $n$ variables, domain size $d$, at most $s \le n - 1$ constraints per variable →
 $O(n \cdot s \cdot d)$ per assignment.
 
@@ -214,6 +216,11 @@ Worked example (p. 290–293), starting from the forward-checking row WA = R, Q 
 
 AC-3 returns false: the dead end is detected **two levels earlier** than with forward checking.
 
+```viz csp
+AC-3 after WA = R, Q = G (slides p. 290–293)
+AC-3 from WA = R, Q = G with the queue NSW→V, NSW→SA, V→NSW, SA→NT: NSW loses B, V loses R, SA becomes empty.
+```
+
 > **Intuition (why re-queue):** deleting $x$ from $D_i$ can only hurt variables that were using $x$ as a
 > support, i.e. the tails of arcs $(X_k, X_i)$. $(X_j, X_i)$ is not re-added: $x$ had no compatible value in
 > $D_j$, so no value of $X_j$ relied on it. In the chain $X < Y < Z$ with domains {1,2,3}, a single pass over
@@ -235,6 +242,11 @@ These are **domain-independent** heuristics, possible thanks to the factored rep
 
 Example (p. 298): after WA = R, NT = G, MRV picks SA (only {B} left). For Q, the value R leaves SA = {B}
 while B leaves SA = {} – LCV tries R first.
+
+```viz csp
+Australia – MRV + degree + forward checking
+Backtracking on Australia with MRV, degree as tie-breaker, and forward checking: SA (degree 5) is chosen first.
+```
 
 > **Exam trap:** "Why min rather than max?" MRV is about failing fast; LCV is about succeeding fast. Variable
 > order affects the size of the tree in every case; value order only matters if a solution exists in the
@@ -291,6 +303,11 @@ On 4-queens ($X_i$ = row of the queen in column $i$; heuristics do not help, X1 
 
 Search tree: {} → {X1 = 1} (dead) and {X1 = 2} → solution (2, 4, 1, 3). Five assignments in total versus
 eight for plain backtracking (113 vs 20 on 8-queens).
+
+```viz csp
+4-queens complete example – FC + AC-3 (slides p. 303–315)
+4-queens with AC-3 at every call and forward checking after every assignment: X1 = 1 fails, X1 = 2 leads to (2, 4, 1, 3).
+```
 
 > **Exam trap:** when hand-simulating, write a **row of domains per step** exactly like the table above, and
 > state the arc you are revising ("X2 → X3: 3 has no support"). On backtracking, the domains go back to the

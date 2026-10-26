@@ -1,0 +1,1 @@
+Local search starts from a complete state, even a bad one, and repairs it a little at a time. Hill climbing is a walk in thick fog: you only see the ground at your feet, so you always step uphill. When every step goes down, you stop. Maybe on the summit, maybe on a foothill or a flat ledge. Random restarts and sideways moves are the ways out.

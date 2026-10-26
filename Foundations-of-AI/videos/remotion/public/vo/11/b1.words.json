@@ -1,0 +1,236 @@
+[
+  {
+    "id": "w0",
+    "text": "Search",
+    "start": 0.07,
+    "end": 0.408
+  },
+  {
+    "id": "w1",
+    "text": "can",
+    "start": 0.49,
+    "end": 0.705
+  },
+  {
+    "id": "w2",
+    "text": "solve",
+    "start": 0.705,
+    "end": 1.104
+  },
+  {
+    "id": "w3",
+    "text": "any",
+    "start": 1.104,
+    "end": 1.288
+  },
+  {
+    "id": "w4",
+    "text": "problem,",
+    "start": 1.349,
+    "end": 2.046
+  },
+  {
+    "id": "w5",
+    "text": "but",
+    "start": 2.16,
+    "end": 2.331
+  },
+  {
+    "id": "w6",
+    "text": "each",
+    "start": 2.331,
+    "end": 2.537
+  },
+  {
+    "id": "w7",
+    "text": "new",
+    "start": 2.581,
+    "end": 2.734
+  },
+  {
+    "id": "w8",
+    "text": "domain",
+    "start": 2.734,
+    "end": 3.271
+  },
+  {
+    "id": "w9",
+    "text": "needs",
+    "start": 3.271,
+    "end": 3.594
+  },
+  {
+    "id": "w10",
+    "text": "its",
+    "start": 3.594,
+    "end": 3.746
+  },
+  {
+    "id": "w11",
+    "text": "own",
+    "start": 3.809,
+    "end": 3.988
+  },
+  {
+    "id": "w12",
+    "text": "successor",
+    "start": 3.988,
+    "end": 4.597
+  },
+  {
+    "id": "w13",
+    "text": "function",
+    "start": 4.597,
+    "end": 5.09
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 5.099,
+    "end": 5.224
+  },
+  {
+    "id": "w15",
+    "text": "its",
+    "start": 5.296,
+    "end": 5.475
+  },
+  {
+    "id": "w16",
+    "text": "own",
+    "start": 5.475,
+    "end": 5.726
+  },
+  {
+    "id": "w17",
+    "text": "heuristic,",
+    "start": 5.726,
+    "end": 6.648
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 6.947,
+    "end": 7.15
+  },
+  {
+    "id": "w19",
+    "text": "the",
+    "start": 7.158,
+    "end": 7.256
+  },
+  {
+    "id": "w20",
+    "text": "states",
+    "start": 7.377,
+    "end": 7.792
+  },
+  {
+    "id": "w21",
+    "text": "are",
+    "start": 7.807,
+    "end": 8.011
+  },
+  {
+    "id": "w22",
+    "text": "opaque.",
+    "start": 8.011,
+    "end": 8.69
+  },
+  {
+    "id": "w23",
+    "text": "Logic",
+    "start": 9.38,
+    "end": 9.776
+  },
+  {
+    "id": "w24",
+    "text": "describes",
+    "start": 9.776,
+    "end": 10.594
+  },
+  {
+    "id": "w25",
+    "text": "states",
+    "start": 10.594,
+    "end": 11.007
+  },
+  {
+    "id": "w26",
+    "text": "and",
+    "start": 11.142,
+    "end": 11.412
+  },
+  {
+    "id": "w27",
+    "text": "rules",
+    "start": 11.412,
+    "end": 11.867
+  },
+  {
+    "id": "w28",
+    "text": "in",
+    "start": 11.867,
+    "end": 12.044
+  },
+  {
+    "id": "w29",
+    "text": "sentences",
+    "start": 12.044,
+    "end": 12.853
+  },
+  {
+    "id": "w30",
+    "text": "a",
+    "start": 12.853,
+    "end": 12.938
+  },
+  {
+    "id": "w31",
+    "text": "program",
+    "start": 12.954,
+    "end": 13.587
+  },
+  {
+    "id": "w32",
+    "text": "can",
+    "start": 13.587,
+    "end": 13.857
+  },
+  {
+    "id": "w33",
+    "text": "read.",
+    "start": 13.857,
+    "end": 14.548
+  },
+  {
+    "id": "w34",
+    "text": "Planning",
+    "start": 15.13,
+    "end": 15.486
+  },
+  {
+    "id": "w35",
+    "text": "puts",
+    "start": 15.56,
+    "end": 15.827
+  },
+  {
+    "id": "w36",
+    "text": "the",
+    "start": 15.827,
+    "end": 16.02
+  },
+  {
+    "id": "w37",
+    "text": "two",
+    "start": 16.02,
+    "end": 16.213
+  },
+  {
+    "id": "w38",
+    "text": "together.",
+    "start": 16.213,
+    "end": 16.896
+  }
+]

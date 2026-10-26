@@ -1,0 +1,1 @@
+Two tools so far. A* plans a path, but it needs a model of the world: the actions, where they lead, what they cost. Bandits learn from rewards by trying, but each choice stands alone. What if there's no model, and every action changes the situation you'll face next?

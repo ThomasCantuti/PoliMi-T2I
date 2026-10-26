@@ -1,0 +1,1 @@
+The exam asks you to run A star on a graph step by step, and to design a heuristic and prove it admissible.

@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.2,
+    "end": 0.254
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.254,
+    "end": 0.569
+  },
+  {
+    "id": "w2",
+    "text": "asks",
+    "start": 0.569,
+    "end": 0.885
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.885,
+    "end": 1.074
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.119,
+    "end": 1.272
+  },
+  {
+    "id": "w5",
+    "text": "model",
+    "start": 1.272,
+    "end": 1.668
+  },
+  {
+    "id": "w6",
+    "text": "a",
+    "start": 1.668,
+    "end": 1.74
+  },
+  {
+    "id": "w7",
+    "text": "problem",
+    "start": 1.74,
+    "end": 2.344
+  },
+  {
+    "id": "w8",
+    "text": "for",
+    "start": 2.344,
+    "end": 2.614
+  },
+  {
+    "id": "w9",
+    "text": "local",
+    "start": 2.614,
+    "end": 3.064
+  },
+  {
+    "id": "w10",
+    "text": "search:",
+    "start": 3.064,
+    "end": 3.749
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 4.281,
+    "end": 4.355
+  },
+  {
+    "id": "w12",
+    "text": "states,",
+    "start": 4.355,
+    "end": 4.982
+  },
+  {
+    "id": "w13",
+    "text": "the",
+    "start": 5.242,
+    "end": 5.267
+  },
+  {
+    "id": "w14",
+    "text": "neighbors,",
+    "start": 5.267,
+    "end": 5.726
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 5.726,
+    "end": 5.923
+  },
+  {
+    "id": "w16",
+    "text": "objective,",
+    "start": 5.923,
+    "end": 6.948
+  },
+  {
+    "id": "w17",
+    "text": "and",
+    "start": 7.151,
+    "end": 7.369
+  },
+  {
+    "id": "w18",
+    "text": "where",
+    "start": 7.369,
+    "end": 7.729
+  },
+  {
+    "id": "w19",
+    "text": "hill",
+    "start": 7.729,
+    "end": 8.024
+  },
+  {
+    "id": "w20",
+    "text": "climbing",
+    "start": 8.024,
+    "end": 8.602
+  },
+  {
+    "id": "w21",
+    "text": "gets",
+    "start": 8.678,
+    "end": 8.907
+  },
+  {
+    "id": "w22",
+    "text": "stuck.",
+    "start": 8.907,
+    "end": 9.365
+  }
+]

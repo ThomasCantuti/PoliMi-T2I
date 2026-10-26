@@ -1,0 +1,1 @@
+In this chapter: probability and Bayes' rule, Bayesian networks and their chain rule, building a network, active trails and d-separation, and inference by enumeration.

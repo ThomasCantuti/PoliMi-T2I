@@ -98,6 +98,11 @@ Convention 1 (wins of MAX, the player at the root). Notation U/N.
 | 9–10 | UCB1 at the root, then at $a_1$ (MIN to move) → $b_1$; add a child $c_1$, playout → −1 | root 2/5, $a_1$ 2/4, $b_1$ 0/2, $c_1$ 0/1 |
 | 11 | UCB1 at the root → $a_2$; add a child, playout → +1 | root 3/6, $a_1$ 2/4, $a_2$ 1/2 (child 1/1) |
 
+```viz mcts
+Step-by-step example – slides p. 417-452
+The six iterations of the slides with C = 1 and playout results +1, −1, −1, +1, −1, +1: final tree root 3/6, a1 2/4, a2 1/2.
+```
+
 The UCB1 numbers with $C = 1$ (the value consistent with the slides):
 
 - step 9, root (N = 4): $a_1$: $\frac23 + \sqrt{\frac{\ln 4}{3}} = 0.667 + 0.680 = 1.346$; $a_2$: $0 + \sqrt{\ln 4} = 1.177$ → $a_1$.
@@ -155,6 +160,11 @@ Meanwhile the bonus of an arm that is not pulled grows slowly with $\ln t$: negl
 rarely. Averaged over random 5-armed Bernoulli bandits (1000 steps), UCB ($c = 0.5$) earns ≈ 98% of the best possible
 reward, ε-greedy (0.1) ≈ 94%, greedy ≈ 59%.
 
+```viz bandit
+UCB vs ε-greedy – 5 arms, close means
+Five Bernoulli arms with means 0.3, 0.5, 0.6, 0.45, 0.65: compare the pulls and the regret of UCB (c = 1) and ε-greedy (ε = 0.1).
+```
+
 ## UCB1 for trees: UCT (slides p. 443–445)
 
 $$\text{UCB1}(n) = \frac{U(n)}{N(n)} + C \cdot \sqrt{\frac{\log N(\text{Parent}(n))}{N(n)}}$$
@@ -173,13 +183,10 @@ node with $N(n) = 0$ has UCB1 $= \infty$. In theory $C = \sqrt2$ for rewards in 
 
 Convention 2 (wins of the player who moved into the node). One iteration, $C = \sqrt 2$:
 
-```text
-(a) selection                      37/100
-                      60/79          1/10           2/11      UCB1: 1.101, 1.060, 1.097  -> 60/79
-                   3/26   16/53                                UCB1: 0.695, 0.708         -> 16/53
-                       27/35  10/18                            UCB1: 1.248, 1.220         -> 27/35 (leaf)
-(b) expansion: new child 0/0 of 27/35; playout: black wins
-(c) backpropagation:  0/1 -> 28/36 -> 16/54 -> 61/80 -> 37/101
+```fig mcts-fig610
+(a) selection from 37/100: UCB1 1.101, 1.060, 1.097 → 60/79; then 0.695, 0.708 → 16/53; then 1.248, 1.220 → 27/35 (leaf).
+(b) expansion: new child 0/0 of 27/35; playout: black wins.
+(c) backpropagation: 0/1 → 28/36 → 16/54 → 61/80 → 37/101.
 ```
 
 Black (the player to move at the root) won: $U + 1$ only on the nodes reached by a black move (60/79 and 27/35);

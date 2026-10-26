@@ -1,0 +1,1 @@
+The exam gives you a network with its tables: compute a probability by enumeration, and list the trails that are active given some evidence.

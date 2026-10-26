@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.1,
+    "end": 0.168
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.168,
+    "end": 0.439
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.439,
+    "end": 1.035
+  },
+  {
+    "id": "w3",
+    "text": "probability",
+    "start": 1.614,
+    "end": 2.389
+  },
+  {
+    "id": "w4",
+    "text": "and",
+    "start": 2.389,
+    "end": 2.62
+  },
+  {
+    "id": "w5",
+    "text": "Bayes'",
+    "start": 2.62,
+    "end": 3.007
+  },
+  {
+    "id": "w6",
+    "text": "rule,",
+    "start": 3.007,
+    "end": 3.459
+  },
+  {
+    "id": "w7",
+    "text": "Bayesian",
+    "start": 3.459,
+    "end": 3.966
+  },
+  {
+    "id": "w8",
+    "text": "networks",
+    "start": 3.966,
+    "end": 4.557
+  },
+  {
+    "id": "w9",
+    "text": "and",
+    "start": 4.557,
+    "end": 4.704
+  },
+  {
+    "id": "w10",
+    "text": "their",
+    "start": 4.704,
+    "end": 4.944
+  },
+  {
+    "id": "w11",
+    "text": "chain",
+    "start": 4.962,
+    "end": 5.221
+  },
+  {
+    "id": "w12",
+    "text": "rule,",
+    "start": 5.221,
+    "end": 5.958
+  },
+  {
+    "id": "w13",
+    "text": "building",
+    "start": 6.423,
+    "end": 6.866
+  },
+  {
+    "id": "w14",
+    "text": "a",
+    "start": 6.866,
+    "end": 6.925
+  },
+  {
+    "id": "w15",
+    "text": "network,",
+    "start": 6.925,
+    "end": 7.511
+  },
+  {
+    "id": "w16",
+    "text": "active",
+    "start": 7.873,
+    "end": 8.141
+  },
+  {
+    "id": "w17",
+    "text": "trails",
+    "start": 8.141,
+    "end": 8.605
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 8.636,
+    "end": 8.832
+  },
+  {
+    "id": "w19",
+    "text": "d-separation,",
+    "start": 8.883,
+    "end": 9.502
+  },
+  {
+    "id": "w20",
+    "text": "and",
+    "start": 9.502,
+    "end": 10.121
+  },
+  {
+    "id": "w21",
+    "text": "inference",
+    "start": 10.162,
+    "end": 10.863
+  },
+  {
+    "id": "w22",
+    "text": "by",
+    "start": 10.863,
+    "end": 10.987
+  },
+  {
+    "id": "w23",
+    "text": "enumeration.",
+    "start": 11.028,
+    "end": 12.224
+  }
+]

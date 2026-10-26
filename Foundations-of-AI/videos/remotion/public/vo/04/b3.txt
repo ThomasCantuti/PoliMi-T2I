@@ -1,0 +1,1 @@
+In this chapter: greedy search and A*, admissible and consistent heuristics, why A* is optimal and which nodes it expands, how to invent heuristics, and two variants, weighted A* and IDA*.

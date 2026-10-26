@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.1,
+    "end": 0.166
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.166,
+    "end": 0.43
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.43,
+    "end": 1.038
+  },
+  {
+    "id": "w3",
+    "text": "rewards",
+    "start": 1.608,
+    "end": 2.051
+  },
+  {
+    "id": "w4",
+    "text": "and",
+    "start": 2.107,
+    "end": 2.292
+  },
+  {
+    "id": "w5",
+    "text": "discounting,",
+    "start": 2.292,
+    "end": 3.339
+  },
+  {
+    "id": "w6",
+    "text": "value",
+    "start": 3.695,
+    "end": 4.0
+  },
+  {
+    "id": "w7",
+    "text": "functions",
+    "start": 4.162,
+    "end": 4.667
+  },
+  {
+    "id": "w8",
+    "text": "and",
+    "start": 4.667,
+    "end": 4.82
+  },
+  {
+    "id": "w9",
+    "text": "the",
+    "start": 4.82,
+    "end": 4.896
+  },
+  {
+    "id": "w10",
+    "text": "Bellman",
+    "start": 4.896,
+    "end": 5.277
+  },
+  {
+    "id": "w11",
+    "text": "equation,",
+    "start": 5.277,
+    "end": 6.192
+  },
+  {
+    "id": "w12",
+    "text": "exploration,",
+    "start": 6.472,
+    "end": 7.432
+  },
+  {
+    "id": "w13",
+    "text": "Q-learning,",
+    "start": 7.819,
+    "end": 8.594
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 8.594,
+    "end": 8.806
+  },
+  {
+    "id": "w15",
+    "text": "how",
+    "start": 8.806,
+    "end": 9.019
+  },
+  {
+    "id": "w16",
+    "text": "learning",
+    "start": 9.019,
+    "end": 9.591
+  },
+  {
+    "id": "w17",
+    "text": "compares",
+    "start": 9.591,
+    "end": 9.886
+  },
+  {
+    "id": "w18",
+    "text": "with",
+    "start": 10.264,
+    "end": 10.449
+  },
+  {
+    "id": "w19",
+    "text": "search",
+    "start": 10.449,
+    "end": 10.873
+  },
+  {
+    "id": "w20",
+    "text": "and",
+    "start": 10.873,
+    "end": 11.086
+  },
+  {
+    "id": "w21",
+    "text": "with",
+    "start": 11.086,
+    "end": 11.372
+  },
+  {
+    "id": "w22",
+    "text": "minimax.",
+    "start": 11.372,
+    "end": 11.925
+  }
+]

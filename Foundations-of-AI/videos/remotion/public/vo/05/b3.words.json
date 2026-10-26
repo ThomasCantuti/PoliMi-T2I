@@ -1,0 +1,170 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.1,
+    "end": 0.164
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.164,
+    "end": 0.427
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.427,
+    "end": 1.037
+  },
+  {
+    "id": "w3",
+    "text": "defining",
+    "start": 1.596,
+    "end": 2.636
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 2.636,
+    "end": 2.773
+  },
+  {
+    "id": "w5",
+    "text": "CSP,",
+    "start": 2.773,
+    "end": 3.192
+  },
+  {
+    "id": "w6",
+    "text": "backtracking",
+    "start": 3.192,
+    "end": 3.848
+  },
+  {
+    "id": "w7",
+    "text": "search,",
+    "start": 3.848,
+    "end": 4.541
+  },
+  {
+    "id": "w8",
+    "text": "forward",
+    "start": 4.882,
+    "end": 5.276
+  },
+  {
+    "id": "w9",
+    "text": "checking",
+    "start": 5.276,
+    "end": 5.619
+  },
+  {
+    "id": "w10",
+    "text": "and",
+    "start": 5.815,
+    "end": 6.03
+  },
+  {
+    "id": "w11",
+    "text": "arc",
+    "start": 6.175,
+    "end": 6.235
+  },
+  {
+    "id": "w12",
+    "text": "consistency,",
+    "start": 6.235,
+    "end": 7.16
+  },
+  {
+    "id": "w13",
+    "text": "the",
+    "start": 7.665,
+    "end": 7.832
+  },
+  {
+    "id": "w14",
+    "text": "ordering",
+    "start": 7.832,
+    "end": 8.445
+  },
+  {
+    "id": "w15",
+    "text": "heuristics",
+    "start": 8.51,
+    "end": 9.372
+  },
+  {
+    "id": "w16",
+    "text": "MRV,",
+    "start": 9.372,
+    "end": 9.79
+  },
+  {
+    "id": "w17",
+    "text": "degree",
+    "start": 9.79,
+    "end": 10.653
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 10.653,
+    "end": 11.107
+  },
+  {
+    "id": "w19",
+    "text": "LCV,",
+    "start": 11.107,
+    "end": 11.581
+  },
+  {
+    "id": "w20",
+    "text": "and",
+    "start": 11.858,
+    "end": 11.926
+  },
+  {
+    "id": "w21",
+    "text": "how",
+    "start": 11.926,
+    "end": 12.068
+  },
+  {
+    "id": "w22",
+    "text": "the",
+    "start": 12.068,
+    "end": 12.194
+  },
+  {
+    "id": "w23",
+    "text": "structure",
+    "start": 12.209,
+    "end": 12.501
+  },
+  {
+    "id": "w24",
+    "text": "of",
+    "start": 12.501,
+    "end": 12.643
+  },
+  {
+    "id": "w25",
+    "text": "a",
+    "start": 12.643,
+    "end": 12.77
+  },
+  {
+    "id": "w26",
+    "text": "problem",
+    "start": 12.986,
+    "end": 13.076
+  },
+  {
+    "id": "w27",
+    "text": "helps.",
+    "start": 13.136,
+    "end": 14.293
+  }
+]

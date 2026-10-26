@@ -1,0 +1,134 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.09,
+    "end": 0.159
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.159,
+    "end": 0.414
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.42,
+    "end": 1.033
+  },
+  {
+    "id": "w3",
+    "text": "how",
+    "start": 1.546,
+    "end": 1.668
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.668,
+    "end": 1.78
+  },
+  {
+    "id": "w5",
+    "text": "judge",
+    "start": 1.854,
+    "end": 2.19
+  },
+  {
+    "id": "w6",
+    "text": "a",
+    "start": 2.19,
+    "end": 2.265
+  },
+  {
+    "id": "w7",
+    "text": "strategy",
+    "start": 2.265,
+    "end": 2.927
+  },
+  {
+    "id": "w8",
+    "text": "(completeness,",
+    "start": 3.086,
+    "end": 4.075
+  },
+  {
+    "id": "w9",
+    "text": "optimality,",
+    "start": 4.38,
+    "end": 5.038
+  },
+  {
+    "id": "w10",
+    "text": "time",
+    "start": 5.095,
+    "end": 5.379
+  },
+  {
+    "id": "w11",
+    "text": "and",
+    "start": 5.379,
+    "end": 5.721
+  },
+  {
+    "id": "w12",
+    "text": "space),",
+    "start": 5.721,
+    "end": 6.29
+  },
+  {
+    "id": "w13",
+    "text": "six",
+    "start": 6.798,
+    "end": 6.923
+  },
+  {
+    "id": "w14",
+    "text": "strategies,",
+    "start": 6.923,
+    "end": 7.666
+  },
+  {
+    "id": "w15",
+    "text": "and",
+    "start": 7.666,
+    "end": 7.781
+  },
+  {
+    "id": "w16",
+    "text": "one",
+    "start": 8.064,
+    "end": 8.116
+  },
+  {
+    "id": "w17",
+    "text": "table",
+    "start": 8.346,
+    "end": 8.493
+  },
+  {
+    "id": "w18",
+    "text": "that",
+    "start": 8.493,
+    "end": 8.796
+  },
+  {
+    "id": "w19",
+    "text": "compares",
+    "start": 8.796,
+    "end": 9.403
+  },
+  {
+    "id": "w20",
+    "text": "them",
+    "start": 9.403,
+    "end": 9.706
+  },
+  {
+    "id": "w21",
+    "text": "all.",
+    "start": 9.706,
+    "end": 10.219
+  }
+]

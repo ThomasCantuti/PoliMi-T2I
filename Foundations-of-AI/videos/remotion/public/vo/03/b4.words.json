@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.12,
+    "end": 0.202
+  },
+  {
+    "id": "w1",
+    "text": "the",
+    "start": 0.202,
+    "end": 0.474
+  },
+  {
+    "id": "w2",
+    "text": "exam",
+    "start": 0.474,
+    "end": 0.836
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.836,
+    "end": 1.107
+  },
+  {
+    "id": "w4",
+    "text": "run",
+    "start": 1.107,
+    "end": 1.354
+  },
+  {
+    "id": "w5",
+    "text": "these",
+    "start": 1.412,
+    "end": 1.823
+  },
+  {
+    "id": "w6",
+    "text": "by",
+    "start": 1.823,
+    "end": 1.996
+  },
+  {
+    "id": "w7",
+    "text": "hand:",
+    "start": 1.996,
+    "end": 2.407
+  },
+  {
+    "id": "w8",
+    "text": "the",
+    "start": 3.006,
+    "end": 3.103
+  },
+  {
+    "id": "w9",
+    "text": "order",
+    "start": 3.189,
+    "end": 3.566
+  },
+  {
+    "id": "w10",
+    "text": "in",
+    "start": 3.575,
+    "end": 3.71
+  },
+  {
+    "id": "w11",
+    "text": "which",
+    "start": 3.71,
+    "end": 4.039
+  },
+  {
+    "id": "w12",
+    "text": "nodes",
+    "start": 4.039,
+    "end": 4.386
+  },
+  {
+    "id": "w13",
+    "text": "are",
+    "start": 4.386,
+    "end": 4.502
+  },
+  {
+    "id": "w14",
+    "text": "expanded,",
+    "start": 4.502,
+    "end": 5.409
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 5.568,
+    "end": 5.605
+  },
+  {
+    "id": "w16",
+    "text": "frontier",
+    "start": 5.605,
+    "end": 6.161
+  },
+  {
+    "id": "w17",
+    "text": "at",
+    "start": 6.161,
+    "end": 6.347
+  },
+  {
+    "id": "w18",
+    "text": "each",
+    "start": 6.347,
+    "end": 6.57
+  },
+  {
+    "id": "w19",
+    "text": "step,",
+    "start": 6.57,
+    "end": 7.098
+  },
+  {
+    "id": "w20",
+    "text": "the",
+    "start": 7.496,
+    "end": 7.517
+  },
+  {
+    "id": "w21",
+    "text": "solution",
+    "start": 7.517,
+    "end": 8.191
+  },
+  {
+    "id": "w22",
+    "text": "found.",
+    "start": 8.319,
+    "end": 8.832
+  }
+]

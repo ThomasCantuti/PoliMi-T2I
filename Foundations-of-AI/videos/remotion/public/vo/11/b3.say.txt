@@ -1,0 +1,1 @@
+In this chapter: writing states and action schemas in STRIPS and P-D-D-L, forward and backward planning, relevant and consistent actions, planning heuristics, and sat-plan.

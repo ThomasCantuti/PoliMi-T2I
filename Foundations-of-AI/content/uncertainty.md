@@ -132,18 +132,10 @@ A Bayesian network is a **directed acyclic graph** where
 Burglary network (AIMA Figure 13.2): the alarm reacts to burglaries and (sometimes) to earthquakes; John and
 Mary call when they hear it.
 
-```text
-   Burglary               Earthquake          P(b) = 0.001        P(e) = 0.002
-         \                 /
-          v               v                   B  E | P(a | B, E)
-             Alarm                            t  t |   0.95
-           /       \                          t  f |   0.94
-          v         v                         f  t |   0.29
-    JohnCalls     MaryCalls                   f  f |   0.001
-
-    A | P(j | A)       A | P(m | A)
-    t |   0.90         t |   0.70
-    f |   0.05         f |   0.01
+```fig bn-burglary
+Burglary → Alarm ← Earthquake; Alarm → JohnCalls; Alarm → MaryCalls.
+P(b) = 0.001, P(e) = 0.002. P(a | B, E): tt 0.95, tf 0.94, ft 0.29, ff 0.001.
+P(j | A): t 0.90, f 0.05. P(m | A): t 0.70, f 0.01.
 ```
 
 **Compactness.** A boolean node with $k$ boolean parents needs $2^k$ numbers (one per row; the other column is
@@ -152,14 +144,8 @@ joint. Burglary: $1 + 1 + 4 + 2 + 2 = 10$ instead of 31; $n = 30$, $k = 5$: 960 
 
 The **student network** used by the course (exams 6 Feb 2024 and 12 Jul 2024):
 
-```text
-   Difficulty {d0, d1}          Knowledge {k0, k1}
-              \                /           \
-               v              v             v
-              Grade {g1, g2, g3}         Test {s0, s1}
-                     |
-                     v
-              Letter {L0, L1}
+```fig bn-student
+Difficulty {d0, d1} → Grade {g1, g2, g3} ← Knowledge {k0, k1}; Knowledge → Test {s0, s1}; Grade → Letter {L0, L1}. Each node is drawn with its CPT (the numbers of the table below).
 ```
 
 | $P(D)$ | $P(K)$ | $K, D$ | $g_1$ | $g_2$ | $g_3$ | $G$ | $L_0$ | $L_1$ | $K$ | $s_0$ | $s_1$ |
@@ -212,6 +198,11 @@ equally good one:
 
 With a diagnostic ordering, the numbers are also harder to assess ($P(E \mid A, B)$: who knows that?).
 
+```fig bn-ordering
+The three orderings of the table built node by node: B, E, A, J, M gives 1 + 1 + 4 + 2 + 2 = 10 numbers;
+M, J, A, B, E gives 1 + 2 + 4 + 2 + 4 = 13; M, J, E, B, A gives 1 + 2 + 4 + 8 + 16 = 31.
+```
+
 Telescopes (exam 8 Sep 2025): $N$ stars, measurements $M_1, M_2$, focus problems $F_1, F_2$. The causal network
 is $N \to M_1 \leftarrow F_1$, $N \to M_2 \leftarrow F_2$, with $P(F_1), P(F_2), P(N), P(M_1 \mid N, F_1), P(M_2 \mid N, F_2)$. The ordering $M_1, M_2, N, F_1, F_2$ gives a correct but bigger network:
 $P(M_1), P(M_2 \mid M_1), P(N \mid M_1, M_2), P(F_1 \mid M_1, N), P(F_2 \mid M_2, N)$.
@@ -239,6 +230,11 @@ directions). Everything follows from three triples:
 | $X \to Y \to Z$ | causal chain | active | **blocked** |
 | $X \leftarrow Y \to Z$ | common cause (fork) | active | **blocked** |
 | $X \to Y \leftarrow Z$ | common effect (**v-structure**) | **blocked** | active (also if a **descendant** of $Y$ is observed) |
+
+```fig bn-triples
+Chain X → Y → Z and fork X ← Y → Z: active when Y is not observed, blocked when Y is observed.
+V-structure X → Y ← Z: blocked when Y is not observed, active when Y (or a descendant of Y) is observed.
+```
 
 > **Key idea:** a trail $X_1 - X_2 - \dots - X_n$ is **active** given the evidence $Z$ iff
 > (1) for every v-structure $X_{i-1} \to X_i \leftarrow X_{i+1}$, $X_i$ or one of its descendants is in $Z$, and
@@ -268,6 +264,11 @@ def is_active(g, trail, evidence):          # g = {node: tuple of parents}
 **Explaining away.** Burglary and Earthquake are independent ($B \to A \leftarrow E$ is blocked). Once the
 alarm is heard they compete to explain it: $P(b \mid a) = 0.374$, but $P(b \mid a, e) = 0.003$. Hearing John
 call (a descendant of Alarm) is enough to make them dependent.
+
+```fig bn-dsep
+Interactive burglary network: click nodes to observe them and check the trails Burglary–Alarm–Earthquake (v-structure),
+JohnCalls–Alarm–MaryCalls (fork) and Burglary–Alarm–JohnCalls (chain).
+```
 
 > **Exam trap:** the v-structure works the **opposite** way from chains and forks: observing the middle node
 > (or any descendant) **opens** it. In the exam of 16 Jan 2025, observing $HD$ closes all the trails through
@@ -309,6 +310,12 @@ function ENUMERATE-ALL(vars, e) returns a real number        # vars in topologic
 
 Burglary: $\mathbf{P}(B \mid j, m) = \alpha \langle 0.00059224, 0.0014919 \rangle = \langle 0.284, 0.716 \rangle$.
 Time $O(2^n)$ for $n$ boolean variables, space $O(n)$.
+
+```fig bn-enumeration
+The enumeration tree of P(b, j, m) = P(b) Σ_e P(e) Σ_a P(a | b, e) P(j | a) P(m | a): paths e,a 0.5985; e,¬a 0.000025;
+¬e,a 0.5922; ¬e,¬a 0.00003; branch e 0.002·0.598525 = 0.00119705; branch ¬e 0.998·0.59223 = 0.59104554;
+P(b, j, m) = 0.00059224, P(¬b, j, m) = 0.0014919, normalized ⟨0.284, 0.716⟩.
+```
 
 **Worked example 1: a marginal** (exam 6 Feb 2024, student network above):
 

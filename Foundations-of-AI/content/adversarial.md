@@ -87,12 +87,9 @@ def minimax_search(game: Game, state: Any) -> tuple[float, Any]:
 
 ### Worked example (Figure 5.2, slides p. 353)
 
-```text
-                    MAX  = 3          best move: the left one
-          /          |           \
-      MIN = 3     MIN = 2      MIN = 2
-      / | \       / | \        / | \
-     3 12  8     2  4  6     14  5  2
+```viz gametree
+Figure 5.2 – minimax on a 3 × 3 tree
+MAX root over three MIN nodes with leaves (3, 12, 8), (2, 4, 6), (14, 5, 2): MIN values 3, 2, 2; MAX = 3, best move the left one.
 ```
 
 Each MIN node takes the minimum of its leaves (3, 2, 2); MAX takes the maximum (3).
@@ -177,6 +174,11 @@ values.
 
 Leaves read: 3, 12, 8, 2, 14, 5, 2 (7 of 9).
 
+```viz gametree
+Figure 6.5 – alpha-beta on the same tree
+Alpha-beta on the Figure 5.2 tree: C is pruned after its first leaf 2 (2 ≤ α = 3); value 3, move to B.
+```
+
 > **Exam trap:** the value returned for a pruned node is only a **bound** (C is "≤ 2", not "= 2"). Write bounds,
 > not exact values, for pruned nodes. And prune on **equality** too: $v \le \alpha$ / $v \ge \beta$.
 
@@ -202,6 +204,11 @@ Order 0, 11: after 0 the MIN node is $\le 0 \le \alpha = 10$ and 11 is pruned.
 Homework tree (slides p. 379), MAX–MIN–MAX: `[[[10, 6], [100, 8]], [[1, 2], [20, 4]]]` (edges a…n). Value 10.
 Alpha-beta reads 10, 6, 100 (then 8 is pruned: MAX ≥ 100 ≥ β = 10), 1, 2 (MAX = 2 ≤ α = 10: the subtree l with 20
 and 4 is pruned). 5 leaves $= 2^2 + 2^1 - 1$: this order is already optimal.
+
+```viz gametree
+Move ordering homework – slide p. 379
+Alpha-beta on [[[10, 6], [100, 8]], [[1, 2], [20, 4]]]: reads 10, 6, 100, 1, 2; value 10. Try "Shuffle" and "Best ordering".
+```
 
 Perfect ordering cannot be guaranteed in practice (it requires knowing the values!), but as a general principle
 **the most promising moves should be expanded first** (slides p. 380): previous best moves from iterative deepening,
@@ -230,11 +237,9 @@ The ideal evaluation function returns the actual minimax value.
 $e(s)$ = rows, columns and diagonals still **open** for MAX − those open for MIN ($f_1$, $f_2$ with $w_1 = 1$, $w_2 = -1$).
 A line is open for a player if it contains no opponent piece.
 
-```text
- . . .        . . .        X O X
- . . .        . X O        . O .
- . . .        . . .        . . .
-e = 8-8 = 0  e = 6-4 = 2  e = 3-3 = 0
+```fig adv-ttt-eval
+Three positions: empty board e = 8 − 8 = 0; X center, O right edge e = 6 − 4 = 2; X O X / . O . / . . . e = 3 − 3 = 0.
+X's first move: center 4, corner 3, edge 2. With h = 2: center 1, corner −1, edge −2, so X plays the center.
 ```
 
 First move: center $8-4 = 4$, corner $8-5 = 3$, edge $8-6 = 2$. With $h = 2$ (X moves, O replies, then evaluate),
@@ -255,12 +260,9 @@ Dice (backgammon), unpredictable opponents, actions that fail (wheels slip): we 
 
 Slides p. 392–393: each MIN action happens with probability 0.5:
 
-```text
-                     MAX = 54.5   (move: right)
-           /                           \
-  0.5·10 + 0.5·10 = 10        0.5·9 + 0.5·100 = 54.5
-      /      \                    /       \
-     10       10                 9        100
+```viz gametree
+Expectimax – slide p. 393
+MAX over two chance nodes with outcomes 0.5/0.5: left 0.5·10 + 0.5·10 = 10, right 0.5·9 + 0.5·100 = 54.5; MAX = 54.5, move right.
 ```
 
 With MIN nodes the answer would be the left branch (10 vs 9). With chance nodes, right (10 vs 54.5).
@@ -283,12 +285,9 @@ Time $O(b^m n^m)$ with $n$ outcomes per chance node: chance multiplies the branc
 
 ### Values matter (slides p. 397)
 
-```text
-           MAX                                  MAX
-     a1 /       \ a2                      a1 /       \ a2
-  CHANCE 2.1   CHANCE 1.3              CHANCE 21    CHANCE 40.9
-  .9 /  \ .1   .9 /  \ .1              .9 /  \ .1   .9 /  \ .1
-   2      3     1      4                20    30     1    400       (leaves of each MIN node are equal)
+```fig adv-values-matter
+MAX over two chance nodes with outcomes 0.9/0.1 (each outcome a MIN node with equal leaves).
+Leaves 2, 3 | 1, 4: chance values 2.1 and 1.3, MAX plays a1. Leaves 20, 30 | 1, 400: chance values 21 and 40.9, MAX plays a2.
 ```
 
 The transformation $1 \to 1, 2 \to 20, 3 \to 30, 4 \to 400$ preserves the order of the leaves, yet the best move flips

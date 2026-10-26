@@ -1,0 +1,128 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.12,
+    "end": 0.188
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.188,
+    "end": 0.475
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.475,
+    "end": 1.054
+  },
+  {
+    "id": "w3",
+    "text": "minimax,",
+    "start": 1.593,
+    "end": 2.347
+  },
+  {
+    "id": "w4",
+    "text": "alpha-beta",
+    "start": 2.577,
+    "end": 3.044
+  },
+  {
+    "id": "w5",
+    "text": "pruning",
+    "start": 3.044,
+    "end": 3.613
+  },
+  {
+    "id": "w6",
+    "text": "and",
+    "start": 3.613,
+    "end": 3.865
+  },
+  {
+    "id": "w7",
+    "text": "move",
+    "start": 3.865,
+    "end": 4.202
+  },
+  {
+    "id": "w8",
+    "text": "ordering,",
+    "start": 4.202,
+    "end": 5.014
+  },
+  {
+    "id": "w9",
+    "text": "evaluation",
+    "start": 5.089,
+    "end": 5.898
+  },
+  {
+    "id": "w10",
+    "text": "functions,",
+    "start": 5.898,
+    "end": 6.884
+  },
+  {
+    "id": "w11",
+    "text": "games",
+    "start": 7.017,
+    "end": 7.316
+  },
+  {
+    "id": "w12",
+    "text": "with",
+    "start": 7.316,
+    "end": 7.659
+  },
+  {
+    "id": "w13",
+    "text": "dice,",
+    "start": 7.659,
+    "end": 8.047
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 8.311,
+    "end": 8.517
+  },
+  {
+    "id": "w15",
+    "text": "games",
+    "start": 8.714,
+    "end": 8.893
+  },
+  {
+    "id": "w16",
+    "text": "with",
+    "start": 8.893,
+    "end": 9.146
+  },
+  {
+    "id": "w17",
+    "text": "more",
+    "start": 9.146,
+    "end": 9.39
+  },
+  {
+    "id": "w18",
+    "text": "than",
+    "start": 9.635,
+    "end": 9.766
+  },
+  {
+    "id": "w19",
+    "text": "two",
+    "start": 9.766,
+    "end": 9.954
+  },
+  {
+    "id": "w20",
+    "text": "players.",
+    "start": 9.973,
+    "end": 10.752
+  }
+]

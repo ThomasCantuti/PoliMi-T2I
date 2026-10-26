@@ -1,0 +1,1 @@
+Until now a state was a black box. Search could ask two things: is this the goal, and what comes next? To color a map, that means filling in every region and discovering a clash only at the end. Depth-first search and heuristics are still useful here. They just can't see inside the box.

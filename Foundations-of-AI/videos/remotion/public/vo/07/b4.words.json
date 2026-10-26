@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "This",
+    "start": 0.08,
+    "end": 0.316
+  },
+  {
+    "id": "w1",
+    "text": "is",
+    "start": 0.316,
+    "end": 0.468
+  },
+  {
+    "id": "w2",
+    "text": "one",
+    "start": 0.468,
+    "end": 0.695
+  },
+  {
+    "id": "w3",
+    "text": "of",
+    "start": 0.695,
+    "end": 0.847
+  },
+  {
+    "id": "w4",
+    "text": "the",
+    "start": 0.847,
+    "end": 1.074
+  },
+  {
+    "id": "w5",
+    "text": "most",
+    "start": 1.074,
+    "end": 1.361
+  },
+  {
+    "id": "w6",
+    "text": "common",
+    "start": 1.411,
+    "end": 1.833
+  },
+  {
+    "id": "w7",
+    "text": "exam",
+    "start": 1.833,
+    "end": 2.136
+  },
+  {
+    "id": "w8",
+    "text": "questions:",
+    "start": 2.136,
+    "end": 2.844
+  },
+  {
+    "id": "w9",
+    "text": "a",
+    "start": 3.423,
+    "end": 3.454
+  },
+  {
+    "id": "w10",
+    "text": "game",
+    "start": 3.454,
+    "end": 3.874
+  },
+  {
+    "id": "w11",
+    "text": "tree,",
+    "start": 3.874,
+    "end": 4.534
+  },
+  {
+    "id": "w12",
+    "text": "the",
+    "start": 4.953,
+    "end": 5.156
+  },
+  {
+    "id": "w13",
+    "text": "minimax",
+    "start": 5.156,
+    "end": 5.614
+  },
+  {
+    "id": "w14",
+    "text": "value",
+    "start": 5.614,
+    "end": 5.86
+  },
+  {
+    "id": "w15",
+    "text": "of",
+    "start": 5.979,
+    "end": 6.073
+  },
+  {
+    "id": "w16",
+    "text": "every",
+    "start": 6.565,
+    "end": 6.632
+  },
+  {
+    "id": "w17",
+    "text": "node,",
+    "start": 6.632,
+    "end": 7.048
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 7.404,
+    "end": 7.543
+  },
+  {
+    "id": "w19",
+    "text": "the",
+    "start": 7.543,
+    "end": 7.712
+  },
+  {
+    "id": "w20",
+    "text": "branches",
+    "start": 7.761,
+    "end": 8.337
+  },
+  {
+    "id": "w21",
+    "text": "alpha-beta",
+    "start": 8.416,
+    "end": 9.12
+  },
+  {
+    "id": "w22",
+    "text": "prunes.",
+    "start": 9.12,
+    "end": 9.835
+  }
+]

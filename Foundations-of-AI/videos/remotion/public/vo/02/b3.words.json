@@ -1,0 +1,176 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.13,
+    "end": 0.198
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.198,
+    "end": 0.515
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.515,
+    "end": 1.124
+  },
+  {
+    "id": "w3",
+    "text": "the",
+    "start": 1.696,
+    "end": 1.791
+  },
+  {
+    "id": "w4",
+    "text": "five",
+    "start": 1.885,
+    "end": 2.075
+  },
+  {
+    "id": "w5",
+    "text": "ingredients",
+    "start": 2.075,
+    "end": 2.798
+  },
+  {
+    "id": "w6",
+    "text": "of",
+    "start": 2.807,
+    "end": 2.928
+  },
+  {
+    "id": "w7",
+    "text": "a",
+    "start": 2.928,
+    "end": 2.979
+  },
+  {
+    "id": "w8",
+    "text": "search",
+    "start": 2.979,
+    "end": 3.298
+  },
+  {
+    "id": "w9",
+    "text": "problem,",
+    "start": 3.376,
+    "end": 4.151
+  },
+  {
+    "id": "w10",
+    "text": "counting",
+    "start": 4.506,
+    "end": 4.999
+  },
+  {
+    "id": "w11",
+    "text": "states,",
+    "start": 5.06,
+    "end": 5.623
+  },
+  {
+    "id": "w12",
+    "text": "abstraction,",
+    "start": 5.938,
+    "end": 6.826
+  },
+  {
+    "id": "w13",
+    "text": "different",
+    "start": 6.975,
+    "end": 7.132
+  },
+  {
+    "id": "w14",
+    "text": "formulations",
+    "start": 7.728,
+    "end": 8.315
+  },
+  {
+    "id": "w15",
+    "text": "of",
+    "start": 8.315,
+    "end": 8.433
+  },
+  {
+    "id": "w16",
+    "text": "the",
+    "start": 8.443,
+    "end": 8.638
+  },
+  {
+    "id": "w17",
+    "text": "same",
+    "start": 8.638,
+    "end": 8.951
+  },
+  {
+    "id": "w18",
+    "text": "problem,",
+    "start": 8.951,
+    "end": 9.656
+  },
+  {
+    "id": "w19",
+    "text": "and",
+    "start": 9.783,
+    "end": 9.88
+  },
+  {
+    "id": "w20",
+    "text": "how",
+    "start": 9.88,
+    "end": 10.096
+  },
+  {
+    "id": "w21",
+    "text": "search",
+    "start": 10.096,
+    "end": 10.448
+  },
+  {
+    "id": "w22",
+    "text": "trees,",
+    "start": 10.575,
+    "end": 11.074
+  },
+  {
+    "id": "w23",
+    "text": "tree",
+    "start": 11.271,
+    "end": 11.332
+  },
+  {
+    "id": "w24",
+    "text": "search",
+    "start": 11.332,
+    "end": 11.952
+  },
+  {
+    "id": "w25",
+    "text": "and",
+    "start": 11.952,
+    "end": 12.186
+  },
+  {
+    "id": "w26",
+    "text": "graph",
+    "start": 12.186,
+    "end": 12.573
+  },
+  {
+    "id": "w27",
+    "text": "search",
+    "start": 12.573,
+    "end": 13.04
+  },
+  {
+    "id": "w28",
+    "text": "work.",
+    "start": 13.04,
+    "end": 13.376
+  }
+]

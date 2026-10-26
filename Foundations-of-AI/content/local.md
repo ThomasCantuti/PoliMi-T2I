@@ -48,13 +48,10 @@ must be broken somehow (first, last, random).
 Place two hospitals on a 5 × 10 grid so that the sum of the Manhattan distances from each house to its
 **closest** hospital is minimal.
 
-```text
-      0 1 2 3 4 5 6 7 8 9
-   0  . . . . H . . . h .      houses   (0,8) (1,2) (3,1) (4,6)
-   1  . . h . . . . . . .      hospitals (0,4) (3,9): cost 3 + 6 + 4 + 4 = 17   (p. 324)
-   2  . . . . . . . . . .
-   3  . h . . . . . . . H
-   4  . . . . . . h . . .
+```viz local
+Homes & hospitals – steepest descent (slides p. 322–330)
+5 × 10 grid, houses at (0,8) (1,2) (3,1) (4,6), hospitals start at (0,4) (3,9): cost 3 + 6 + 4 + 4 = 17 (p. 324).
+Steepest descent moves one hospital one cell at a time.
 ```
 
 Neighbors: move one hospital one cell up/down/left/right (p. 325: 6 neighbors here, with costs
@@ -74,6 +71,11 @@ Neighbors: move one hospital one cell up/down/left/right (p. 325: 6 neighbors he
 > to a maximum that is not the global maximum" (p. 330).
 
 ## Why hill climbing gets stuck (Figure 4.1, p. 331)
+
+```fig local-landscape
+The objective function over the state space: a shoulder, the global maximum, a local maximum and a "flat" local maximum.
+From the current state every uphill step leads to the local maximum.
+```
 
 | landscape feature | what it is | effect |
 |---|---|---|
@@ -108,6 +110,11 @@ neighbors (move one queen within its column), 8 of which tie for the best value 
 goes $17 \to 12 \to 7 \to 3 \to 2 \to 1$ and stops. (a) a state with $h = 1$ (only the queens of columns 4 and
 7 attack each other) where **every** neighbor is worse: a local minimum.
 
+```viz local
+8-queens hill climbing from Fig. 4.3(b) (h = 17)
+Steepest descent on 8-queens from the h = 17 state of Figure 4.3(b): 17 → 12 → 7 → 3 → 2 → 1, then stuck.
+```
+
 ## Min-conflicts
 
 The local-search algorithm for CSPs (AIMA 6.4, the `min_conflicts` of csp.ipynb the slides point to, p. 336):
@@ -125,6 +132,11 @@ return failure
 It is hill climbing that changes **one variable at a time** with random choices, which makes plateaus easy
 to cross. On n-queens the number of steps barely depends on $n$ (≈ 50 steps for a million queens, with a
 greedy initial assignment). Still local: from Figure 4.3(a) it never moves.
+
+```viz local
+8-queens – min-conflicts
+Min-conflicts on 8-queens: pick a conflicted queen at random, move it to the row with the fewest conflicts.
+```
 
 | | backtracking (+ FC, AC-3, MRV) | hill climbing / min-conflicts |
 |---|---|---|

@@ -72,6 +72,23 @@ def result(state, a):
     return (state - a.delete) | a.add
 ```
 
+The robot-and-box domain of exam 30 Aug 2022 (rooms R1–R2–R3 joined by doors D1 and D2), used again in the worked
+examples below:
+
+```text
+GoThru(d, r1, r2)        P: InRoom(ROBOT,r1) ∧ Connects(d,r1,r2)
+                         E: InRoom(ROBOT,r2) ∧ ¬InRoom(ROBOT,r1)
+PushThru(b, d, r1, r2)   P: InRoom(ROBOT,r1) ∧ InRoom(b,r1) ∧ Connects(d,r1,r2) ∧ Box(b)
+                         E: InRoom(ROBOT,r2) ∧ InRoom(b,r2) ∧ ¬InRoom(ROBOT,r1) ∧ ¬InRoom(b,r1)
+```
+
+```fig plan-rooms
+State: InRoom(ROBOT,R1), InRoom(BOX1,R2), Connects(D1,R1,R2), Connects(D1,R2,R1), Connects(D2,R2,R3), Connects(D2,R3,R2), Box(BOX1).
+PushThru(BOX1,D1,R1,R2) is not applicable: InRoom(BOX1,R1) is not in the state (closed world: false).
+GoThru(D1,R1,R2) is applicable; RESULT deletes InRoom(ROBOT,R1) and adds InRoom(ROBOT,R2), every other fact is copied.
+Then PushThru(BOX1,D1,R2,R1) is applicable and moves robot and box to R1: the goal Box(x) ∧ InRoom(x, R1) holds.
+```
+
 A **planning domain** is a set of action schemas; a **planning problem** adds the constants, the initial state
 and the goal. A **plan** is a sequence of ground actions, each applicable in the state produced by the previous
 ones, whose final state satisfies the goal.
@@ -189,7 +206,7 @@ def forward_bfs(init, goal, actions):           # actions: ground actions, in th
 **Worked example (exam 30 Aug 2022).** Rooms R1–R2–R3 linked by doors D1, D2 (connections in both
 directions), robot in R1, BOX1 in R2, goal Box(x) ∧ InRoom(x, R1). Lexicographic order of the actions:
 
-```text
+```fig plan-forward
 [InRoom(ROBOT,R1), InRoom(BOX1,R2), Connects(...)×4, Box(BOX1)]
  └─ GoThru(D1,R1,R2) → [InRoom(ROBOT,R2), InRoom(BOX1,R2), …]
      ├─ GoThru(D1,R2,R1)          → same as the root: repeated
@@ -240,6 +257,16 @@ def backward_bfs(init, goal, actions):
                     reached.add(g1)
                     frontier.append((g1, [a.name] + plan))
     return None
+```
+
+The same robot-and-box problem, solved backwards:
+
+```fig plan-regression
+G0 = Box(BOX1), InRoom(BOX1,R1). Of the 8 ground actions only PushThru(BOX1,D1,R2,R1) is relevant and consistent.
+G1 = R[G0, PushThru(BOX1,D1,R2,R1)] = Box(BOX1), InRoom(ROBOT,R2), InRoom(BOX1,R2), Connects(D1,R2,R1): not satisfied by Init.
+Relevant and consistent for G1: GoThru(D1,R1,R2), GoThru(D2,R3,R2), PushThru(BOX1,D1,R1,R2), PushThru(BOX1,D2,R3,R2).
+G2 = R[G1, GoThru(D1,R1,R2)] = Box(BOX1), InRoom(ROBOT,R1), InRoom(BOX1,R2), Connects(D1,R1,R2), Connects(D1,R2,R1): satisfied by Init.
+Plan (found last-first): GoThru(D1,R1,R2), PushThru(BOX1,D1,R2,R1).
 ```
 
 **Worked example (exam 14 Jan 2026).** Robot with two arms, four balls in room RA, goal
@@ -369,6 +396,14 @@ Exam 16 Jan 2025: init contains $\lnot AtB1T2^0$, goal contains $AtB1T2^0$ → D
 unit propagation; there is no plan with zero actions. The first satisfiable $L$ is the length of a shortest
 plan (exam 8 Sep 2023: $L = 1$, the plan Move(R1, L1, L2)). For a larger $L$ the sentence stays satisfiable,
 because the axioms allow time steps with **no action** (they forbid two actions per step, not zero).
+
+```fig plan-satplan
+Two rooms: fluents AtR1, AtR2; actions MoveR (P: AtR1, E: AtR2 ∧ ¬AtR1) and MoveL (P: AtR2, E: AtR1 ∧ ¬AtR2); Init AtR1, goal AtR2.
+L = 0: AtR1^0 ∧ ¬AtR2^0 ∧ AtR2^0 is unsatisfiable.
+L = 1: init and goal fix AtR1^0, ¬AtR2^0, AtR2^1; the precondition axiom forces ¬MoveL^0; the fluent axiom of AtR2 forces MoveR^0,
+that of AtR1 forces ¬AtR1^1. One model: plan MoveR.
+L = 2: two models, MoveR then no action, or no action then MoveR.
+```
 
 > **Exam trap:** list the fluents **ground** and **only the time-dependent ones**: In(Ba1,Bk1), In(Ba1,Bk2),
 > In(Ba2,Bk1), In(Ba2,Bk2) — not In(Ba1,Ba1) (exam 18 Jan 2024); the 5 `…-mixed`/`batter-in-pan`/`cake-baked`

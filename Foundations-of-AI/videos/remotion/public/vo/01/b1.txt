@@ -1,0 +1,1 @@
+This course builds one thing: an agent. It perceives the world, decides, acts, and then does it again. Every chapter after this one is a different answer to the same question: how should it decide? By searching, by satisfying constraints, by playing against an opponent, by learning from rewards, by reasoning with logic, and with probability.

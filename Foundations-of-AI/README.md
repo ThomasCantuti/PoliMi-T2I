@@ -65,10 +65,13 @@ runner/               aima.py (course helpers), harness.py (test runner), catalo
 problems/<topic>/     one Python file per problem (NN_* code, qNN_* quiz, tNN_* trace,
                       wNN_* exercise-book exercise, xNN_* exam-style: titles start with "Exam ·")
 content/<topic>.md    theory pages
+content/videos/       chapter intro videos (<topic>.mp4, Git LFS), shown at the top of each Theory tab
+videos/               how they are made: SCRIPTS.md, remotion/ (one composition per chapter), tools/ (local Kokoro voice)
 exams/<year>/         past written exams with official solutions (_A, _B… = versions of the same exam)
 *.pdf                 course slides, the RL slides, exercises.pdf (exercise book), FAI_Calendar.pdf
 web/                  Vite 8 + React 19 + TypeScript 7 + Tailwind 4 frontend
   src/viz/*.ts        framework-agnostic visualizers (search, csp, local, gametree, mcts, bandit)
+  src/figs/*.ts       theory figures and steppers, placed with ```fig <name>``` blocks in content/*.md
 ```
 
 Development: `cd web && npm run dev` (http://127.0.0.1:5173, needs `python3 server.py` running for the API),

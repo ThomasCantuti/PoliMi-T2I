@@ -1,0 +1,134 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.14,
+    "end": 0.285
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.285,
+    "end": 0.67
+  },
+  {
+    "id": "w2",
+    "text": "asks",
+    "start": 0.67,
+    "end": 1.054
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 1.054,
+    "end": 1.345
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.345,
+    "end": 1.532
+  },
+  {
+    "id": "w5",
+    "text": "run",
+    "start": 1.532,
+    "end": 1.823
+  },
+  {
+    "id": "w6",
+    "text": "A*",
+    "start": 1.823,
+    "end": 1.916
+  },
+  {
+    "id": "w7",
+    "text": "on",
+    "start": 2.342,
+    "end": 2.487
+  },
+  {
+    "id": "w8",
+    "text": "a",
+    "start": 2.487,
+    "end": 2.56
+  },
+  {
+    "id": "w9",
+    "text": "graph",
+    "start": 2.56,
+    "end": 2.944
+  },
+  {
+    "id": "w10",
+    "text": "step",
+    "start": 2.944,
+    "end": 3.277
+  },
+  {
+    "id": "w11",
+    "text": "by",
+    "start": 3.422,
+    "end": 3.723
+  },
+  {
+    "id": "w12",
+    "text": "step,",
+    "start": 3.723,
+    "end": 3.942
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 4.392,
+    "end": 4.495
+  },
+  {
+    "id": "w14",
+    "text": "to",
+    "start": 4.495,
+    "end": 4.577
+  },
+  {
+    "id": "w15",
+    "text": "design",
+    "start": 4.577,
+    "end": 5.151
+  },
+  {
+    "id": "w16",
+    "text": "a",
+    "start": 5.151,
+    "end": 5.223
+  },
+  {
+    "id": "w17",
+    "text": "heuristic",
+    "start": 5.223,
+    "end": 6.002
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 6.135,
+    "end": 6.217
+  },
+  {
+    "id": "w19",
+    "text": "prove",
+    "start": 6.217,
+    "end": 6.576
+  },
+  {
+    "id": "w20",
+    "text": "it",
+    "start": 6.576,
+    "end": 6.72
+  },
+  {
+    "id": "w21",
+    "text": "admissible.",
+    "start": 6.72,
+    "end": 7.509
+  }
+]

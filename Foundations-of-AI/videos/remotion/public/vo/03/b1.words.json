@@ -1,0 +1,302 @@
+[
+  {
+    "id": "w0",
+    "text": "You",
+    "start": 0.12,
+    "end": 0.211
+  },
+  {
+    "id": "w1",
+    "text": "can",
+    "start": 0.211,
+    "end": 0.422
+  },
+  {
+    "id": "w2",
+    "text": "now",
+    "start": 0.422,
+    "end": 0.634
+  },
+  {
+    "id": "w3",
+    "text": "write",
+    "start": 0.634,
+    "end": 0.977
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 0.977,
+    "end": 0.997
+  },
+  {
+    "id": "w5",
+    "text": "problem",
+    "start": 1.067,
+    "end": 1.551
+  },
+  {
+    "id": "w6",
+    "text": "as",
+    "start": 1.551,
+    "end": 1.722
+  },
+  {
+    "id": "w7",
+    "text": "states,",
+    "start": 1.722,
+    "end": 2.297
+  },
+  {
+    "id": "w8",
+    "text": "actions",
+    "start": 2.538,
+    "end": 3.26
+  },
+  {
+    "id": "w9",
+    "text": "and",
+    "start": 3.26,
+    "end": 3.395
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 3.467,
+    "end": 3.508
+  },
+  {
+    "id": "w11",
+    "text": "goal",
+    "start": 3.508,
+    "end": 3.715
+  },
+  {
+    "id": "w12",
+    "text": "test,",
+    "start": 3.787,
+    "end": 4.159
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 4.51,
+    "end": 4.603
+  },
+  {
+    "id": "w14",
+    "text": "search",
+    "start": 4.603,
+    "end": 5.036
+  },
+  {
+    "id": "w15",
+    "text": "grows",
+    "start": 5.036,
+    "end": 5.398
+  },
+  {
+    "id": "w16",
+    "text": "a",
+    "start": 5.398,
+    "end": 5.408
+  },
+  {
+    "id": "w17",
+    "text": "tree",
+    "start": 5.48,
+    "end": 5.759
+  },
+  {
+    "id": "w18",
+    "text": "of",
+    "start": 5.759,
+    "end": 5.904
+  },
+  {
+    "id": "w19",
+    "text": "paths",
+    "start": 5.904,
+    "end": 6.234
+  },
+  {
+    "id": "w20",
+    "text": "from",
+    "start": 6.317,
+    "end": 6.534
+  },
+  {
+    "id": "w21",
+    "text": "the",
+    "start": 6.606,
+    "end": 6.73
+  },
+  {
+    "id": "w22",
+    "text": "start.",
+    "start": 6.998,
+    "end": 7.36
+  },
+  {
+    "id": "w23",
+    "text": "At",
+    "start": 7.971,
+    "end": 8.29
+  },
+  {
+    "id": "w24",
+    "text": "every",
+    "start": 8.29,
+    "end": 8.608
+  },
+  {
+    "id": "w25",
+    "text": "moment",
+    "start": 8.608,
+    "end": 8.964
+  },
+  {
+    "id": "w26",
+    "text": "some",
+    "start": 8.964,
+    "end": 9.267
+  },
+  {
+    "id": "w27",
+    "text": "nodes",
+    "start": 9.267,
+    "end": 9.646
+  },
+  {
+    "id": "w28",
+    "text": "are",
+    "start": 9.646,
+    "end": 9.873
+  },
+  {
+    "id": "w29",
+    "text": "waiting",
+    "start": 9.873,
+    "end": 10.229
+  },
+  {
+    "id": "w30",
+    "text": "to",
+    "start": 10.434,
+    "end": 10.563
+  },
+  {
+    "id": "w31",
+    "text": "be",
+    "start": 10.563,
+    "end": 10.707
+  },
+  {
+    "id": "w32",
+    "text": "expanded:",
+    "start": 10.714,
+    "end": 11.366
+  },
+  {
+    "id": "w33",
+    "text": "the",
+    "start": 11.833,
+    "end": 11.948
+  },
+  {
+    "id": "w34",
+    "text": "frontier.",
+    "start": 11.993,
+    "end": 12.703
+  },
+  {
+    "id": "w35",
+    "text": "One",
+    "start": 13.314,
+    "end": 13.936
+  },
+  {
+    "id": "w36",
+    "text": "decision",
+    "start": 13.936,
+    "end": 14.114
+  },
+  {
+    "id": "w37",
+    "text": "is",
+    "start": 14.114,
+    "end": 14.255
+  },
+  {
+    "id": "w38",
+    "text": "left,",
+    "start": 14.255,
+    "end": 14.543
+  },
+  {
+    "id": "w39",
+    "text": "and",
+    "start": 14.543,
+    "end": 14.758
+  },
+  {
+    "id": "w40",
+    "text": "it",
+    "start": 14.758,
+    "end": 14.899
+  },
+  {
+    "id": "w41",
+    "text": "changes",
+    "start": 14.899,
+    "end": 15.38
+  },
+  {
+    "id": "w42",
+    "text": "everything:",
+    "start": 15.454,
+    "end": 16.394
+  },
+  {
+    "id": "w43",
+    "text": "which",
+    "start": 16.878,
+    "end": 17.138
+  },
+  {
+    "id": "w44",
+    "text": "frontier",
+    "start": 17.138,
+    "end": 17.762
+  },
+  {
+    "id": "w45",
+    "text": "node",
+    "start": 17.762,
+    "end": 18.074
+  },
+  {
+    "id": "w46",
+    "text": "do",
+    "start": 18.074,
+    "end": 18.23
+  },
+  {
+    "id": "w47",
+    "text": "you",
+    "start": 18.23,
+    "end": 18.459
+  },
+  {
+    "id": "w48",
+    "text": "expand",
+    "start": 18.459,
+    "end": 18.906
+  },
+  {
+    "id": "w49",
+    "text": "next?",
+    "start": 18.927,
+    "end": 19.499
+  }
+]

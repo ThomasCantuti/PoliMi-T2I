@@ -1,0 +1,1 @@
+In this chapter: rewards and discounting, value functions and the Bellman equation, exploration, Q-learning, and how learning compares with search and with minimax.

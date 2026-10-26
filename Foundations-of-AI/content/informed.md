@@ -74,12 +74,14 @@ $f(n) = h(n)$ (p. 179): always expand the node that *looks* closest to the goal.
 Navigation example (p. 198–200): start S, goal G, `#` obstacles, $h$ = Manhattan distance ignoring
 obstacles.
 
-```text
- . . . . . . . . . . .
- . # . . . # # # # # .
- . # # . . . G . . # .
- S . # # # # # # # # .
- . . . . . . . . . . .
+```fig search-grid
+Grid of 5 rows and 11 columns, # = obstacle:
+. . . . . . . . . . .
+. # . . . # # # # # .
+. # # . . . G . . # .
+S . # # # # # # # # .
+. . . . . . . . . . .
+Greedy follows the bottom corridor to the cell under G (h = 2), goes around and pays 25; A* returns the optimal path over the top, cost 11.
 ```
 
 Greedy follows the decreasing $h$ along the bottom corridor up to the cell just under G ($h = 2$),
@@ -103,11 +105,8 @@ cost 25; the optimal one (over the top) costs 11.
 - $h_1(n)$ = number of misplaced tiles.
 - $h_2(n)$ = sum of the Manhattan distances of the tiles from their goal squares.
 
-```text
- 5 _ 8        1 2 3
- 4 2 1        4 5 6
- 7 3 6        7 8 _
- node n       goal
+```fig search-heuristics
+Node n = 5 _ 8 / 4 2 1 / 7 3 6, goal = 1 2 3 / 4 5 6 / 7 8 _. Misplaced tiles: 5, 8, 2, 1, 3, 6 (h1 = 6). Manhattan distances 2 + 3 + 0 + 1 + 3 + 0 + 3 + 1 = 13 (h2).
 ```
 
 | tile | 5 | 8 | 4 | 2 | 1 | 7 | 3 | 6 | total |
@@ -126,12 +125,8 @@ $h = 0$ it is uniform-cost search.
 
 **Worked example** (exam style). Undirected graph, $h$ in brackets:
 
-```text
-            A(6) ---4--- D(2)
-          2/   \3           \5
-       S(8)     C(3) ---4--- G(0)
-          3\   /4           /6
-            B(6) ---3--- E(5)
+```fig search-astar
+Undirected graph, h in brackets: S(8), A(6), B(6), C(3), D(2), E(5), G(0). Edges: S–A 2, S–B 3, A–C 3, A–D 4, B–C 4, B–E 3, C–G 4, D–G 5, E–G 6. A* selects S, A, C, D, B, G and returns S → A → C → G, cost 9.
 ```
 
 | step | selected: $g + h = f$ | frontier after expanding it ($f$) |
@@ -149,6 +144,11 @@ C before D and B before G are **ties** broken FIFO. On the same graph greedy ret
 On the navigation grid (p. 201) A* also starts towards the bottom corridor, but as $g$ grows the
 $f$ of those cells exceeds that of the top route, and A* "comes back": it returns the optimal path
 of cost 11 (25 nodes expanded, against 29 for uniform-cost search).
+
+```viz search
+Path planning grid: A* (slides p.198–201)
+A* on the navigation grid of the greedy example: it first follows the bottom corridor, then the growing f sends it back to the top route; optimal path of cost 11, 25 nodes expanded.
+```
 
 > **Key idea:** by using both $g(n)$ and $h(n)$, A* can lead the agent away from suboptimal paths
 > (p. 202).
@@ -183,12 +183,8 @@ $$h \text{ is consistent} \iff h(n) \le c(n, a, n') + h(n') \text{ for every } n
 The **triangle inequality** (p. 218): going to $n'$ first and then estimating cannot look cheaper
 than the direct estimate from $n$.
 
-```text
-        n
-   c  /   \  h(n)          inconsistent example (p. 219):
-     n'    \               h(n) = 100, c(n, a, n') = 10, h(n') = 20
-  h(n') \   \              100 > 10 + 20
-         goal
+```fig search-consistent
+Triangle n → n' (step cost c) → goal, with the estimates h(n) and h(n'). Consistent example (A → C in the A* example): 6 ≤ 3 + 3. Inconsistent example (p. 219): h(n) = 100, c(n, a, n') = 10, h(n') = 20, and 100 > 10 + 20.
 ```
 
 - Every **consistent** heuristic is **admissible** (not vice versa): chain the inequality along an
@@ -226,6 +222,11 @@ C→G (100); $h(A) = 100$, $h(B) = 1$, $h(C) = 90$ — admissible, but $100 > 1 
 | 5 | C again → G with $g = 102$, re-added | G selected: **cost 104** ✗ |
 | 6 | G selected: **cost 102** ✓ | |
 
+```viz search
+Inconsistent heuristic: expanded list vs tree search (slides p.227–229)
+The slide example with the admissible but inconsistent h (h(A) = 100, h(B) = 1, h(C) = 90), run as graph search with an expanded list: the cheaper path to C through A is dropped and G is returned with cost 104 instead of 102.
+```
+
 | variant | guaranteed optimal with | price |
 |---|---|---|
 | tree search (`best_first_tree_search`) | admissible $h$ | many duplicate paths in the frontier |
@@ -250,6 +251,10 @@ With a consistent heuristic (p. 232), comparing $f(n) = g^*(n) + h(n)$ with $C^*
 
 In the worked example ($C^* = 9$): S, A, C, D ($f = 8$) surely; B and G ($f = 9$) maybe; E
 ($f = 11$) never.
+
+```fig search-contours
+The A* worked-example graph with each node colored by f(n) = g*(n) + h(n) against C* = 9: S, A, C, D have f = 8 (always expanded), B and G have f = 9 (maybe, depending on ties), E has f = 11 (never expanded).
+```
 
 A* is **optimally efficient**: no other optimal algorithm using the same $h$ is guaranteed to expand
 fewer nodes (apart from ties at $f = C^*$), because any of them must expand every node with
@@ -305,6 +310,11 @@ $w = 0$ gives uniform-cost search, $w = 1$ A*, $w \to \infty$ greedy best-first 
 p. 239 picture shows the same effect on a map: the explored area shrinks to a narrow band around
 the path.
 
+```viz search
+Weighted A* (w = 2): fewer expansions, worse path
+Weighted A* with f = g + 2h on a small graph: it expands only S and A and returns S → A → G with cost 7, while the optimal path S → C → D → E → G costs 6.
+```
+
 ## Iterative deepening A* (IDA*)
 
 IDA* cuts the memory of A* by bounding $f$ instead of the depth (p. 241–242). It assumes a
@@ -322,6 +332,11 @@ Slide example (p. 243–254): 8-puzzle `2 8 3 / 1 6 4 / 7 _ 5` → `1 2 3 / 8 _ 
 Iteration 1, cutoff = $f(\text{root}) = 0 + 4 = 4$: only the root and its child with $f = 4$ are
 expanded; the pruned nodes have $f = 5, 6$. Iteration 2, cutoff = 5: the depth-first search
 reaches the goal with $f = 5 + 0 = 5$. Cutoffs: 4, 5.
+
+```viz search
+IDA*: growing f-cutoffs
+IDA* on a small graph (not the 8-puzzle): each iteration is a depth-first search that prunes nodes with f above the cutoff; the next cutoff is the smallest pruned f, until the goal is reached.
+```
 
 | property (p. 255) | IDA* |
 |---|---|

@@ -1,0 +1,278 @@
+[
+  {
+    "id": "w0",
+    "text": "Alpha-beta",
+    "start": 0.1,
+    "end": 0.797
+  },
+  {
+    "id": "w1",
+    "text": "needs",
+    "start": 0.797,
+    "end": 1.234
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 1.234,
+    "end": 1.494
+  },
+  {
+    "id": "w3",
+    "text": "things:",
+    "start": 1.494,
+    "end": 2.099
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 2.578,
+    "end": 2.654
+  },
+  {
+    "id": "w5",
+    "text": "branching",
+    "start": 2.654,
+    "end": 3.177
+  },
+  {
+    "id": "w6",
+    "text": "factor",
+    "start": 3.185,
+    "end": 3.59
+  },
+  {
+    "id": "w7",
+    "text": "small",
+    "start": 3.59,
+    "end": 3.986
+  },
+  {
+    "id": "w8",
+    "text": "enough",
+    "start": 3.986,
+    "end": 4.18
+  },
+  {
+    "id": "w9",
+    "text": "to",
+    "start": 4.265,
+    "end": 4.332
+  },
+  {
+    "id": "w10",
+    "text": "search",
+    "start": 4.332,
+    "end": 4.652
+  },
+  {
+    "id": "w11",
+    "text": "deep,",
+    "start": 4.686,
+    "end": 5.42
+  },
+  {
+    "id": "w12",
+    "text": "and",
+    "start": 5.794,
+    "end": 5.886
+  },
+  {
+    "id": "w13",
+    "text": "an",
+    "start": 5.886,
+    "end": 5.994
+  },
+  {
+    "id": "w14",
+    "text": "evaluation",
+    "start": 5.994,
+    "end": 6.619
+  },
+  {
+    "id": "w15",
+    "text": "function",
+    "start": 6.702,
+    "end": 7.202
+  },
+  {
+    "id": "w16",
+    "text": "for",
+    "start": 7.202,
+    "end": 7.418
+  },
+  {
+    "id": "w17",
+    "text": "the",
+    "start": 7.418,
+    "end": 7.585
+  },
+  {
+    "id": "w18",
+    "text": "positions",
+    "start": 7.651,
+    "end": 8.109
+  },
+  {
+    "id": "w19",
+    "text": "where",
+    "start": 8.268,
+    "end": 8.368
+  },
+  {
+    "id": "w20",
+    "text": "it",
+    "start": 8.759,
+    "end": 8.792
+  },
+  {
+    "id": "w21",
+    "text": "stops.",
+    "start": 8.792,
+    "end": 9.4
+  },
+  {
+    "id": "w22",
+    "text": "Go",
+    "start": 10.102,
+    "end": 10.191
+  },
+  {
+    "id": "w23",
+    "text": "has",
+    "start": 10.191,
+    "end": 10.438
+  },
+  {
+    "id": "w24",
+    "text": "about",
+    "start": 10.497,
+    "end": 10.952
+  },
+  {
+    "id": "w25",
+    "text": "250",
+    "start": 10.952,
+    "end": 11.773
+  },
+  {
+    "id": "w26",
+    "text": "moves",
+    "start": 11.802,
+    "end": 12.069
+  },
+  {
+    "id": "w27",
+    "text": "per",
+    "start": 12.544,
+    "end": 12.573
+  },
+  {
+    "id": "w28",
+    "text": "position,",
+    "start": 12.573,
+    "end": 13.424
+  },
+  {
+    "id": "w29",
+    "text": "against",
+    "start": 13.668,
+    "end": 14.283
+  },
+  {
+    "id": "w30",
+    "text": "20",
+    "start": 14.283,
+    "end": 14.824
+  },
+  {
+    "id": "w31",
+    "text": "to",
+    "start": 14.824,
+    "end": 14.992
+  },
+  {
+    "id": "w32",
+    "text": "35",
+    "start": 14.992,
+    "end": 15.384
+  },
+  {
+    "id": "w33",
+    "text": "in",
+    "start": 15.542,
+    "end": 15.719
+  },
+  {
+    "id": "w34",
+    "text": "chess,",
+    "start": 15.831,
+    "end": 16.4
+  },
+  {
+    "id": "w35",
+    "text": "and",
+    "start": 16.719,
+    "end": 16.933
+  },
+  {
+    "id": "w36",
+    "text": "nobody",
+    "start": 16.933,
+    "end": 17.361
+  },
+  {
+    "id": "w37",
+    "text": "knows",
+    "start": 17.361,
+    "end": 17.717
+  },
+  {
+    "id": "w38",
+    "text": "how",
+    "start": 17.717,
+    "end": 17.931
+  },
+  {
+    "id": "w39",
+    "text": "to",
+    "start": 17.931,
+    "end": 18.105
+  },
+  {
+    "id": "w40",
+    "text": "score",
+    "start": 18.206,
+    "end": 18.533
+  },
+  {
+    "id": "w41",
+    "text": "a",
+    "start": 18.533,
+    "end": 18.573
+  },
+  {
+    "id": "w42",
+    "text": "Go",
+    "start": 18.614,
+    "end": 18.787
+  },
+  {
+    "id": "w43",
+    "text": "position",
+    "start": 18.787,
+    "end": 19.47
+  },
+  {
+    "id": "w44",
+    "text": "by",
+    "start": 19.47,
+    "end": 19.623
+  },
+  {
+    "id": "w45",
+    "text": "hand.",
+    "start": 19.725,
+    "end": 20.224
+  }
+]

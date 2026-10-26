@@ -1,0 +1,1 @@
+Every agent so far knew the world as a state: a node, an assignment, a board. None of them could store a general rule like "if it rains, the street is wet" and use it to work out new facts. The C-S-P chapter left a hint: variables that are true or false, with constraints between them. That's where logic starts.

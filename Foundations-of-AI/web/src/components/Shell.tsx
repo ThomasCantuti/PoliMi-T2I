@@ -44,7 +44,7 @@ export function TopBar({ onPalette }: { onPalette: () => void }) {
       </a>
       <button onClick={onPalette}
         className="mx-auto flex w-[min(420px,40vw)] items-center gap-2 rounded-lg border border-line bg-panel-2 px-3 py-1.5 text-[13px] text-muted transition hover:border-line-strong">
-        <Search size={14} /><span className="flex-1 text-left">Search problems & topics…</span>
+        <Search size={14} className="shrink-0" /><span className="flex-1 truncate text-left">Search problems & topics…</span>
         <kbd className="hidden sm:inline">⌘K</kbd>
       </button>
       <button onClick={() => toggle(true)} title={ok ? 'Local model ready' : 'Local model not reachable'}
@@ -53,8 +53,8 @@ export function TopBar({ onPalette }: { onPalette: () => void }) {
         {ok ? prettyModel(model) : 'Tutor offline'}
       </button>
       <button className="btn ghost icon" onClick={toggleTheme} title="Toggle theme">{theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}</button>
-      <button className={cn('btn', open ? 'active' : 'primary')} onClick={() => toggle()}>
-        <Sparkles size={14} /> Tutor <kbd className="!border-white/30 !bg-white/10 !text-current">⌘J</kbd>
+      <button className={cn('btn', open ? 'active' : 'primary')} onClick={() => toggle()} title="Tutor (⌘J)">
+        <Sparkles size={14} /> <span className="hidden min-[400px]:inline">Tutor</span> <kbd className="hidden !border-white/30 !bg-white/10 !text-current sm:inline">⌘J</kbd>
       </button>
     </header>
   );

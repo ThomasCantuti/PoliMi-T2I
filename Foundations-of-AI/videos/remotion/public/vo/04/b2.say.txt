@@ -1,0 +1,1 @@
+Give it a guess of the cost still to go: a heuristic, h. Greedy search looks only ahead, at h. Uniform-cost looks only back, at g. A star looks both ways: g plus h, the cost of the whole trip through this node. When the guess never overestimates, A star still returns the cheapest path, and it expands far fewer nodes to find it. The chapter shows exactly when, and why.

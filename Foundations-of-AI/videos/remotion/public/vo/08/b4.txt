@@ -1,0 +1,1 @@
+The exam gives you a partial tree with win counts: compute UCB1, choose where to expand, and update the statistics after each playout.

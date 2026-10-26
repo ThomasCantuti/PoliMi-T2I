@@ -1,0 +1,1 @@
+Last chapter, the goal-based agent imagined the future and checked whether it reached its goal. In a world that is fully observable, deterministic, static and known, all of that imagining can happen before the first move: the solution is a fixed sequence of actions. What's missing is a way to describe the problem so a program can search for that sequence.

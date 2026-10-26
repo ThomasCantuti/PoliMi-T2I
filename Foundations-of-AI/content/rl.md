@@ -52,11 +52,8 @@ programming turns data + program into output; machine learning turns data + outp
 At time $t$ the agent perceives state $s_t$ and performs action $a_t$; at time $t+1$ the environment moves to $s_{t+1}$
 and the agent receives the reward $r_{t+1}$.
 
-```text
-        s_t, r_t
-   ┌───────────────── Environment ◀──┐
-   ▼                                 │ a_t
- Agent ──────────────────────────────┘
+```fig rl-loop
+The agent performs action a_t on the environment; the environment answers with the next state s_t+1 and the reward r_t+1; then t becomes t + 1.
 ```
 
 **Sequential decision making** (RL p. 14): we take a sequence of decisions to reach the goal; the optimal actions are
@@ -117,12 +114,12 @@ backwards, one ring of cells at a time; each cell takes the best of its availabl
 
 Exam of 11 June 2026: the agent moves up/down/left/right, $\gamma = 0.5$, reward 0 entering the goal and −1 otherwise.
 
-```text
- ┌───────┬───────┬───────┐
- │ -1.5  │  -1   │   0   │      (1,3): down into G      → 0 + 0.5·0       =  0
- ├───────┼───────┼───────┤      (1,2): right to (1,3)   → -1 + 0.5·0      = -1
- │ -1.75 │ ##### │   G   │      (1,1): right to (1,2)   → -1 + 0.5·(-1)   = -1.5
- └───────┴───────┴───────┘      (2,1): up to (1,1)      → -1 + 0.5·(-1.5) = -1.75
+```fig rl-bellman
+Grid with two rows: (1,1) (1,2) (1,3) on top; (2,1), a wall and G below. Values computed backward from G:
+(1,3): down into G → 0 + 0.5·0 = 0
+(1,2): right to (1,3) → -1 + 0.5·0 = -1
+(1,1): right to (1,2) → -1 + 0.5·(-1) = -1.5
+(2,1): up to (1,1) → -1 + 0.5·(-1.5) = -1.75
 ```
 
 With goal-reward (1 at the goal, 0 otherwise) the same reasoning gives $V = \gamma^{d-1}$ for a cell at distance $d$ from
@@ -186,12 +183,10 @@ def q_learning(env, episodes, beta, gamma, epsilon):
 **Worked example** (exam 30 Aug 2022): the 3×3 grid below, $\gamma = 0.5$, $\beta = 0.25$, reward 1 entering the goal and
 0 otherwise, $Q = 0$. Each episode is east, east, south, south from S.
 
-```text
-     1   2   3
- 1 [ S ][   ][   ]       episode 1: only the last step changes something:
- 2 [   ][###][   ]         Q((2,3), S) = 0 + 0.25·(1 − 0) = 0.25
- 3 [   ][   ][ G ]       episode 2: Q((1,3), S) = 0 + 0.25·(0 + 0.5·0.25 − 0) = 0.03125
-                                    Q((2,3), S) = 0.25 + 0.25·(1 − 0.25)     = 0.4375
+```fig rl-qlearning
+3×3 grid: S = (1,1), a wall at (2,2), G = (3,3); every episode goes east, east, south, south.
+Episode 1: only the last step changes something: Q((2,3), S) = 0 + 0.25·(1 − 0) = 0.25.
+Episode 2: Q((1,3), S) = 0 + 0.25·(0 + 0.5·0.25 − 0) = 0.03125; Q((2,3), S) = 0.25 + 0.25·(1 − 0.25) = 0.4375.
 ```
 
 The reward travels backwards **one step per episode**: Q-learning needs many episodes to propagate it to the start.

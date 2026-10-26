@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.1,
+    "end": 0.229
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.229,
+    "end": 0.513
+  },
+  {
+    "id": "w2",
+    "text": "asks",
+    "start": 0.513,
+    "end": 0.796
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.796,
+    "end": 1.011
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 1.011,
+    "end": 1.149
+  },
+  {
+    "id": "w5",
+    "text": "translate",
+    "start": 1.149,
+    "end": 1.768
+  },
+  {
+    "id": "w6",
+    "text": "English",
+    "start": 1.879,
+    "end": 2.206
+  },
+  {
+    "id": "w7",
+    "text": "into",
+    "start": 2.223,
+    "end": 2.705
+  },
+  {
+    "id": "w8",
+    "text": "logic,",
+    "start": 2.705,
+    "end": 3.444
+  },
+  {
+    "id": "w9",
+    "text": "convert",
+    "start": 3.942,
+    "end": 4.361
+  },
+  {
+    "id": "w10",
+    "text": "it",
+    "start": 4.361,
+    "end": 4.424
+  },
+  {
+    "id": "w11",
+    "text": "to",
+    "start": 4.528,
+    "end": 4.602
+  },
+  {
+    "id": "w12",
+    "text": "CNF,",
+    "start": 4.602,
+    "end": 5.544
+  },
+  {
+    "id": "w13",
+    "text": "prove",
+    "start": 6.025,
+    "end": 6.216
+  },
+  {
+    "id": "w14",
+    "text": "a",
+    "start": 6.216,
+    "end": 6.247
+  },
+  {
+    "id": "w15",
+    "text": "query",
+    "start": 6.303,
+    "end": 6.677
+  },
+  {
+    "id": "w16",
+    "text": "by",
+    "start": 6.677,
+    "end": 6.804
+  },
+  {
+    "id": "w17",
+    "text": "resolution,",
+    "start": 6.875,
+    "end": 7.9
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 8.13,
+    "end": 8.514
+  },
+  {
+    "id": "w19",
+    "text": "run",
+    "start": 8.514,
+    "end": 8.876
+  },
+  {
+    "id": "w20",
+    "text": "DPLL",
+    "start": 9.023,
+    "end": 9.407
+  },
+  {
+    "id": "w21",
+    "text": "step",
+    "start": 9.407,
+    "end": 9.927
+  },
+  {
+    "id": "w22",
+    "text": "by",
+    "start": 9.927,
+    "end": 10.187
+  },
+  {
+    "id": "w23",
+    "text": "step.",
+    "start": 10.187,
+    "end": 11.136
+  }
+]

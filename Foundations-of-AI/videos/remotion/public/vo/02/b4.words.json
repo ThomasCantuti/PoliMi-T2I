@@ -1,0 +1,152 @@
+[
+  {
+    "id": "w0",
+    "text": "Exams",
+    "start": 0.13,
+    "end": 0.47
+  },
+  {
+    "id": "w1",
+    "text": "often",
+    "start": 0.47,
+    "end": 0.949
+  },
+  {
+    "id": "w2",
+    "text": "open",
+    "start": 0.949,
+    "end": 1.329
+  },
+  {
+    "id": "w3",
+    "text": "with",
+    "start": 1.329,
+    "end": 1.708
+  },
+  {
+    "id": "w4",
+    "text": "exactly",
+    "start": 1.708,
+    "end": 2.377
+  },
+  {
+    "id": "w5",
+    "text": "this:",
+    "start": 2.377,
+    "end": 2.817
+  },
+  {
+    "id": "w6",
+    "text": "formulate",
+    "start": 3.411,
+    "end": 3.967
+  },
+  {
+    "id": "w7",
+    "text": "a",
+    "start": 4.048,
+    "end": 4.101
+  },
+  {
+    "id": "w8",
+    "text": "puzzle",
+    "start": 4.101,
+    "end": 4.585
+  },
+  {
+    "id": "w9",
+    "text": "as",
+    "start": 4.585,
+    "end": 4.746
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 4.746,
+    "end": 4.827
+  },
+  {
+    "id": "w11",
+    "text": "search",
+    "start": 4.827,
+    "end": 5.284
+  },
+  {
+    "id": "w12",
+    "text": "problem,",
+    "start": 5.383,
+    "end": 5.893
+  },
+  {
+    "id": "w13",
+    "text": "then",
+    "start": 6.328,
+    "end": 6.495
+  },
+  {
+    "id": "w14",
+    "text": "give",
+    "start": 6.495,
+    "end": 6.781
+  },
+  {
+    "id": "w15",
+    "text": "its",
+    "start": 6.781,
+    "end": 6.993
+  },
+  {
+    "id": "w16",
+    "text": "branching",
+    "start": 6.993,
+    "end": 7.547
+  },
+  {
+    "id": "w17",
+    "text": "factor",
+    "start": 7.639,
+    "end": 8.091
+  },
+  {
+    "id": "w18",
+    "text": "and",
+    "start": 8.091,
+    "end": 8.239
+  },
+  {
+    "id": "w19",
+    "text": "the",
+    "start": 8.239,
+    "end": 8.257
+  },
+  {
+    "id": "w20",
+    "text": "size",
+    "start": 8.359,
+    "end": 8.792
+  },
+  {
+    "id": "w21",
+    "text": "of",
+    "start": 8.792,
+    "end": 8.995
+  },
+  {
+    "id": "w22",
+    "text": "its",
+    "start": 8.995,
+    "end": 9.161
+  },
+  {
+    "id": "w23",
+    "text": "state",
+    "start": 9.161,
+    "end": 9.466
+  },
+  {
+    "id": "w24",
+    "text": "space.",
+    "start": 9.466,
+    "end": 10.453
+  }
+]

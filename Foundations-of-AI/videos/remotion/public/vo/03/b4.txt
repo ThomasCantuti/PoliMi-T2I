@@ -1,0 +1,1 @@
+In the exam you run these by hand: the order in which nodes are expanded, the frontier at each step, the solution found.

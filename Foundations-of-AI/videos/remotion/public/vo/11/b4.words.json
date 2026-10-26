@@ -1,0 +1,152 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.08,
+    "end": 0.203
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.203,
+    "end": 0.458
+  },
+  {
+    "id": "w2",
+    "text": "asks",
+    "start": 0.458,
+    "end": 0.713
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.713,
+    "end": 0.889
+  },
+  {
+    "id": "w4",
+    "text": "to",
+    "start": 0.924,
+    "end": 1.03
+  },
+  {
+    "id": "w5",
+    "text": "write",
+    "start": 1.03,
+    "end": 1.347
+  },
+  {
+    "id": "w6",
+    "text": "the",
+    "start": 1.347,
+    "end": 1.54
+  },
+  {
+    "id": "w7",
+    "text": "action",
+    "start": 1.54,
+    "end": 1.945
+  },
+  {
+    "id": "w8",
+    "text": "schemas",
+    "start": 1.945,
+    "end": 2.385
+  },
+  {
+    "id": "w9",
+    "text": "for",
+    "start": 2.464,
+    "end": 2.499
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 2.499,
+    "end": 2.543
+  },
+  {
+    "id": "w11",
+    "text": "domain,",
+    "start": 2.543,
+    "end": 3.599
+  },
+  {
+    "id": "w12",
+    "text": "draw",
+    "start": 4.119,
+    "end": 4.322
+  },
+  {
+    "id": "w13",
+    "text": "a",
+    "start": 4.322,
+    "end": 4.385
+  },
+  {
+    "id": "w14",
+    "text": "forward",
+    "start": 4.385,
+    "end": 4.87
+  },
+  {
+    "id": "w15",
+    "text": "planning",
+    "start": 4.878,
+    "end": 5.512
+  },
+  {
+    "id": "w16",
+    "text": "tree,",
+    "start": 5.575,
+    "end": 6.037
+  },
+  {
+    "id": "w17",
+    "text": "and",
+    "start": 6.454,
+    "end": 6.589
+  },
+  {
+    "id": "w18",
+    "text": "regress",
+    "start": 6.589,
+    "end": 7.127
+  },
+  {
+    "id": "w19",
+    "text": "a",
+    "start": 7.127,
+    "end": 7.161
+  },
+  {
+    "id": "w20",
+    "text": "goal",
+    "start": 7.195,
+    "end": 7.486
+  },
+  {
+    "id": "w21",
+    "text": "through",
+    "start": 7.531,
+    "end": 8.036
+  },
+  {
+    "id": "w22",
+    "text": "each",
+    "start": 8.036,
+    "end": 8.328
+  },
+  {
+    "id": "w23",
+    "text": "relevant",
+    "start": 8.406,
+    "end": 8.934
+  },
+  {
+    "id": "w24",
+    "text": "action.",
+    "start": 9.035,
+    "end": 9.685
+  }
+]

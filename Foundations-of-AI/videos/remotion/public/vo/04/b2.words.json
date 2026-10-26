@@ -1,0 +1,416 @@
+[
+  {
+    "id": "w0",
+    "text": "Give",
+    "start": 0.07,
+    "end": 0.273
+  },
+  {
+    "id": "w1",
+    "text": "it",
+    "start": 0.273,
+    "end": 0.403
+  },
+  {
+    "id": "w2",
+    "text": "a",
+    "start": 0.403,
+    "end": 0.46
+  },
+  {
+    "id": "w3",
+    "text": "guess",
+    "start": 0.46,
+    "end": 0.794
+  },
+  {
+    "id": "w4",
+    "text": "of",
+    "start": 0.794,
+    "end": 0.924
+  },
+  {
+    "id": "w5",
+    "text": "the",
+    "start": 0.924,
+    "end": 1.062
+  },
+  {
+    "id": "w6",
+    "text": "cost",
+    "start": 1.119,
+    "end": 1.379
+  },
+  {
+    "id": "w7",
+    "text": "still",
+    "start": 1.379,
+    "end": 1.591
+  },
+  {
+    "id": "w8",
+    "text": "to",
+    "start": 1.591,
+    "end": 1.997
+  },
+  {
+    "id": "w9",
+    "text": "go:",
+    "start": 1.997,
+    "end": 2.013
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 2.406,
+    "end": 2.428
+  },
+  {
+    "id": "w11",
+    "text": "heuristic,",
+    "start": 2.428,
+    "end": 3.301
+  },
+  {
+    "id": "w12",
+    "text": "h.",
+    "start": 3.538,
+    "end": 3.889
+  },
+  {
+    "id": "w13",
+    "text": "Greedy",
+    "start": 3.889,
+    "end": 4.24
+  },
+  {
+    "id": "w14",
+    "text": "search",
+    "start": 4.24,
+    "end": 4.575
+  },
+  {
+    "id": "w15",
+    "text": "looks",
+    "start": 5.14,
+    "end": 5.276
+  },
+  {
+    "id": "w16",
+    "text": "only",
+    "start": 5.328,
+    "end": 5.58
+  },
+  {
+    "id": "w17",
+    "text": "ahead,",
+    "start": 5.58,
+    "end": 5.883
+  },
+  {
+    "id": "w18",
+    "text": "at",
+    "start": 5.95,
+    "end": 6.17
+  },
+  {
+    "id": "w19",
+    "text": "h.",
+    "start": 6.17,
+    "end": 6.352
+  },
+  {
+    "id": "w20",
+    "text": "Uniform-cost",
+    "start": 6.77,
+    "end": 7.76
+  },
+  {
+    "id": "w21",
+    "text": "looks",
+    "start": 7.76,
+    "end": 8.234
+  },
+  {
+    "id": "w22",
+    "text": "only",
+    "start": 8.234,
+    "end": 8.389
+  },
+  {
+    "id": "w23",
+    "text": "back,",
+    "start": 8.853,
+    "end": 8.974
+  },
+  {
+    "id": "w24",
+    "text": "at",
+    "start": 9.008,
+    "end": 9.181
+  },
+  {
+    "id": "w25",
+    "text": "g.",
+    "start": 9.181,
+    "end": 9.465
+  },
+  {
+    "id": "w26",
+    "text": "A*",
+    "start": 10.087,
+    "end": 10.105
+  },
+  {
+    "id": "w27",
+    "text": "looks",
+    "start": 10.434,
+    "end": 10.835
+  },
+  {
+    "id": "w28",
+    "text": "both",
+    "start": 10.844,
+    "end": 11.173
+  },
+  {
+    "id": "w29",
+    "text": "ways:",
+    "start": 11.173,
+    "end": 11.707
+  },
+  {
+    "id": "w30",
+    "text": "g",
+    "start": 12.023,
+    "end": 12.325
+  },
+  {
+    "id": "w31",
+    "text": "plus",
+    "start": 12.325,
+    "end": 12.626
+  },
+  {
+    "id": "w32",
+    "text": "h,",
+    "start": 12.666,
+    "end": 13.131
+  },
+  {
+    "id": "w33",
+    "text": "the",
+    "start": 13.236,
+    "end": 13.387
+  },
+  {
+    "id": "w34",
+    "text": "cost",
+    "start": 13.387,
+    "end": 13.585
+  },
+  {
+    "id": "w35",
+    "text": "of",
+    "start": 13.585,
+    "end": 13.68
+  },
+  {
+    "id": "w36",
+    "text": "the",
+    "start": 13.68,
+    "end": 13.783
+  },
+  {
+    "id": "w37",
+    "text": "whole",
+    "start": 13.807,
+    "end": 13.879
+  },
+  {
+    "id": "w38",
+    "text": "trip",
+    "start": 14.251,
+    "end": 14.315
+  },
+  {
+    "id": "w39",
+    "text": "through",
+    "start": 14.315,
+    "end": 14.79
+  },
+  {
+    "id": "w40",
+    "text": "this",
+    "start": 14.79,
+    "end": 14.83
+  },
+  {
+    "id": "w41",
+    "text": "node.",
+    "start": 15.084,
+    "end": 15.551
+  },
+  {
+    "id": "w42",
+    "text": "When",
+    "start": 16.183,
+    "end": 16.36
+  },
+  {
+    "id": "w43",
+    "text": "the",
+    "start": 16.37,
+    "end": 16.567
+  },
+  {
+    "id": "w44",
+    "text": "guess",
+    "start": 16.567,
+    "end": 16.892
+  },
+  {
+    "id": "w45",
+    "text": "never",
+    "start": 16.892,
+    "end": 17.217
+  },
+  {
+    "id": "w46",
+    "text": "overestimates,",
+    "start": 17.217,
+    "end": 18.083
+  },
+  {
+    "id": "w47",
+    "text": "A*",
+    "start": 18.163,
+    "end": 18.182
+  },
+  {
+    "id": "w48",
+    "text": "still",
+    "start": 18.531,
+    "end": 18.956
+  },
+  {
+    "id": "w49",
+    "text": "returns",
+    "start": 18.965,
+    "end": 19.569
+  },
+  {
+    "id": "w50",
+    "text": "the",
+    "start": 19.569,
+    "end": 19.824
+  },
+  {
+    "id": "w51",
+    "text": "cheapest",
+    "start": 19.824,
+    "end": 20.513
+  },
+  {
+    "id": "w52",
+    "text": "path,",
+    "start": 20.513,
+    "end": 20.891
+  },
+  {
+    "id": "w53",
+    "text": "and",
+    "start": 20.957,
+    "end": 21.155
+  },
+  {
+    "id": "w54",
+    "text": "it",
+    "start": 21.155,
+    "end": 21.325
+  },
+  {
+    "id": "w55",
+    "text": "expands",
+    "start": 21.325,
+    "end": 21.948
+  },
+  {
+    "id": "w56",
+    "text": "far",
+    "start": 21.948,
+    "end": 22.212
+  },
+  {
+    "id": "w57",
+    "text": "fewer",
+    "start": 22.212,
+    "end": 22.656
+  },
+  {
+    "id": "w58",
+    "text": "nodes",
+    "start": 22.656,
+    "end": 22.75
+  },
+  {
+    "id": "w59",
+    "text": "to",
+    "start": 23.232,
+    "end": 23.269
+  },
+  {
+    "id": "w60",
+    "text": "find",
+    "start": 23.269,
+    "end": 23.619
+  },
+  {
+    "id": "w61",
+    "text": "it.",
+    "start": 23.619,
+    "end": 23.93
+  },
+  {
+    "id": "w62",
+    "text": "The",
+    "start": 24.529,
+    "end": 24.694
+  },
+  {
+    "id": "w63",
+    "text": "chapter",
+    "start": 24.694,
+    "end": 25.237
+  },
+  {
+    "id": "w64",
+    "text": "shows",
+    "start": 25.305,
+    "end": 25.655
+  },
+  {
+    "id": "w65",
+    "text": "exactly",
+    "start": 25.655,
+    "end": 26.218
+  },
+  {
+    "id": "w66",
+    "text": "when,",
+    "start": 26.218,
+    "end": 26.334
+  },
+  {
+    "id": "w67",
+    "text": "and",
+    "start": 26.334,
+    "end": 26.858
+  },
+  {
+    "id": "w68",
+    "text": "why.",
+    "start": 26.858,
+    "end": 27.285
+  }
+]

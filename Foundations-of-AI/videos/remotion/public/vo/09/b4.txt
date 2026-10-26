@@ -1,0 +1,1 @@
+The exam gives you a small grid and a few episodes: fill in the Q-table after each one, and the values at convergence.

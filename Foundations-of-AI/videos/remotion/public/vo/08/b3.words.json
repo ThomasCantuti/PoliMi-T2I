@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.04,
+    "end": 0.137
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.137,
+    "end": 0.389
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.389,
+    "end": 0.97
+  },
+  {
+    "id": "w3",
+    "text": "rollouts,",
+    "start": 1.485,
+    "end": 2.266
+  },
+  {
+    "id": "w4",
+    "text": "the",
+    "start": 2.464,
+    "end": 2.675
+  },
+  {
+    "id": "w5",
+    "text": "four",
+    "start": 2.675,
+    "end": 2.857
+  },
+  {
+    "id": "w6",
+    "text": "phases",
+    "start": 3.02,
+    "end": 3.49
+  },
+  {
+    "id": "w7",
+    "text": "of",
+    "start": 3.49,
+    "end": 3.951
+  },
+  {
+    "id": "w8",
+    "text": "MCTS,",
+    "start": 3.951,
+    "end": 4.891
+  },
+  {
+    "id": "w9",
+    "text": "multi-armed",
+    "start": 5.269,
+    "end": 5.842
+  },
+  {
+    "id": "w10",
+    "text": "bandits",
+    "start": 5.915,
+    "end": 6.079
+  },
+  {
+    "id": "w11",
+    "text": "with",
+    "start": 6.606,
+    "end": 6.77
+  },
+  {
+    "id": "w12",
+    "text": "\u03b5-greedy",
+    "start": 7.479,
+    "end": 7.861
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 8.006,
+    "end": 8.27
+  },
+  {
+    "id": "w14",
+    "text": "UCB1,",
+    "start": 8.27,
+    "end": 9.488
+  },
+  {
+    "id": "w15",
+    "text": "UCT,",
+    "start": 9.95,
+    "end": 11.008
+  },
+  {
+    "id": "w16",
+    "text": "and",
+    "start": 11.309,
+    "end": 11.469
+  },
+  {
+    "id": "w17",
+    "text": "how",
+    "start": 11.469,
+    "end": 11.698
+  },
+  {
+    "id": "w18",
+    "text": "AlphaZero",
+    "start": 11.698,
+    "end": 12.377
+  },
+  {
+    "id": "w19",
+    "text": "puts",
+    "start": 12.467,
+    "end": 12.677
+  },
+  {
+    "id": "w20",
+    "text": "it",
+    "start": 12.837,
+    "end": 12.897
+  },
+  {
+    "id": "w21",
+    "text": "all",
+    "start": 12.897,
+    "end": 13.136
+  },
+  {
+    "id": "w22",
+    "text": "together.",
+    "start": 13.136,
+    "end": 13.845
+  }
+]

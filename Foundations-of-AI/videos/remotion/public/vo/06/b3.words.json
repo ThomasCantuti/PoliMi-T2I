@@ -1,0 +1,128 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.03,
+    "end": 0.133
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.133,
+    "end": 0.392
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.392,
+    "end": 0.968
+  },
+  {
+    "id": "w3",
+    "text": "hill",
+    "start": 1.517,
+    "end": 1.595
+  },
+  {
+    "id": "w4",
+    "text": "climbing",
+    "start": 1.595,
+    "end": 2.168
+  },
+  {
+    "id": "w5",
+    "text": "on",
+    "start": 2.202,
+    "end": 2.35
+  },
+  {
+    "id": "w6",
+    "text": "a",
+    "start": 2.35,
+    "end": 2.419
+  },
+  {
+    "id": "w7",
+    "text": "worked",
+    "start": 2.419,
+    "end": 2.87
+  },
+  {
+    "id": "w8",
+    "text": "example,",
+    "start": 2.87,
+    "end": 3.442
+  },
+  {
+    "id": "w9",
+    "text": "local",
+    "start": 3.821,
+    "end": 4.213
+  },
+  {
+    "id": "w10",
+    "text": "maxima,",
+    "start": 4.213,
+    "end": 4.869
+  },
+  {
+    "id": "w11",
+    "text": "plateaus",
+    "start": 5.19,
+    "end": 5.852
+  },
+  {
+    "id": "w12",
+    "text": "and",
+    "start": 5.852,
+    "end": 6.144
+  },
+  {
+    "id": "w13",
+    "text": "ridges,",
+    "start": 6.144,
+    "end": 6.762
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 6.991,
+    "end": 7.241
+  },
+  {
+    "id": "w15",
+    "text": "solving",
+    "start": 7.241,
+    "end": 7.853
+  },
+  {
+    "id": "w16",
+    "text": "CSPs",
+    "start": 7.903,
+    "end": 8.294
+  },
+  {
+    "id": "w17",
+    "text": "as",
+    "start": 8.294,
+    "end": 8.524
+  },
+  {
+    "id": "w18",
+    "text": "optimization",
+    "start": 8.524,
+    "end": 9.637
+  },
+  {
+    "id": "w19",
+    "text": "with",
+    "start": 9.637,
+    "end": 10.018
+  },
+  {
+    "id": "w20",
+    "text": "min-conflicts.",
+    "start": 10.018,
+    "end": 11.371
+  }
+]

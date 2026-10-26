@@ -1,0 +1,1 @@
+Backtracking builds a solution one variable at a time, from an empty assignment, and search keeps the whole path that led there. For many problems the path doesn't matter: for eight queens, the final board is all you need. And a frontier of millions of nodes is a high price for a path you'll throw away.

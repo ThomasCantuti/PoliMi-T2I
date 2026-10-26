@@ -1,0 +1,1 @@
+In this chapter: how to judge a strategy (completeness, optimality, time and space), six strategies, and one table that compares them all.

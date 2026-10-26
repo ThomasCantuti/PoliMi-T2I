@@ -1,0 +1,1 @@
+You can now write a problem as states, actions and a goal test, and search grows a tree of paths from the start. At every moment some nodes are waiting to be expanded: the frontier. One decision is left, and it changes everything: which frontier node do you expand next?

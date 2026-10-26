@@ -1,0 +1,1 @@
+Uniform-cost search always extends the cheapest path found so far, so it is optimal. It is also blind: it spreads in every direction, away from the goal as much as toward it, because it only looks back at what it has already paid.

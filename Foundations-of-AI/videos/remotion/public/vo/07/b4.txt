@@ -1,0 +1,1 @@
+This is one of the most common exam questions: a game tree, the minimax value of every node, and the branches alpha-beta prunes.

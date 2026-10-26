@@ -1,0 +1,1 @@
+In this chapter: hill climbing on a worked example, local maxima, plateaus and ridges, and solving C-S-Ps as optimization with min-conflicts.

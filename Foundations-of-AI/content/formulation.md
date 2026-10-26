@@ -55,11 +55,9 @@ class Problem:
 State `8 2 7 / 3 4 _ / 5 1 6` (as a tuple: `(8, 2, 7, 3, 4, 0, 5, 1, 6)`, 0 = blank).
 The blank is on the right edge, so `actions(s) = {up, down, left}`:
 
-| action | result(s, a) |
-|---|---|
-| up | `8 2 _ / 3 4 7 / 5 1 6` |
-| down | `8 2 7 / 3 4 6 / 5 1 _` |
-| left | `8 2 7 / 3 _ 4 / 5 1 6` |
+```fig search-8puzzle
+State s = 8 2 7 / 3 4 _ / 5 1 6 and its successors. result(s, up) = 8 2 _ / 3 4 7 / 5 1 6; result(s, down) = 8 2 7 / 3 4 6 / 5 1 _; result(s, left) = 8 2 7 / 3 _ 4 / 5 1 6. Right is not applicable: the blank is on the right edge.
+```
 
 Choosing "the blank moves" as the action (instead of "tile $k$ moves") gives at most 4 actions per state;
 the branching factor is 2, 3 or 4 ($b \approx 2.7$ on average). Every action is **reversible**.
@@ -228,6 +226,11 @@ How fast does the tree outgrow the state space? From the slides' 8-puzzle state:
 
 > **Intuition:** graph search trades **memory** for **time**: it pays to store every reached state so that it
 > never redoes the work under another path.
+
+```viz search
+Repeated states: tree vs graph search (BFS)
+A state space of six states with loops (S, A, B, C, D, G) next to the search tree that breadth-first tree search builds on it: the same state appears in several nodes. Switch "Repeated states" to the reached table to see graph search handle each state once.
+```
 
 ## Best-first search: the general scheme (slides p. 108–109)
 

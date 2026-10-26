@@ -1,0 +1,296 @@
+[
+  {
+    "id": "w0",
+    "text": "Two",
+    "start": 0.04,
+    "end": 0.334
+  },
+  {
+    "id": "w1",
+    "text": "tools",
+    "start": 0.334,
+    "end": 0.878
+  },
+  {
+    "id": "w2",
+    "text": "so",
+    "start": 0.878,
+    "end": 1.036
+  },
+  {
+    "id": "w3",
+    "text": "far.",
+    "start": 1.089,
+    "end": 1.474
+  },
+  {
+    "id": "w4",
+    "text": "A*",
+    "start": 1.868,
+    "end": 1.913
+  },
+  {
+    "id": "w5",
+    "text": "plans",
+    "start": 2.267,
+    "end": 2.712
+  },
+  {
+    "id": "w6",
+    "text": "a",
+    "start": 2.712,
+    "end": 2.731
+  },
+  {
+    "id": "w7",
+    "text": "path,",
+    "start": 2.794,
+    "end": 3.184
+  },
+  {
+    "id": "w8",
+    "text": "but",
+    "start": 3.348,
+    "end": 3.402
+  },
+  {
+    "id": "w9",
+    "text": "it",
+    "start": 3.402,
+    "end": 3.493
+  },
+  {
+    "id": "w10",
+    "text": "needs",
+    "start": 3.62,
+    "end": 3.738
+  },
+  {
+    "id": "w11",
+    "text": "a",
+    "start": 3.738,
+    "end": 3.829
+  },
+  {
+    "id": "w12",
+    "text": "model",
+    "start": 3.829,
+    "end": 4.283
+  },
+  {
+    "id": "w13",
+    "text": "of",
+    "start": 4.283,
+    "end": 4.446
+  },
+  {
+    "id": "w14",
+    "text": "the",
+    "start": 4.446,
+    "end": 4.701
+  },
+  {
+    "id": "w15",
+    "text": "world:",
+    "start": 4.701,
+    "end": 5.391
+  },
+  {
+    "id": "w16",
+    "text": "the",
+    "start": 5.89,
+    "end": 6.053
+  },
+  {
+    "id": "w17",
+    "text": "actions,",
+    "start": 6.113,
+    "end": 6.686
+  },
+  {
+    "id": "w18",
+    "text": "where",
+    "start": 6.686,
+    "end": 7.003
+  },
+  {
+    "id": "w19",
+    "text": "they",
+    "start": 7.003,
+    "end": 7.106
+  },
+  {
+    "id": "w20",
+    "text": "lead,",
+    "start": 7.542,
+    "end": 7.662
+  },
+  {
+    "id": "w21",
+    "text": "what",
+    "start": 7.722,
+    "end": 7.936
+  },
+  {
+    "id": "w22",
+    "text": "they",
+    "start": 8.004,
+    "end": 8.261
+  },
+  {
+    "id": "w23",
+    "text": "cost.",
+    "start": 8.261,
+    "end": 8.663
+  },
+  {
+    "id": "w24",
+    "text": "Bandits",
+    "start": 9.309,
+    "end": 9.787
+  },
+  {
+    "id": "w25",
+    "text": "learn",
+    "start": 9.787,
+    "end": 10.15
+  },
+  {
+    "id": "w26",
+    "text": "from",
+    "start": 10.15,
+    "end": 10.442
+  },
+  {
+    "id": "w27",
+    "text": "rewards",
+    "start": 10.442,
+    "end": 10.557
+  },
+  {
+    "id": "w28",
+    "text": "by",
+    "start": 11.017,
+    "end": 11.097
+  },
+  {
+    "id": "w29",
+    "text": "trying,",
+    "start": 11.097,
+    "end": 11.574
+  },
+  {
+    "id": "w30",
+    "text": "but",
+    "start": 11.61,
+    "end": 11.787
+  },
+  {
+    "id": "w31",
+    "text": "each",
+    "start": 11.84,
+    "end": 12.114
+  },
+  {
+    "id": "w32",
+    "text": "choice",
+    "start": 12.114,
+    "end": 12.451
+  },
+  {
+    "id": "w33",
+    "text": "stands",
+    "start": 12.575,
+    "end": 12.858
+  },
+  {
+    "id": "w34",
+    "text": "alone.",
+    "start": 13.318,
+    "end": 13.699
+  },
+  {
+    "id": "w35",
+    "text": "What",
+    "start": 14.319,
+    "end": 14.496
+  },
+  {
+    "id": "w36",
+    "text": "if",
+    "start": 14.549,
+    "end": 14.681
+  },
+  {
+    "id": "w37",
+    "text": "there's",
+    "start": 14.681,
+    "end": 15.14
+  },
+  {
+    "id": "w38",
+    "text": "no",
+    "start": 15.14,
+    "end": 15.158
+  },
+  {
+    "id": "w39",
+    "text": "model,",
+    "start": 15.281,
+    "end": 15.626
+  },
+  {
+    "id": "w40",
+    "text": "and",
+    "start": 15.825,
+    "end": 16.009
+  },
+  {
+    "id": "w41",
+    "text": "every",
+    "start": 16.009,
+    "end": 16.377
+  },
+  {
+    "id": "w42",
+    "text": "action",
+    "start": 16.377,
+    "end": 16.744
+  },
+  {
+    "id": "w43",
+    "text": "changes",
+    "start": 16.812,
+    "end": 17.102
+  },
+  {
+    "id": "w44",
+    "text": "the",
+    "start": 17.431,
+    "end": 17.566
+  },
+  {
+    "id": "w45",
+    "text": "situation",
+    "start": 17.692,
+    "end": 18.224
+  },
+  {
+    "id": "w46",
+    "text": "you'll",
+    "start": 18.282,
+    "end": 18.679
+  },
+  {
+    "id": "w47",
+    "text": "face",
+    "start": 18.679,
+    "end": 18.959
+  },
+  {
+    "id": "w48",
+    "text": "next?",
+    "start": 19.133,
+    "end": 19.52
+  }
+]

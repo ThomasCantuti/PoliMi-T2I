@@ -1,0 +1,1 @@
+In this chapter: defining a C-S-P, backtracking search, forward checking and arc consistency, the ordering heuristics M-R-V, degree and L-C-V, and how the structure of a problem helps.

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "In",
+    "start": 0.03,
+    "end": 0.141
+  },
+  {
+    "id": "w1",
+    "text": "this",
+    "start": 0.141,
+    "end": 0.403
+  },
+  {
+    "id": "w2",
+    "text": "chapter:",
+    "start": 0.403,
+    "end": 0.992
+  },
+  {
+    "id": "w3",
+    "text": "writing",
+    "start": 1.512,
+    "end": 1.945
+  },
+  {
+    "id": "w4",
+    "text": "states",
+    "start": 1.945,
+    "end": 2.341
+  },
+  {
+    "id": "w5",
+    "text": "and",
+    "start": 2.341,
+    "end": 2.53
+  },
+  {
+    "id": "w6",
+    "text": "action",
+    "start": 2.53,
+    "end": 2.918
+  },
+  {
+    "id": "w7",
+    "text": "schemas",
+    "start": 2.918,
+    "end": 3.423
+  },
+  {
+    "id": "w8",
+    "text": "in",
+    "start": 3.423,
+    "end": 3.423
+  },
+  {
+    "id": "w9",
+    "text": "STRIPS",
+    "start": 3.423,
+    "end": 3.423
+  },
+  {
+    "id": "w10",
+    "text": "and",
+    "start": 3.423,
+    "end": 3.603
+  },
+  {
+    "id": "w11",
+    "text": "PDDL,",
+    "start": 4.441,
+    "end": 5.415
+  },
+  {
+    "id": "w12",
+    "text": "forward",
+    "start": 5.758,
+    "end": 6.188
+  },
+  {
+    "id": "w13",
+    "text": "and",
+    "start": 6.188,
+    "end": 6.393
+  },
+  {
+    "id": "w14",
+    "text": "backward",
+    "start": 6.393,
+    "end": 6.947
+  },
+  {
+    "id": "w15",
+    "text": "planning,",
+    "start": 6.998,
+    "end": 7.665
+  },
+  {
+    "id": "w16",
+    "text": "relevant",
+    "start": 8.09,
+    "end": 8.244
+  },
+  {
+    "id": "w17",
+    "text": "and",
+    "start": 8.739,
+    "end": 8.847
+  },
+  {
+    "id": "w18",
+    "text": "consistent",
+    "start": 8.847,
+    "end": 9.532
+  },
+  {
+    "id": "w19",
+    "text": "actions,",
+    "start": 9.55,
+    "end": 10.19
+  },
+  {
+    "id": "w20",
+    "text": "planning",
+    "start": 10.588,
+    "end": 11.22
+  },
+  {
+    "id": "w21",
+    "text": "heuristics,",
+    "start": 11.22,
+    "end": 11.931
+  },
+  {
+    "id": "w22",
+    "text": "and",
+    "start": 11.992,
+    "end": 12.222
+  },
+  {
+    "id": "w23",
+    "text": "SATPlan.",
+    "start": 12.222,
+    "end": 12.864
+  }
+]

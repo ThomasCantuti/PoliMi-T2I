@@ -1,0 +1,368 @@
+[
+  {
+    "id": "w0",
+    "text": "Last",
+    "start": 0.06,
+    "end": 0.322
+  },
+  {
+    "id": "w1",
+    "text": "chapter,",
+    "start": 0.322,
+    "end": 0.906
+  },
+  {
+    "id": "w2",
+    "text": "the",
+    "start": 1.209,
+    "end": 1.279
+  },
+  {
+    "id": "w3",
+    "text": "goal-based",
+    "start": 1.279,
+    "end": 1.977
+  },
+  {
+    "id": "w4",
+    "text": "agent",
+    "start": 1.977,
+    "end": 2.327
+  },
+  {
+    "id": "w5",
+    "text": "imagined",
+    "start": 2.405,
+    "end": 2.877
+  },
+  {
+    "id": "w6",
+    "text": "the",
+    "start": 2.877,
+    "end": 3.113
+  },
+  {
+    "id": "w7",
+    "text": "future",
+    "start": 3.113,
+    "end": 3.436
+  },
+  {
+    "id": "w8",
+    "text": "and",
+    "start": 3.645,
+    "end": 3.785
+  },
+  {
+    "id": "w9",
+    "text": "checked",
+    "start": 3.785,
+    "end": 4.134
+  },
+  {
+    "id": "w10",
+    "text": "whether",
+    "start": 4.23,
+    "end": 4.676
+  },
+  {
+    "id": "w11",
+    "text": "it",
+    "start": 4.676,
+    "end": 4.798
+  },
+  {
+    "id": "w12",
+    "text": "reached",
+    "start": 4.798,
+    "end": 5.235
+  },
+  {
+    "id": "w13",
+    "text": "its",
+    "start": 5.235,
+    "end": 5.435
+  },
+  {
+    "id": "w14",
+    "text": "goal.",
+    "start": 5.435,
+    "end": 5.916
+  },
+  {
+    "id": "w15",
+    "text": "In",
+    "start": 6.653,
+    "end": 6.744
+  },
+  {
+    "id": "w16",
+    "text": "a",
+    "start": 6.744,
+    "end": 6.816
+  },
+  {
+    "id": "w17",
+    "text": "world",
+    "start": 6.816,
+    "end": 7.158
+  },
+  {
+    "id": "w18",
+    "text": "that",
+    "start": 7.257,
+    "end": 7.402
+  },
+  {
+    "id": "w19",
+    "text": "is",
+    "start": 7.402,
+    "end": 7.699
+  },
+  {
+    "id": "w20",
+    "text": "fully",
+    "start": 7.699,
+    "end": 7.997
+  },
+  {
+    "id": "w21",
+    "text": "observable,",
+    "start": 7.997,
+    "end": 8.943
+  },
+  {
+    "id": "w22",
+    "text": "deterministic,",
+    "start": 9.251,
+    "end": 10.231
+  },
+  {
+    "id": "w23",
+    "text": "static",
+    "start": 10.585,
+    "end": 11.173
+  },
+  {
+    "id": "w24",
+    "text": "and",
+    "start": 11.173,
+    "end": 11.354
+  },
+  {
+    "id": "w25",
+    "text": "known,",
+    "start": 11.422,
+    "end": 11.799
+  },
+  {
+    "id": "w26",
+    "text": "all",
+    "start": 12.107,
+    "end": 12.244
+  },
+  {
+    "id": "w27",
+    "text": "of",
+    "start": 12.244,
+    "end": 12.373
+  },
+  {
+    "id": "w28",
+    "text": "that",
+    "start": 12.373,
+    "end": 12.621
+  },
+  {
+    "id": "w29",
+    "text": "imagining",
+    "start": 12.721,
+    "end": 13.235
+  },
+  {
+    "id": "w30",
+    "text": "can",
+    "start": 13.235,
+    "end": 13.428
+  },
+  {
+    "id": "w31",
+    "text": "happen",
+    "start": 13.428,
+    "end": 13.832
+  },
+  {
+    "id": "w32",
+    "text": "before",
+    "start": 13.887,
+    "end": 14.309
+  },
+  {
+    "id": "w33",
+    "text": "the",
+    "start": 14.309,
+    "end": 14.538
+  },
+  {
+    "id": "w34",
+    "text": "first",
+    "start": 14.538,
+    "end": 14.923
+  },
+  {
+    "id": "w35",
+    "text": "move:",
+    "start": 14.923,
+    "end": 15.474
+  },
+  {
+    "id": "w36",
+    "text": "the",
+    "start": 16.049,
+    "end": 16.219
+  },
+  {
+    "id": "w37",
+    "text": "solution",
+    "start": 16.219,
+    "end": 16.712
+  },
+  {
+    "id": "w38",
+    "text": "is",
+    "start": 16.712,
+    "end": 16.873
+  },
+  {
+    "id": "w39",
+    "text": "a",
+    "start": 16.873,
+    "end": 17.035
+  },
+  {
+    "id": "w40",
+    "text": "fixed",
+    "start": 17.035,
+    "end": 17.375
+  },
+  {
+    "id": "w41",
+    "text": "sequence",
+    "start": 17.383,
+    "end": 17.953
+  },
+  {
+    "id": "w42",
+    "text": "of",
+    "start": 17.97,
+    "end": 18.114
+  },
+  {
+    "id": "w43",
+    "text": "actions.",
+    "start": 18.114,
+    "end": 18.871
+  },
+  {
+    "id": "w44",
+    "text": "What's",
+    "start": 19.448,
+    "end": 19.731
+  },
+  {
+    "id": "w45",
+    "text": "missing",
+    "start": 19.8,
+    "end": 20.259
+  },
+  {
+    "id": "w46",
+    "text": "is",
+    "start": 20.416,
+    "end": 20.445
+  },
+  {
+    "id": "w47",
+    "text": "a",
+    "start": 20.445,
+    "end": 20.582
+  },
+  {
+    "id": "w48",
+    "text": "way",
+    "start": 20.582,
+    "end": 20.748
+  },
+  {
+    "id": "w49",
+    "text": "to",
+    "start": 20.748,
+    "end": 20.895
+  },
+  {
+    "id": "w50",
+    "text": "describe",
+    "start": 20.895,
+    "end": 21.472
+  },
+  {
+    "id": "w51",
+    "text": "the",
+    "start": 21.472,
+    "end": 21.687
+  },
+  {
+    "id": "w52",
+    "text": "problem",
+    "start": 21.687,
+    "end": 22.244
+  },
+  {
+    "id": "w53",
+    "text": "so",
+    "start": 22.303,
+    "end": 22.391
+  },
+  {
+    "id": "w54",
+    "text": "a",
+    "start": 22.391,
+    "end": 22.459
+  },
+  {
+    "id": "w55",
+    "text": "program",
+    "start": 22.459,
+    "end": 22.967
+  },
+  {
+    "id": "w56",
+    "text": "can",
+    "start": 22.967,
+    "end": 23.124
+  },
+  {
+    "id": "w57",
+    "text": "search",
+    "start": 23.437,
+    "end": 23.622
+  },
+  {
+    "id": "w58",
+    "text": "for",
+    "start": 23.622,
+    "end": 23.818
+  },
+  {
+    "id": "w59",
+    "text": "that",
+    "start": 23.838,
+    "end": 24.131
+  },
+  {
+    "id": "w60",
+    "text": "sequence.",
+    "start": 24.131,
+    "end": 24.981
+  }
+]

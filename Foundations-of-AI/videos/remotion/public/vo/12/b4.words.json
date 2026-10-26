@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.1,
+    "end": 0.251
+  },
+  {
+    "id": "w1",
+    "text": "exam",
+    "start": 0.251,
+    "end": 0.562
+  },
+  {
+    "id": "w2",
+    "text": "gives",
+    "start": 0.562,
+    "end": 0.948
+  },
+  {
+    "id": "w3",
+    "text": "you",
+    "start": 0.948,
+    "end": 1.183
+  },
+  {
+    "id": "w4",
+    "text": "a",
+    "start": 1.183,
+    "end": 1.259
+  },
+  {
+    "id": "w5",
+    "text": "network",
+    "start": 1.259,
+    "end": 1.771
+  },
+  {
+    "id": "w6",
+    "text": "with",
+    "start": 1.805,
+    "end": 2.116
+  },
+  {
+    "id": "w7",
+    "text": "its",
+    "start": 2.116,
+    "end": 2.275
+  },
+  {
+    "id": "w8",
+    "text": "tables:",
+    "start": 2.343,
+    "end": 2.922
+  },
+  {
+    "id": "w9",
+    "text": "compute",
+    "start": 3.451,
+    "end": 3.795
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 3.795,
+    "end": 3.85
+  },
+  {
+    "id": "w11",
+    "text": "probability",
+    "start": 3.931,
+    "end": 4.593
+  },
+  {
+    "id": "w12",
+    "text": "by",
+    "start": 4.593,
+    "end": 4.81
+  },
+  {
+    "id": "w13",
+    "text": "enumeration,",
+    "start": 4.81,
+    "end": 5.925
+  },
+  {
+    "id": "w14",
+    "text": "and",
+    "start": 6.38,
+    "end": 6.481
+  },
+  {
+    "id": "w15",
+    "text": "list",
+    "start": 6.594,
+    "end": 6.785
+  },
+  {
+    "id": "w16",
+    "text": "the",
+    "start": 6.785,
+    "end": 7.011
+  },
+  {
+    "id": "w17",
+    "text": "trails",
+    "start": 7.011,
+    "end": 7.473
+  },
+  {
+    "id": "w18",
+    "text": "that",
+    "start": 7.473,
+    "end": 7.777
+  },
+  {
+    "id": "w19",
+    "text": "are",
+    "start": 7.777,
+    "end": 8.002
+  },
+  {
+    "id": "w20",
+    "text": "active",
+    "start": 8.002,
+    "end": 8.464
+  },
+  {
+    "id": "w21",
+    "text": "given",
+    "start": 8.464,
+    "end": 8.847
+  },
+  {
+    "id": "w22",
+    "text": "some",
+    "start": 8.847,
+    "end": 9.151
+  },
+  {
+    "id": "w23",
+    "text": "evidence.",
+    "start": 9.151,
+    "end": 9.771
+  }
+]
