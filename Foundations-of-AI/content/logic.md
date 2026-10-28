@@ -41,6 +41,12 @@ The **declarative** approach: tell the agent what it needs to know (background k
 inference work out the actions, instead of hard-coding behaviors (procedural approach). The agent can be
 described at the **knowledge level** (what it knows and its goals) independently of the implementation.
 
+```fig logic-wumpus
+AIMA's 4×4 wumpus world (Fig. 7.2: wumpus in [1,3], pits in [3,1], [3,3], [4,4], gold in [2,3]) run by a knowledge-based agent. At each step it TELLs its percept (breeze, stench, glitter) and ASKs, for every square, whether KB ⊨ ¬P ∧ ¬W, by model checking over the pit symbols of the squares next to visited ones and the wumpus square.
+Squares turn green when proved safe, red when a pit or the wumpus is proved, grey while undecided. In [1,1] nothing is perceived, so [2,1] and [1,2] are safe; the breeze in [2,1] leaves [2,2] and [3,1] undecided; the stench in [1,2] proves the wumpus in [1,3], a pit in [3,1] and [2,2] safe (AIMA §7.2).
+The agent visits [2,2], [3,2] and [2,3], grabs the gold and climbs out after 12 actions, entering only squares proved safe. A random world can leave it with no provably safe move.
+```
+
 ## Logic: models and entailment (AIMA §7.3)
 
 - **Syntax**: which sentences are well formed. **Semantics**: the truth of each sentence in each
@@ -59,6 +65,11 @@ described at the **knowledge level** (what it knows and its goals) independently
 > **Exam trap:** soundness and completeness are about **which conclusions** the algorithm reaches, nothing
 > else. "A sound algorithm derives all the entailed conclusions" is **false** (that is completeness);
 > "a complete algorithm supports all the connectives" is **false** (exam 12 Jul 2024).
+
+```fig logic-sound
+For each literal of a small KB: whether KB ⊨ ℓ (truth table) and whether three procedures derive it: resolution by refutation, forward chaining, and the unsound rule "affirming the consequent". A derived literal that is not entailed is marked red (unsound); an entailed literal not derived is marked amber (incomplete).
+KB {Raining ⇒ Wet, Wet}: 2 models, only Wet entailed; resolution and FC derive Wet; affirming the consequent also derives Raining, not entailed. Exam 14 Jun 2023 KB: 1 model, entailed ¬Wet, Outside, Warm, ¬Swimming, ¬Raining, Pleasant; resolution derives exactly these, FC only Outside and Warm (sound, incomplete: the KB is not definite). AIMA's FC KB: FC derives all 6 entailed symbols.
+```
 
 **Grounding**: if the KB is true in the real world, any sentence derived by a sound procedure is true in the
 real world too. Whether the KB is true is a question of perception and learning, not of logic.
@@ -165,6 +176,12 @@ and show that no model survives.
 **Monotonicity**: if $KB \models \alpha$ then $KB \wedge \beta \models \alpha$. Adding knowledge never retracts
 a conclusion — in particular an **inconsistent** KB (no models) entails **every** sentence (exam 8 Jul 2025).
 
+```fig logic-truth
+A live truth table: type a formula α (¬ ∧ ∨ ⇒ ⇔, or ~ & | => <=>) and optionally a KB; every model is a row, the rows that make α true are lit, and the verdict says valid, satisfiable or unsatisfiable.
+With a KB the rows where KB is true are lit and the columns KB ⇒ α and KB ∧ ¬α show the deduction and refutation theorems. Presets: P ∨ ¬P is valid (2 of 2 models), P ∧ ¬P unsatisfiable, P ⇒ Q true in 3 of 4; P ⇒ Q ≡ ¬Q ⇒ ¬P; S ⇒ (D ∨ B) ≡ (S ∧ ¬B) ⇒ D (11 Jun 2026);
+the wumpus KB R1–R5 is true in 3 of 128 models and all 3 have ¬P1,2 (AIMA Fig. 7.9); the resolution example entails R (KB true in 2 of 32 models, both with R); the inconsistent KB A ∧ ¬A entails Q vacuously; in the 14 Jan 2026 KB α = ¬Z ⇒ ¬Y is false in both models of KB, so KB ⊨ ¬α and KB ⊭ α.
+```
+
 > **Exam trap:** keep the three questions apart (exam 16 Jan 2025): from "$KB \cup \{\neg R\}$ is
 > unsatisfiable" you conclude $KB \models R$; you do **not** conclude that $R$ is valid (it is false in the
 > model with $R$ false) nor that the KB is unsatisfiable (only $KB \cup \{\neg R\}$ is).
@@ -187,6 +204,11 @@ Example (§7.5.2): $B_{1,1} \Leftrightarrow (P_{1,2} \vee P_{2,1})$
 | 2 | $(\neg B_{1,1} \vee P_{1,2} \vee P_{2,1}) \wedge (\neg(P_{1,2} \vee P_{2,1}) \vee B_{1,1})$ |
 | 3 | $(\neg B_{1,1} \vee P_{1,2} \vee P_{2,1}) \wedge ((\neg P_{1,2} \wedge \neg P_{2,1}) \vee B_{1,1})$ |
 | 4 | $(\neg B_{1,1} \vee P_{1,2} \vee P_{2,1}) \wedge (\neg P_{1,2} \vee B_{1,1}) \wedge (\neg P_{2,1} \vee B_{1,1})$ |
+
+```fig logic-cnf
+A stepper that runs the four phases on a formula, one rewrite per step, with the rule named and the rewritten subformula marked. B1,1 ⇔ (P1,2 ∨ P2,1) takes 5 rewrites: biconditional elimination; implication elimination twice; De Morgan; distributivity, giving the 3 clauses of the table.
+Other presets: Lucky ∧ (Smart ∨ Study) ⇒ Pass (exam 10 Jul 2023) gives ¬Lucky ∨ ¬Smart ∨ Pass and ¬Lucky ∨ ¬Study ∨ Pass; (¬D ∨ B) ⇒ T (11 Jun 2026) gives D ∨ T and ¬B ∨ T; (S ∧ ¬B) ⇒ D, S ⇒ (D ∨ B) and (S ⇒ D) ∨ B all give ¬S ∨ B ∨ D; (A1 ∧ B1) ∨ (A2 ∧ B2) ∨ (A3 ∧ B3) gives 8 clauses. You can also type your own formula.
+```
 
 Useful patterns: $A \wedge B \Rightarrow C$ becomes the single clause $\neg A \vee \neg B \vee C$;
 $A \vee B \Rightarrow C$ becomes **two** clauses $\neg A \vee C$ and $\neg B \vee C$ (exam 18 Jan 2024: clauses
@@ -271,6 +293,12 @@ is unsatisfiable, but it contains no unit clause, so unit resolution cannot even
 the negated query $\neg A \vee \neg B$, input resolution derives $A$ (1,2), $B$ (1,3), $\neg B$ (2,4), $\neg A$ (3,4)
 and then nothing new: $A$ and $\neg A$ would give $\bot$, but neither is an input clause. Yet $KB \models A \wedge B$.
 
+```fig logic-strategies
+Four columns run PL-RESOLUTION round by round on the same clauses, each resolving only the pairs its strategy allows: plain (any pair), unit (a unit parent), input (an input parent), set of support (a parent from the negated query or its descendants). Each counts the distinct new clauses and ends with the proof or with "nothing new".
+Worked example (clauses numbered as in exam 14 Jul 2022): plain 15 clauses, unit 7, input 15, set of support 7, all reach ⊥. Exam 14 Jul 2022 counterexample: unit cannot start (no unit clause), input stops after 14 clauses, plain and set of support find ⊥.
+Exam 31 Aug 2026: input derives A, B, ¬B, ¬A and stops, as in the official solution. Raining (14 Jun 2023, not Horn): all four succeed. Warehouse robot (11 Jun 2026): plain 64 clauses, unit 14, input 64, set of support 10.
+```
+
 > **Key idea:** on **Horn** clauses (next section) unit resolution and input resolution are complete
 > (exam 18 Jan 2023: "we can conclude $KB \models B$ because this strategy is complete for Horn clauses").
 > Both counterexamples above contain a clause with two positive literals.
@@ -290,6 +318,11 @@ can be decided in time **linear** in the size of the KB (forward and backward ch
 > positive literals. $Warm \wedge \neg Raining \Rightarrow Pleasant$ is $\neg Warm \vee Raining \vee Pleasant$: **two**
 > positive literals; $\neg Wet$ has **zero** (exam 14 Jun 2023). $X \vee Y \vee Z$ is not definite either
 > (exam 14 Jan 2026), so FC cannot be used there.
+
+```fig logic-horn
+An editable KB, one sentence per line: each sentence is converted to CNF and every clause is shown with its positive literals in green, their count and its kind (definite: exactly one; goal clause: none; not Horn: two or more).
+Exam 14 Jun 2023: Warm ∧ ¬Raining ⇒ Pleasant becomes ¬Warm ∨ Raining ∨ Pleasant, two positive literals, and ¬Wet is a goal clause, so the KB is not definite. Exam 14 Jan 2026: X ∨ Y ∨ Z (three), X ∨ Y ∨ ¬Z and X ∨ T ∨ ¬Y (two) are not Horn. The forward-chaining KB of AIMA is all definite.
+```
 
 ## Forward chaining (AIMA §7.5.4)
 
@@ -460,9 +493,19 @@ If it returns a model, the formula is satisfiable; if it returns failure, we **d
 flips). WalkSAT is not complete: it can never prove unsatisfiability, so it cannot be used to prove entailment.
 It is useful when a model is expected to exist.
 
+```fig logic-walksat
+WalkSAT live on a random 3-CNF with n = 50 symbols and m = 200 clauses (m/n = 4, slider 2–6): the 50 symbols of the current model, one cell per clause (red while false), and a plot of the number of false clauses after each flip.
+Each flip picks a false clause at random and flips, with probability p (slider, default 0.5), a random symbol of it, otherwise the symbol that leaves the fewest false clauses. If the count reaches 0 the formula is satisfiable; after 10 000 flips WalkSAT returns failure, which only means "don't know": the Ask DPLL button decides the formula with complete DPLL.
+```
+
 Random 3-CNF with $m$ clauses and $n$ symbols: for small $m/n$ almost all are satisfiable (easy), for large
 $m/n$ almost none are; the **satisfiability threshold** is around $m/n \approx 4.26$, where the hardest
 problems are.
+
+```fig logic-threshold
+On demand, for m/n from 1 to 8 in steps of 0.25, the figure generates 200 random 3-CNFs with n = 20 symbols (or 100 with n = 30, 40 with n = 50) and decides each with DPLL, plotting the fraction that is satisfiable and the median number of DPLL calls.
+With n = 20 about 98% of the formulas are satisfiable at m/n = 3.5 and about 5% at 6; the fraction crosses 50% near m/n ≈ 4.5–4.65 and DPLL's median work peaks between 4.5 and 5 (about 150 calls, against 20 at m/n = 2 and about 70 at 8). Small n makes the drop gradual and moves it above 4.26; with n = 30 it crosses near 4.5, with n = 50 (AIMA Fig. 7.19; 1160 formulas, several seconds) near 4.35–4.4 and more steeply.
+```
 
 ## First-order logic: an overview (AIMA ch. 8)
 
@@ -485,6 +528,11 @@ $\neg\forall x\, P \equiv \exists x\, \neg P$. A model of FOL fixes a domain of 
 interpretation of every symbol; there are infinitely many models, so truth tables are impossible.
 Knowledge engineering in FOL: identify the questions, assemble the vocabulary (predicates, functions,
 constants), encode general knowledge, encode the instance, query, debug. The written exam does not ask FOL.
+
+```fig logic-fol
+AIMA's model of Fig. 8.2: five objects (Richard, John, the crown, two left legs), John is the only king, Richard and John are persons, the crown is on John's head. Each row evaluates the body of four sentences for one object; ∀ is true when every row is T, ∃ when some row is.
+∀x King(x) ⇒ Person(x) is true (the 4 non-kings make it true vacuously); the mistake ∀x King(x) ∧ Person(x) is false (Richard is not a king). ∃x Crown(x) ∧ OnHead(x, John) is true (witness: the crown); the mistake ∃x Crown(x) ⇒ OnHead(x, John) is true only because Richard is not a crown. The relations can be toggled.
+```
 
 ## Summary
 

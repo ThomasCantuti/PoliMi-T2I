@@ -66,6 +66,10 @@ digits $\{0, \dots, 9\}$. Constraints: $Alldiff(F, T, U, W, R, O)$, $O + O = R +
 $C_1 + W + W = U + 10\,C_2$, $C_2 + T + T = O + 10\,C_3$, $C_3 = F$. These involve 3 or more variables: drawn as
 a **constraint hypergraph** (square nodes = constraints).
 
+```fig csp-crypt
+TWO + TWO = FOUR as a constraint hypergraph: circles are the variables F, T, U, W, R, O, C1, C2, C3 (click to change a value), squares are the five constraints of the slide, green when satisfied and red when violated, with the sum written in columns. It starts from T = 7, W = 3, O = 4, F = 1, U = 6, R = 8 with all carries 0: two constraints are violated until C3 = 1. The slide's constraints admit 19 solutions (12 with F = 0); 7 without leading zeros, e.g. 734 + 734 = 1468.
+```
+
 **Sudoku (p. 269).** One variable per open square, domain $\{1, \dots, 9\}$; 27 nine-way $Alldiff$ constraints
 (9 rows, 9 columns, 9 regions).
 
@@ -135,6 +139,10 @@ function BACKTRACK(csp, assignment) returns a solution or failure
 | Australia, slide order WA NT SA T NSW V Q (p. 263) | 9 (NSW = R leaves Q without colors) |
 | Australia with only 2 colors (unsolvable) | 10, before giving up |
 | 8-queens / 16-queens / 20-queens | 113 / 10 052 / 199 635 |
+
+```fig csp-backtrack
+Two maps of Australia colored live, same variable and value order. Left: depth-first search on a black box, which checks the constraints only on complete assignments (p. 263). Right: backtracking, which rejects a value as soon as it clashes with an assigned neighbor. Slides' order WA, NT, SA, T, NSW, V, Q: 626 assignments and 415 complete colorings tested vs 9 assignments (NSW = red is undone). Order WA, NT, Q, NSW, V, SA, T: 419 and 277 vs 7. Two colors: 254 assignments and all 128 colorings vs 10, no solution.
+```
 
 Three questions improve it (p. 277): **filtering** (detect inevitable failure early), **ordering** (which
 variable next, which value first), **structure** (exploit the constraint graph).
@@ -269,6 +277,10 @@ each, the worst-case cost is $O\!\left(\frac{n}{c}\, d^{c}\right)$, **linear in 
 $n = 80$, $d = 2$, $c = 20$: $2^{80}$ nodes ≈ 4 billion years vs $4 \cdot 2^{20}$ nodes ≈ 0.4 s
 (at 10 million nodes/s).
 
+```fig csp-structure
+k triangles plus one K4 (no 3-coloring exists for it), colored with 3 colors by one backtracking over the whole graph (top) and by one backtracking per connected component (bottom). With k = 3: 3,885 assignments against 24; each extra triangle multiplies the top count by about 6 (105, 645, 3,885, 23,325, 139,965, 839,805 for k = 1 to 6) and adds 3 to the bottom one (18 to 33).
+```
+
 ## Putting it together: the complete 4-queens example (p. 301–315)
 
 The modified backtracking of p. 317 runs **AC-3 at the start of every call** and **forward checking after
@@ -321,6 +333,11 @@ involves three variables at once. Generalized propagation (path consistency, **k
 but costs more; AC-3 is usually a good **compromise between time spent in search and time spent in
 constraint propagation**.
 
+```viz csp
+Beyond AC-3: three variables, two values (slide p. 316)
+AC-3 on X ≠ Y, X ≠ Z, Y ≠ Z with domains {1, 2}: every arc is revised and none removes a value, yet the CSP has no solution.
+```
+
 ## Search vs inference (p. 317)
 
 Constraint propagation is **inference**; backtracking is **search**. Some CSPs can be solved by inference
@@ -333,6 +350,10 @@ any assignment. Others (the triangle above) need search even when AC-3 finds not
 | forward checking | constraints between the new variable and its unassigned neighbors | $O(nsd)$ | an emptied neighbor domain |
 | AC-3 (MAC) | every arc, propagated transitively | $O(nsd^3)$ | any pairwise inconsistency |
 | k-consistency | groups of k variables | exponential in k | more, at a higher price |
+
+```fig csp-queens
+Plain backtracking, forward checking and MAC (AC-3 at every call plus forward checking) race on n-queens (n from 4 to 30), static order or MRV, with live counters of assignments, backtracks and constraint checks; the shaded squares are values crossed off the domains. 8-queens, static order: 113 / 88 / 20 assignments, 2,438 / 902 / 2,784 constraint checks. 16-queens: 10,052 / 7,560 / 1,403 assignments, 827,932 / 133,555 / 313,835 checks. With MRV: 75 / 75 / 20 assignments on 8-queens, 44 / 44 / 21 on 16-queens.
+```
 
 ## How it connects
 

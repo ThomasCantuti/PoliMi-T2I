@@ -43,6 +43,10 @@ At each step the current state is replaced by its **best neighbor** (steepest as
 descent when minimizing a cost); it stops when no neighbor is better. Ties between equally good neighbors
 must be broken somehow (first, last, random).
 
+```fig local-climb
+Three hill climbers on 8-queens run thousands of times from random states (one queen per column, h = attacking pairs, random tie-breaking): plain steepest descent, with up to 100 consecutive sideways moves, and with random restarts. A plot shows the share of runs that reach h = 0 and bars the mean steps per run. Measured over 20,000 runs each: about 14% solved in about 4 steps (about 3 when stuck); about 94% with sideways moves (about 19 steps when solved, about 63 when stuck); random restarts always solve it, with about 7 climbs and about 22 steps per solution.
+```
+
 ## Example: homes and hospitals (p. 322–330)
 
 Place two hospitals on a 5 × 10 grid so that the sum of the Manhattan distances from each house to its
@@ -132,6 +136,10 @@ return failure
 It is hill climbing that changes **one variable at a time** with random choices, which makes plateaus easy
 to cross. On n-queens the number of steps barely depends on $n$ (≈ 50 steps for a million queens, with a
 greedy initial assignment). Still local: from Figure 4.3(a) it never moves.
+
+```fig local-minconf
+Min-conflicts on n-queens for n from 8 to 8192 (board drawn up to 32), with the greedy initial assignment of aima-python or a random one, up to 100,000 repairs; every run is a dot on a log-log plot of repair steps against n, with the median of each start. Greedy start: the median stays around 50 repairs from n = 32 to n = 8192. Random start: about 90% of the queens start in conflict and the repairs grow with n (roughly 700 at n = 1024, 5,000 at n = 8192). On 8 and 16 queens a few runs cycle without finding a solution.
+```
 
 ```viz local
 8-queens – min-conflicts

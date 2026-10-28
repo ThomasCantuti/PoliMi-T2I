@@ -42,6 +42,12 @@ The ranking matches the open-lines evaluation function (center 4 > corner 3 > ed
 game. But the statistics are **uncertain**, and in a tree they are computed on samples of **different sizes**:
 "70 of 100" is less reliable than "692 of 1000", while "5 of 10" is almost no information (slides p. 427–428).
 
+```fig mcts-rollouts
+Random playouts after X's first move (center, corner, edge), one per move per step up to 10 000 each, with the X-win estimate and its
+95% band (± 1.96·σ/√n) on a log axis. The estimates converge to the exact random-play probabilities 69.29%, 60.71%, 53.57% (the slides
+measured 69.2%, 60.9%, 53.8%); the three bands stop overlapping after about 300 to 2 000 playouts (700 in a typical run). With perfect play all three moves are draws.
+```
+
 MCTS develops a **sparse, asymmetric** game tree while evaluating states with random simulations; simulations are run
 incrementally, one after the other, while deeper nodes are added (slides p. 410). The more complex the game, the more
 simulations we need — and the more expensive each one becomes (p. 411).
@@ -68,6 +74,13 @@ function MONTE-CARLO-TREE-SEARCH(state) returns an action
     return the move in ACTIONS(state) whose node has highest number of playouts
 ```
 
+```viz mcts
+Tic-tac-toe – X must block at c2 (seeded random playouts)
+The four phases on a real position (X: a1, a3; O: a2, b2; X to move), C = 1.41, 30 iterations of seeded random playouts. After 30
+iterations the root is 15.5/30 (MAX's wins, a draw counts ½) and MCTS returns c2, the block, with the most playouts: 6.5/9, against
+b1 2.5/6, c1 2/5, b3 2.5/5, c3 2/5.
+```
+
 **When does MCTS stop?** It is an **anytime** method: whenever it stops it can provide an answer — typically after a
 time limit or a given number of rollouts (slides p. 415).
 
@@ -84,6 +97,12 @@ Each node $n$ stores a pair: **wins** $U(n)$ and **number of simulations** $N(n)
 
 With convention 2 every player simply picks the child with the largest UCB1. With convention 1, at the opponent's
 levels you must maximize the opponent's win rate $(N(n) - U(n))/N(n)$ instead. A draw counts ½.
+
+```fig mcts-stats
+The tree of the slides' example before step 9 (root N = 4; a1 2/3 with b1 0/1 and b2 1/1; a2 0/1), shown in convention 1 (MAX's wins) or
+convention 2 (wins of the player who moved into the node: b1 1/1, b2 0/1). MIN at a1 picks b1 either way. At the root, UCB1 of a1 and a2
+against C: with C = 1, a1 1.346 vs a2 1.177 (the slides' choice); with C = √2, a1 1.628 vs a2 1.665; the choice flips at C = 1.34.
+```
 
 ## Step-by-step example (slides p. 417–452)
 
@@ -113,7 +132,7 @@ The UCB1 numbers with $C = 1$ (the value consistent with the slides):
 > the root is 2/5 and $a_1$ 2/4 — and only with these numbers does UCB1 pick $a_2$. The final tree is root 3/6,
 > $a_1$ 2/4, $a_2$ 1/2 (the slide's "2/3" for $a_1$ is a typo: its children add up to 4 visits).
 
-> **Exam trap:** with $C = \sqrt 2$ the choice at step 9 is already $a_2$ ($0.667 + 1.414 \cdot 0.680 = 1.629 < 1.414 \cdot 1.177 = 1.665$).
+> **Exam trap:** with $C = \sqrt 2$ the choice at step 9 is already $a_2$ ($0.667 + 1.414 \cdot 0.680 = 1.628 < 1.414 \cdot 1.177 = 1.665$).
 > Always check which $C$ the exercise uses, and use the **natural** log.
 
 ## Multi-armed bandits (slides p. 430–442)
@@ -158,7 +177,15 @@ How the bonus shrinks with experience (p. 442), $t = 10\,000$:
 
 Meanwhile the bonus of an arm that is not pulled grows slowly with $\ln t$: neglected arms are re-tried, more and more
 rarely. Averaged over random 5-armed Bernoulli bandits (1000 steps), UCB ($c = 0.5$) earns ≈ 98% of the best possible
-reward, ε-greedy (0.1) ≈ 94%, greedy ≈ 59%.
+reward, ε-greedy (0.1) ≈ 94%, greedy ≈ 59% (ties broken toward the first arm, as in the Playground: greedy then never leaves
+arm 1, whose estimate stays above the untried arms' 0; with random tie-breaking greedy reaches ≈ 77%).
+
+```fig mcts-bandits
+2 000 random 5-armed Bernoulli bandits (μ uniform in [0, 1]), 1 000 steps each, greedy, ε-greedy (ε = 0.1) and UCB (c = 0.5) on the same
+bandits and rewards. Left: % of runs pulling the best arm at each step; right: average cumulative regret. Greedy never leaves arm 1 (best arm
+20% of the time, about 60% of the best reward); ε-greedy reaches about 83% best-arm pulls with regret growing linearly (about 94% of the
+reward); UCB about 91% with a flattening regret curve (about 98%). Sliders change k, ε and c.
+```
 
 ```viz bandit
 UCB vs ε-greedy – 5 arms, close means
@@ -205,13 +232,21 @@ every node on the path gets $N + 1$.
 | guarantee | optimal on the full tree | converges with more simulations; few simulations can blunder |
 | weak spot | huge $b$, no good $e(s)$ | expensive simulations; playouts may not be informative (traps) |
 
+```fig mcts-vs-minimax
+A random game with two moves per turn and 10 plies (each move adds a hidden number in [−1, 1] to a score; MAX wins if it ends positive),
+searched by minimax and by MCTS with the same number of nodes. MCTS (UCB1, C = √2) runs 500 iterations, about 450 nodes (an iteration
+that ends on a final position adds none); minimax gets the same number of nodes level by level, complete to ply 7, and evaluates the
+cut-off with the score so far. MCTS reaches ply 10 along its most visited line after about 110–240 nodes, while other branches stay shallow.
+```
+
 > **Key idea:** MCTS does not need an explicit evaluation function: random playouts are enough to explore the search
 > space, so it can be used when an evaluation function, or a substantial corpus of knowledge, is unavailable (slides p. 453).
 
 **Quiz time (slides p. 455)**, tic-tac-toe: minimax vs random → minimax never loses; two minimax players → always a
 draw (and the same game every time); minimax vs alpha-beta → always draws (same values, same moves); two minimax players
 at Breakthrough → the game is too big to search fully, so they need a depth limit and $e(s)$; alpha-beta vs MCTS →
-alpha-beta never loses, a well-tuned MCTS with enough playouts draws.
+alpha-beta never loses; a well-tuned MCTS with enough playouts draws almost every game (with 1000 playouts per move and
+$C = \sqrt 2$ it still loses a few games in 100).
 
 ## Four ways to build a player (slides p. 457–472)
 
@@ -221,6 +256,14 @@ alpha-beta never loses, a well-tuned MCTS with enough playouts draws.
 | #2 lookahead | simulate what happens ahead: minimax / alpha-beta with the utility (or $e(s)$) | general, optimal, needs only rules | explores all matches: exponential; $e(s)$ needs domain knowledge |
 | #3 rollouts | MCTS: evaluate states by incrementally simulating matches | no $e(s)$ | simulations are expensive and may not provide enough information |
 | #4 learning | learn from simulations how to evaluate states | once learned, no random rollouts needed | training cost |
+
+```fig mcts-players
+A tic-tac-toe tournament of 100 games between two of: random, #1 hand-written rules, #2 minimax, #3 MCTS with n playouts per move,
+with the players swapping sides every game. Presets follow the quiz of slide p. 455 and the exam of 8 July 2025.
+Measured: minimax vs random, minimax never loses (about 90 wins, 10 draws); minimax vs minimax, 100 draws, all the same game; minimax vs
+MCTS with 1 playout, MCTS plays like random (about 90 minimax wins); minimax vs MCTS with 1 000 playouts, about 95 draws and 3–7 MCTS
+losses; rules vs random, about 90 wins and 0–2 losses (a random opponent sometimes builds a fork the rules cannot stop); rules vs MCTS with 200 playouts, mostly draws.
+```
 
 ## AlphaZero (slides p. 473–477)
 
@@ -233,6 +276,13 @@ alpha-beta never loses, a well-tuned MCTS with enough playouts draws.
   **MCTS is a policy improvement operator**.
 - The network is trained by reinforcement learning to match $\pi$ and the game outcome: lookahead search inside the
   training loop. Random rollouts are replaced by the value $v$; selection is guided by $\mathbf{p}$.
+
+```fig mcts-alphazero
+The AlphaZero loop as a cycle of five boxes: the network f_θ(s) = (p, v) guides an MCTS in every position of a self-play game; the search
+probabilities π_t choose the moves (a_t ~ π_t); the outcome z labels every position, giving training data (s_t, π_t, z); θ is trained so that
+p matches π and v matches z; the new network guides the next games. A bar chart on the position X..OO.X.. compares a uniform p (0.2 per
+move) with π from 200 MCTS iterations, concentrated on the block c2.
+```
 
 ## How it connects
 

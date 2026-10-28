@@ -45,6 +45,13 @@ flight but is a terrible plan.
 
 $$\text{decision theory} = \text{probability theory} + \text{utility theory}$$
 
+```fig bn-airport
+Plans A_t (leave t minutes before the flight) with an assumed travel time (lognormal, median 50 minutes): P(make the flight | A_t)
+rises with t (A_30 0.047, A_90 0.975, A_120 0.998, A_1440 practically 1), while the expected waiting grows (A_1440: about 23 hours).
+Expected utility EU(A_t) = −E[wait] − M · P(miss) has a maximum: with a missed flight worth 600 minutes of waiting the best plan is A_93;
+a costlier miss moves it right (M = 6000: A_119), a cheaper one left (M = 60: A_65).
+```
+
 An agent is rational iff it chooses the action with **maximum expected utility** (MEU), averaged over all the
 possible outcomes of the action (AIMA §12.1.2):
 
@@ -96,6 +103,13 @@ are **not** independent ($P(toothache \wedge catch) = 0.124 \ne 0.2 \cdot 0.34$)
 **given** $Cavity$: both are caused by the cavity, and once we know about it, one tells nothing more about the
 other ($0.108 / 0.2 = 0.54 = 0.6 \cdot 0.9$).
 
+```fig bn-joint
+Interactive full joint of Toothache, Catch, Cavity (AIMA Fig. 12.3): choose an event and evidence; the cells summed light up.
+P(cavity) = 0.108 + 0.012 + 0.072 + 0.008 = 0.2; P(cavity | toothache) = 0.12 / 0.2 = 0.6, i.e. P(Cavity | toothache) = α⟨0.12, 0.08⟩ = ⟨0.6, 0.4⟩.
+P(toothache ∧ catch) = 0.124 ≠ P(toothache) P(catch) = 0.2 · 0.34 = 0.068 (dependent);
+P(toothache ∧ catch | cavity) = 0.54 = 0.6 · 0.9 (independent given cavity).
+```
+
 > **Exam trap:** "independent" and "conditionally independent" are different claims, and neither implies the
 > other. Toothache and Catch are dependent but conditionally independent given Cavity; two independent causes
 > become dependent once their common effect is observed (explaining away, below).
@@ -119,6 +133,12 @@ $$\mathbf{P}(Cavity \mid toothache \wedge catch) = \alpha\,\mathbf{P}(toothache 
 
 the same value as the full joint table ($0.108 / 0.124$). One cause with many conditionally independent effects
 is the **naive Bayes** model.
+
+```fig bn-bayes
+Natural frequencies: 1000 people coloured by cause and evidence, then 1000 people who show the evidence.
+Sliders for P(H), P(e | H), P(e | ¬H). Presets: cavity | toothache (0.2, 0.6, 0.1 → 0.6); cavity | toothache ∧ catch (0.2, 0.54, 0.02 → 0.871);
+meningitis | stiff neck (1/50000, 0.7, P(s) = 0.01 → 0.0014: of 100,000 people 1.4 have both, about 999 have a stiff neck without meningitis).
+```
 
 ## Bayesian networks (AIMA §13.1)
 
@@ -172,6 +192,12 @@ $P(A, B, C, D, E) = P(A)\,P(C)\,P(E)\,P(B \mid A, C)\,P(D \mid C, E)$.
 Compared with the general chain rule, each factor $P(X_i \mid X_{i-1}, \dots, X_1)$ has been shortened to
 $P(X_i \mid Parents(X_i))$: the network **claims** that each variable is conditionally independent of its other
 predecessors given its parents. That claim is what makes it compact, and what can make it wrong.
+
+```fig bn-chainrule
+Burglary network with its CPTs; click a node to flip its value. The probability of the atomic event is rebuilt one factor per node,
+parents first, with the CPT row in use highlighted: P(¬b) P(¬e) P(a | ¬b, ¬e) P(j | a) P(m | a) = 0.999 · 0.998 · 0.001 · 0.9 · 0.7 = 0.000628.
+Under it, the general chain rule in the same order with the non-parents struck out (P(j | ¬b, ¬e, a) becomes P(j | a)). The 32 events sum to 1.
+```
 
 > **Exam trap:** exam tables often list only $P(X = \text{True} \mid \dots)$. For $X = \text{False}$ use
 > $1 - p$ **of the same row**: $P(\neg a \mid b, \neg e) = 1 - 0.94 = 0.06$. Each **row** sums to 1, not each
@@ -285,6 +311,12 @@ A CPT grows as $2^k$ with $k$ parents; often the relation has a simple shape:
   instead of $2^k$). Fever with $q_{cold} = 0.6$, $q_{flu} = 0.2$, $q_{malaria} = 0.1$:
   $P(fever \mid cold, flu, malaria) = 1 - 0.6 \cdot 0.2 \cdot 0.1 = 0.988$.
 
+```fig bn-noisyor
+Cold, Flu, Malaria → Fever with inhibition probabilities q = 0.6, 0.2, 0.1 (sliders). The 8-row CPT is computed live:
+P(¬fever | causes) = product of q over the true causes: e.g. cold, flu: 0.6 · 0.2 = 0.12 → P(fever) = 0.88; all three: 0.012 → 0.988; no cause: P(fever) = 0.
+3 numbers instead of 2^3 = 8.
+```
+
 (Continuous variables, AIMA §13.2.3, are not in the program.)
 
 ## Inference by enumeration (AIMA §13.3.1)
@@ -340,6 +372,12 @@ $$P(k_1 \mid d_1, g_3) = \frac{P(g_3 \wedge k_1 \wedge d_1)}{P(d_1 \wedge g_3)}
 
 The prior was $P(k_1) = 0.3$: the C makes high knowledge much less likely.
 
+```fig bn-student-enum
+Stepper on the student network. P(L1): Test sums out; P(g1) = 0.1·0.7·0.3 + 0.9·0.7·0.05 + 0.1·0.3·0.9 + 0.9·0.3·0.5 = 0.2145,
+P(g2) = 0.2689, P(g3) = 0.5166; times P(L1 | g) = 0.9, 0.6, 0.01: 0.19305 + 0.16134 + 0.00517 = 0.3596 ≈ 0.360.
+P(k1 | d1, g3): numerator 0.2·0.3·0.9 = 0.054, denominator 0.441 + 0.054 = 0.495, ratio 0.109 (prior 0.3).
+```
+
 > **Exam trap:** a leaf that is neither queried nor observed (Test, Blood Pressure) sums to 1 and disappears;
 > a hidden variable **between** the query and the rest (Grade in $P(L_1)$) does not. And never forget the
 > denominator: $P(k_1 \wedge g_3 \wedge d_1) = 0.054$ is a joint, not the answer.
@@ -351,6 +389,12 @@ The prior was $P(k_1) = 0.3$: the C makes high knowledge much less likely.
 | **causal** (predictive) | from causes to effects, top-down | $P(L_1) = 0.360$; knowing she studied: $P(L_1 \mid k_1) = 0.655$ |
 | **evidential** (diagnostic) | from effects to causes, bottom-up | $P(k_1) = 0.3$; she got a C: $P(k_1 \mid g_3) = 0.106$, and $P(d_1 \mid g_3) = 0.958$ (prior 0.9) |
 | **intercausal** (explaining away) | between causes of a common effect | $P(k_1 \mid g_3, d_1) = 0.109$ but $P(k_1 \mid g_3, d_0) = 0.028$ |
+
+```fig bn-reasoning
+Click a value to observe it; every bar shows P(X = x | evidence) computed by enumeration, with a tick at the prior.
+Student network: P(L1) = 0.360, P(L1 | k1) = 0.655 (causal); P(k1 | g3) = 0.106 and P(d1 | g3) = 0.958 (evidential);
+P(k1 | g3, d1) = 0.109 but P(k1 | g3, d0) = 0.028 (intercausal). Burglary network: P(b | a) = 0.374, P(b | a, e) = 0.003 (explaining away), P(b | j, m) = 0.284.
+```
 
 The official model answer: causal reasoning flows in the causal direction, from the priors (Difficulty,
 Knowledge) down, e.g. the probability of a recommendation letter given that the student studied a lot;

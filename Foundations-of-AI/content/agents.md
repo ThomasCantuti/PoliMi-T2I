@@ -64,6 +64,10 @@ The **performance measure** is the criterion for evaluating the success of the b
 what you want in the environment, not according to how you think the agent should behave (rewarding
 "dirt sucked" rewards dumping dirt and sucking it again).
 
+```fig agents-rational
+Two programs run side by side in the two-square vacuum world with the same random dirt: the simple reflex agent keeps moving, the model-based agent stays once it believes both squares clean. Score: +1 per clean square per step, −c per move; after each step a clean square gets dirty again with probability q. A live plot shows each agent's average score per step and its exact long-run value (Markov chain). If dirt never returns (q = 0) staying wins for every c > 0 (2 per step vs 2 − c) and they tie at c = 0. If dirt returns, staying earns only 1 per step (the other square stays dirty), and keeping moving wins when moves are cheap: 1.407 at c = 0.5, q = 0.2; 1.070 at c = 1, q = 0.1; but 0.929 at c = 1, q = 0.5. A map of c against q shows which program wins; the boundary lies near c ≈ 0.8–1.1.
+```
+
 > **Exam trap:** rational ≠ omniscient ≠ successful. An agent that looks both ways and is hit by a falling
 > cargo door acted rationally: rationality maximizes **expected** performance given the percepts, not the
 > actual outcome. It does include *gathering information* (look before crossing) and *learning*.
@@ -80,6 +84,10 @@ what you want in the environment, not according to how you think the agent shoul
 | refinery controller | purity, yield, safety | refinery, raw materials, operators | valves, pumps, heaters, stirrers, displays | temperature, pressure, flow, chemical sensors |
 | English tutor | student's score on test | set of students, testing agency | display of exercises, feedback, speech | keyboard entry, voice |
 | automated taxi | safe, fast, legal, comfortable trip, profit | roads, traffic, pedestrians, customers | steering, accelerator, brake, signal, horn, display | cameras, GPS, speedometer, odometer, accelerometer, engine sensors |
+
+```fig agents-peas
+Pick one of the six agents of the table and its PEAS entries appear in place around the agent: sensors bring percepts from the environment to the agent program, actuators act on the environment, and the performance measure sits outside the agent and judges the sequence of environment states. "Quiz me" shows one entry (for example "touchscreen/voice entry of symptoms and findings") and asks which of the four boxes it belongs to, with the reason after each answer and a count of first-try answers.
+```
 
 > **Exam trap:** for software agents the actuators are "display …" and the sensors are "keyboard/entry of …".
 > The performance measure is a *criterion*, never a device.
@@ -113,6 +121,10 @@ AIMA Fig. 2.6 (slides p. 29) — learn the reasoning, not the table:
 | refinery controller | partially | single | stochastic | sequential | dynamic | continuous |
 | English tutor | partially | multi | stochastic | sequential | dynamic | discrete |
 
+```fig agents-envprops
+An explorer of AIMA Fig. 2.6: pick one of the ten task environments (or click the properties to build your own) and see its six properties with the reason for each, how many are on the hard side, and which course techniques assume that kind of environment. Crossword puzzle (1 hard side): search, CSP and local search, logical agent, classical planning, tabular Q-learning. Chess with a clock: minimax and α–β, MCTS, Q-learning. Backgammon: expectiminimax, MCTS, Q-learning. Poker, taxi driving, medical diagnosis, part-picking robot, refinery controller and English tutor are partially observable: of the course techniques only Bayesian networks assume that. Image analysis (episodic, continuous) fits none of them.
+```
+
 > **Exam trap:** *known/unknown* is about knowledge of the rules, *observable* is about perception. Solitaire
 > is known but partially observable; a new video game can be fully observable but unknown.
 
@@ -140,6 +152,10 @@ function TABLE-DRIVEN-AGENT(percept) returns an action
 
 With $|P|$ possible percepts and lifetime $T$ the table has $\sum_{t=1}^{T} |P|^t$ entries: 1 398 100 for
 the vacuum world ($|P| = 4$) with $T = 10$, astronomically many for a taxi.
+
+```fig agents-table
+Left: the first rows of the TABLE-DRIVEN-AGENT's table for the vacuum world (AIMA Fig. 2.3): [A, Clean] → Right, [A, Dirty] → Suck, [B, Clean] → Left, [B, Dirty] → Suck, then the sequences of two percepts, and so on; every action is the reflex rule applied to the last percept. With lifetime T = 10 the table has 1,398,100 rows, while REFLEX-VACUUM-AGENT is 4 lines for any T. Right: a log-scale plot of the number of rows against T (sliders for |P| and T): the vacuum curve grows as 4^T and passes 10^80, the number of atoms in the observable universe, at T = 133 for |P| = 4 (off the plot) and at T = 40 for |P| = 100.
+```
 
 > **Key idea (slides p. 34):** the key challenge is to write programs that produce rational behaviour from a
 > **smallish program**. The four architectures below are four ways to compress the table.
@@ -213,6 +229,10 @@ importance of the goals. More expensive in computation.
 | model-based reflex | + internal state | memory, transition & sensor model | Roomba 980 (SLAM) |
 | goal-based | + prediction + goals | "what if I do $a$?", search/planning | route finder, game tree |
 | utility-based | + utility | *how good* a state is, expected utility | taxi trading speed vs safety |
+
+```fig agents-four
+The four architectures clean the same 3×6 room side by side for T = 30 steps, starting in the top-left corner with four dirty squares (three near the start, one in the far corner); each step scores +1 per clean square and −c per move. With c = 1: the simple reflex agent follows a fixed arrow per square and never stops (26 moves, performance 469); the model-based agent follows the same arrows but stops when its state says all clean (17 moves, 478); the goal-based agent follows a shortest plan found by breadth-first search (9 moves, 510); the utility-based agent maximizes the score itself and here matches it (510). With c = 4 the utility-based agent leaves the far square dirty (3 moves, 489) and beats the goal-based one (483). A bar chart shows the points each agent has lost to dirt and to moves.
+```
 
 ## Worked example: reflex vs model-based in the vacuum world
 

@@ -43,6 +43,12 @@ negative = good for MIN, 0 = tie. MIN's values are the opposite (multiply by −
 
 The **game tree** alternates MAX levels (MAX to move, ▲) and MIN levels (▼) down to terminal states (slides p. 344).
 
+```fig adv-ttt-tree
+The tic-tac-toe game tree grown level by level. Level d has 1, 9, 72, 504, 3 024, 15 120, 54 720, 148 176, 200 448, 127 872 nodes
+(move sequences) but only 1, 9, 72, 252, 756, 1 260, 1 520, 1 140, 390, 78 distinct positions. Games first end at level 5 (1 440 X wins).
+In total 549 946 nodes, 255 168 complete games (131 184 X wins, 77 904 O wins, 46 080 draws) and 5 478 distinct positions.
+```
+
 ## Minimax
 
 **Minimax value** of a node (slides p. 351–352): the utility (for MAX) of the terminal state reached if both
@@ -105,6 +111,12 @@ Each MIN node takes the minimum of its leaves (3, 2, 2); MAX takes the maximum (
 
 > **Exam trap:** minimax space is $O(bh)$ (or $O(h)$ generating one child at a time), **not** $O(b^h)$ — it is a
 > depth-first search. Only the time is exponential.
+
+```fig adv-cost
+Nodes against search depth on a log scale: b^h (minimax), b^(3h/4) (alpha-beta, random order), b^(h/2) (alpha-beta, perfect order),
+with the node budget as a horizontal line. With b = 35 and 100 s at 10 000 nodes/s (10^6 nodes): minimax reaches depth 3.89,
+alpha-beta 5.18 in random order and 7.77 with perfect ordering (the slides' "about depth 8"). Memory stays b·h.
+```
 
 ## Alpha-beta pruning
 
@@ -198,6 +210,13 @@ The efficiency of alpha-beta depends on the order in which nodes are examined (s
 With perfect ordering and distinct leaves, a uniform tree evaluates exactly $b^{\lceil h/2\rceil} + b^{\lfloor h/2\rfloor} - 1$
 leaves (17 of 81 for $b = 3$, $h = 4$).
 
+```fig adv-ordering
+Alpha-beta on random uniform trees (b = 2…5, depth up to 8), each tree searched three times: best first, random order, worst first.
+Left: which leaves of the last tree are read. Right: average leaves read against the depth on a log scale, next to b^h, b^(3h/4), b^(h/2).
+Best first always reads b^⌈h/2⌉ + b^⌊h/2⌋ − 1 leaves (53 of 729 for b = 3, h = 6); random order about 250 (≈ 1.8 × 3^(4.5) = 140);
+worst first about 650: the measured counts grow parallel to the three textbook curves.
+```
+
 Example (slides p. 378): MAX with children `[10]` and a MIN node with leaves 11, 0. Order 11, 0: nothing is pruned.
 Order 0, 11: after 0 the MIN node is $\le 0 \le \alpha = 10$ and 11 is pruned.
 
@@ -253,6 +272,14 @@ Evaluation functions are always imperfect; **the deeper in the tree they are bur
 matters**; there is a trade-off between complex features and computation (slides p. 389). Beyond the cutoff the
 search is blind (the *horizon*).
 
+```fig adv-depth
+Depth-limited minimax with the open-lines e(s) on four tic-tac-toe positions; a slider sets the depth limit h and each square shows the
+backed-up value of playing there, with its true outcome under perfect play. Empty board, h = 2: center 1, corner −1, edge −2 (slides p. 386).
+"A win beyond the horizon" (O on c1, X on c3): b2 for h = 1–3, b1 for h = 4, the winning a1 only from h = 5. "A loss beyond the horizon":
+b1 looks best up to h = 3 but loses; h = 4 switches to a drawing move. "e(s) not normalized": with e up to 8 and wins worth 1, h = 1 prefers
+c1 (e = 2) to the immediate win a1, and c1 loses; dividing e by 8 fixes it.
+```
+
 ## Stochastic games: expectiminimax
 
 Dice (backgammon), unpredictable opponents, actions that fail (wheels slip): we add **chance nodes** to the tree
@@ -307,6 +334,12 @@ MAX root over three chance nodes (each outcome 1/3): `[3, 12, 9]`, `[2, 4, 6]`, 
 
 $$\text{upper bound} = \textstyle\sum_{\text{seen}} P(r)\,v_r + \big(1 - \sum_{\text{seen}} P(r)\big)\cdot \max U$$
 
+```fig adv-chance
+The tree of slides p. 398–399 with a slider for the known maximum utility M. With M = 15: the first chance node is worth 8 (α = 8);
+in the second, after 2 and 4 the bound is (2 + 4 + 15)/3 = 7 ≤ 8, so 6 is pruned; in the third, after 0 and 6 the bound is 7, so 15 is pruned:
+7 of 9 leaves read, value 8. Pruning stops once M > 18. With the range unknown every bound is +∞ and all 9 leaves are read.
+```
+
 As depth increases, the probability of reaching a given node shrinks: the usefulness of search is diminished and a
 limited depth is less damaging.
 
@@ -323,6 +356,11 @@ players (red, blue, green) and leaves (1,6,6) (7,1,2) (6,1,2) (7,2,1) (5,1,7) (1
 
 Players may cooperate or compete; alliances can emerge.
 
+```fig adv-multiplayer
+The three-player tree of slide p. 401 backed up step by step. Green picks the larger third component: (1,6,6), (6,1,2), (5,1,7), (5,2,5).
+Blue the larger second: (1,6,6) and (5,2,5). Red the larger first: (5,2,5), the value of the game.
+```
+
 ## Homework (slides p. 402)
 
 *Your opponent runs a depth-2 minimax, uses its result 80% of the time and moves randomly otherwise. What tree
@@ -338,6 +376,12 @@ move $0.2/k$ ($k$ legal moves). With a model of the opponent you maximize expect
 | time | $O(b^h)$ | $O(b^{h/2})$ … $O(b^h)$ | bounded by depth | $O(b^m n^m)$ |
 | needs | utility | utility + good ordering | $e(s)$ | probabilities, values on a meaningful scale |
 | optimal? | yes (full tree) | yes (full tree) | no | yes in expectation (full tree) |
+
+```fig adv-race
+The four algorithms of the table choose X's first move in tic-tac-toe, advancing the same number of nodes per frame. Minimax: 549 946 nodes,
+value 0, a1 (all nine first moves draw). Alpha-beta: same value and move after 18 297 nodes (30× fewer). Depth-limited alpha-beta with
+h = 2 and e(s): 36 nodes, b2 with the estimate 1. Expectiminimax with O as a random player: 549 946 nodes, value 0.9948, best move a1 (a corner).
+```
 
 ## How it connects
 

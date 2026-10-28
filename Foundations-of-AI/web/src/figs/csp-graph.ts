@@ -2,7 +2,7 @@
 // (two regions are neighbors iff they share a border); outlines and region centers are the CSP visualizer's.
 import { card, s, stepper, style, type FigOptions, type Frame } from './shell';
 
-const MAP: Record<string, number[][]> = {
+export const MAP: Record<string, number[][]> = {
   WA: [[129, -14.9], [129, -26], [129, -31.6], [126.5, -32.3], [124, -33.6], [121.5, -33.8], [119.5, -34.4], [117.8, -35.1], [116, -34.8], [115, -34.2], [115.6, -33.4], [115.7, -31.7], [115, -29.5], [114.2, -28], [113.5, -26], [113.7, -24], [114.2, -22], [116.7, -20.6], [119, -20], [121, -19.5], [122.3, -18], [123.5, -16.6], [125, -15], [126.8, -13.9], [128.2, -14.9]],
   NT: [[129, -14.9], [129.6, -13.6], [130.3, -12.4], [131.5, -11.3], [132.6, -11.5], [133.5, -11.8], [135.2, -12.2], [136.7, -12.1], [136.2, -13.6], [135.5, -14.8], [136.8, -15.9], [138, -16.6], [138, -26], [129, -26]],
   Q: [[138, -16.6], [139.5, -17.4], [140.8, -17.4], [141.5, -15.5], [141.6, -12.8], [142.5, -10.7], [143.4, -12.5], [143.8, -14.2], [145.3, -15], [145.5, -16.8], [146.3, -18.9], [148.8, -20.4], [150.5, -22.4], [151.2, -23.8], [153.1, -25.3], [153.5, -28.2], [151, -28.9], [149, -29], [141, -29], [141, -26], [138, -26]],
@@ -11,16 +11,16 @@ const MAP: Record<string, number[][]> = {
   SA: [[129, -26], [138, -26], [141, -26], [141, -29], [141, -34], [141, -38.1], [140, -37.5], [139.6, -36.8], [139.3, -35.6], [138.1, -35.6], [138.5, -34.5], [137.9, -33], [137.5, -34.4], [135.9, -34.9], [135.6, -34], [134.6, -33], [133.6, -32.2], [131.2, -31.5], [129, -31.6]],
   T: [[144.7, -40.7], [146.6, -41.1], [148.3, -40.9], [148.3, -42.1], [147.6, -43.1], [146.1, -43.6], [145.2, -42.2]],
 };
-const CENTER: Record<string, number[]> = { WA: [121.5, -25], NT: [133.5, -19.8], SA: [135, -30.3], Q: [144.3, -22.5], NSW: [146.5, -32.3], V: [143.8, -36.9], T: [146.5, -42.3] };
+export const CENTER: Record<string, number[]> = { WA: [121.5, -25], NT: [133.5, -19.8], SA: [135, -30.3], Q: [144.3, -22.5], NSW: [146.5, -32.3], V: [143.8, -36.9], T: [146.5, -42.3] };
 const GRAPH: Record<string, number[]> = { WA: [468, 175], NT: [528, 95], Q: [624, 95], SA: [576, 175], NSW: [668, 175], V: [624, 255], T: [668, 325] };
 const SOLUTION: Record<string, string> = { WA: 'R', NT: 'G', Q: 'R', NSW: 'G', V: 'R', SA: 'B', T: 'G' }; // p. 261
 const COLOR: Record<string, string> = { R: '#e5484d', G: '#2f9e6a', B: '#3e6ee8' };
 const NAMES: Record<string, string> = { R: 'red', G: 'green', B: 'blue' };
-const proj = ([lon, lat]: number[]) => [(lon - 112) * 10 + 10, (-lat - 9.5) * 10];
+export const proj = ([lon, lat]: number[]) => [(lon - 112) * 10 + 10, (-lat - 9.5) * 10];
 
 const V = Object.keys(MAP);
 // a shared border = at least two common outline points (one common point would only be a corner)
-const EDGES = V.flatMap((a, i) => V.slice(i + 1)
+export const EDGES = V.flatMap((a, i) => V.slice(i + 1)
   .filter(b => MAP[a].filter(p => MAP[b].some(q => q[0] === p[0] && q[1] === p[1])).length >= 2).map(b => [a, b]));
 const OK = EDGES.every(([a, b]) => SOLUTION[a] !== SOLUTION[b]);
 

@@ -12,6 +12,10 @@ configuration is**, **which moves are legal** and **what a move does**. That des
 defines a huge graph (the state space). Search then builds, piece by piece, a **tree of paths** from the
 start, hoping to hit the goal after exploring only a tiny part of the graph.
 
+```fig search-unfold
+Starting from the 8-puzzle state 8 2 7 / 3 4 _ / 5 1 6, breadth-first expansion calls actions(s) and result(s, a) state after state; the generated states appear on concentric rings by distance from the start: 1, 3, 5, 10, 14, 28, 42, 80, 108 states at 0…8 moves, 291 in all, that is 0.16% of the 181 440 states reachable from the start. The side panel shows the state being expanded and its successors.
+```
+
 > **Key idea:** the *formulation* decides how big and how nasty the space is; the *strategy* only decides in
 > which order it is explored. A good formulation can shrink the space by orders of magnitude (8-queens:
 > $1.8 \times 10^{14}$ → 2057).
@@ -47,6 +51,10 @@ class Problem:
 - **Path cost:** the sum of the step costs. **Optimal solution:** a solution with the lowest path cost
   (slides p. 65). A problem could have **no solution**.
 
+```fig search-formulate
+Three problems behind the same five functions; the student applies actions by hand. 8-puzzle from 1 2 3 / 4 8 5 / _ 7 6 (4 moves from the goal: right, up, right, down), goal test s == (1, 2, 3, 4, 5, 6, 7, 8, 0). Water jugs (4, 3) from (0, 0), goal test: 2 liters in some jug. Incremental 8 queens: a state lists the queens' rows column by column, actions(s) are the safe rows of the next column, goal test: 8 queens placed. The panel shows s, actions(s), the goal test, the step cost 1, the path so far and its cost; when the goal test becomes true the path is the solution.
+```
+
 > **Exam trap:** the goal can be a *test* (a set of states: "some jug contains 2 liters", "8 non-attacking
 > queens"), not a single state.
 
@@ -73,6 +81,10 @@ the branching factor is 2, 3 or 4 ($b \approx 2.7$ on average). Every action is 
 Chess has $10^{43}$–$10^{50}$ states, Go $10^{170}$, the universe $10^{79}$–$10^{81}$ atoms. Building the
 explicit state space is impossible in time **and memory**:
 
+```fig search-size
+Horizontal log-scale bars: 8-puzzle 9! = 362 880 arrangements, 15-puzzle 16! ≈ 2.1×10^13, 24-puzzle 25! ≈ 1.6×10^25, chess 10^43–10^50, atoms in the universe 10^79–10^81, Go 10^170. A slider sets how many states are generated per second; at 10^8 per second (slides p. 67) listing them takes 3.6 ms, about 2.4 days and about 4.9×10^9 years for the three puzzles, and 1 byte per state needs 363 kB, 21 TB and 16 million EB.
+```
+
 > **Key idea (slides p. 68):** a problem-solving agent must find (build) a solution by exploring only a
 > **small portion** of the state space.
 
@@ -90,6 +102,10 @@ and differ in irrelevant details (an 8-puzzle state ignores tile colors, materia
   never recognized, the space is infinite;
 - a good abstraction is **valid** (abstract solutions can be executed in the real world) and **useful**
   (actions are easy to carry out).
+
+```fig search-abstraction
+Three physical 8-puzzles (wooden tiles, worn plastic tiles, a photo taken at an angle) with the same arrangement map to one abstract state, 8 2 7 / 3 4 _ / 5 1 6. Ticking "the history of the moves" makes every path a different state: within 12 moves there are 411 940 states instead of 2 021 and the space becomes infinite. Ticking "the look of the tiles" adds a detail that no action, result, goal test or cost depends on.
+```
 
 ## Same problem, different formulations
 
@@ -109,6 +125,10 @@ Fixing the order and moving the constraint check into `actions` makes every stat
 solution reached by exactly one path. Even for 4×4, the naive search tree has 47 297 nodes over 2517
 states; the incremental one has 17.
 
+```fig search-queens
+Two boards walked depth-first at the same pace. 1st formulation (a queen on any empty square): on 4×4 the search tree has 1 + 16 + 240 + 3 360 + 43 680 = 47 297 nodes over 2 517 distinct arrangements, with 48 goal nodes (each of the 2 solutions reached in 4! orders). 2nd formulation (leftmost empty column, non-attacked squares): 17 nodes, 2 solutions. 5×5: 6 693 626 nodes over 68 406 states vs 54. 8×8: about 1.8×10^14 nodes (the slides' 64 × 63 × … × 57 = 1.78×10^14 is depth 8 alone) vs 2 057 states and 92 solutions; the figure estimates how long the 1st tree would take at the measured pace.
+```
+
 > **Exam trap:** $64 \times \dots \times 57$ counts **sequences** of placements (search-tree nodes at depth 8):
 > the same arrangement is counted $8!$ times. Distinct arrangements of 8 queens are $\binom{64}{8} \approx 4.4 \times 10^9$.
 
@@ -116,6 +136,10 @@ states; the incremental one has 17.
 
 Find an order in which to assemble the parts of an object; a good sequence never needs to undo work.
 States: partial assemblies; actions: add one part where it fits; few repeated states.
+
+```fig search-assembly
+A toy gearbox of five parts (base, shaft, gear, bearing, cover; the slides give no concrete instance). A state is the set of parts in place; a part can be added when its supports are there and the cover does not yet close the inside. The reachable state space has 11 states, 4 of them dead ends where the cover went on too early; the search tree from the empty assembly has 13 nodes and only 2 complete sequences (base, shaft, then gear and bearing in either order, then cover), so the two orders of gear and bearing are the only repeated state.
+```
 
 ### Path planning (slides p. 78–86)
 
@@ -127,10 +151,18 @@ Robot from the red point to the green point among polygonal obstacles. Three for
 | **cell decomposition** | free regions (vertical slabs) | move to an adjacent region (through its center) | few states, paths not optimal |
 | **visibility graph** | start, goal and obstacle vertices | straight segments between mutually visible vertices | very few states, **true shortest path** (hugs corners) |
 
+```fig search-paths
+The slides' map (20 × 12 units, two polygonal obstacles, start S at (2, 5), goal G at (19, 8)) in three formulations, each searched with uniform-cost search. Grid: the free grid points, 8 moves of cost 1 or √2; cell decomposition: the free cells cut by vertical lines through the obstacle vertices, moving through the middle of the shared borders; visibility graph: S, G and the 13 obstacle vertices joined by segments that do not cross an obstacle. The figure counts states and edges and shows the path length of each: the visibility graph has the fewest states and the shortest path, the grid the most states.
+```
+
 ### Water pouring (homework, search4e — slides p. 110)
 
 State: tuple of liters per jug; actions `('Fill', i)`, `('Dump', i)`, `('Pour', i, j)`; goal: the target
 amount is in some jug. Jugs (4, 3), goal 2: 14 reachable states, solution of 4 actions.
+
+```fig search-jugs
+Jugs of 4 and 3 liters, both empty. Breadth-first search from (0, 0) discovers the reachable states column by column (fewest actions): (0,0); (4,0), (0,3); (4,3), (1,3), (3,0); (1,0), (3,3); (0,1), (4,2); (4,1), (0,2); (2,3), (2,0): 14 states out of the 20 pairs, because in every reachable state one jug is empty or full. The shallowest state with 2 liters is (4,2), at depth 4: ('Fill', 1), ('Pour', 1, 0), ('Fill', 1), ('Pour', 1, 0), which then plays on the jugs. You can also pour by hand; the goal can be set to 1–4 liters.
+```
 
 ## Searching for solutions: the search tree (slides p. 87–97)
 
@@ -141,6 +173,10 @@ children are successors.
   **many nodes** (one per path that reaches it).
 - If states can be revisited, the **search tree can be infinite even if the state space is finite**
   (8-puzzle: `up` then `down` gives back the root state, one level deeper).
+
+```fig search-nodes
+The 8-puzzle search tree from 8 2 7 / 3 4 _ / 5 1 6 without any repeated-state check, depth 1 to 4 (4, 12, 36 and 100 nodes). Selecting a node shows its Node fields (state, parent, action, path_cost, depth) and the path from the root, and marks every node holding the same state: at depth 2 the node "up, down" holds the initial state again, like the root and the nodes "down, up" and "left, right" (4 nodes, one state). The depth-4 tree has 100 nodes but only 33 distinct states.
+```
 
 ```python
 class Node:
@@ -183,6 +219,10 @@ def expand(problem: Problem, node: Node) -> Iterator[Node]:
 > **Exam trap:** *generating* a node (creating it as a child) ≠ *expanding* it (generating its children).
 > The goal test in the generic scheme is done when a node is **selected**, not when it is generated.
 
+```fig search-loop
+The tree-search loop run on a state space of six states (S → A, B; A → C, D; B → D; C, D → G) with the pseudocode line in use highlighted. FIFO frontier: S1 is selected and expanded (A2, B3 generated), then A2 (C4, D5), B3 (D6: a second node for state D), C4 (G7 generated but not tested), D5 (G8), D6 (G9); then G7 is selected and passes the goal test: solution S → A → C → G after 6 expansions and 9 generated nodes. With a LIFO frontier: S1, A2, C4 are expanded and G6 is selected next: 3 expansions, 6 generated nodes.
+```
+
 ## Repeated states and graph search (slides p. 103–107)
 
 Many nodes can correspond to the same state; this is **unavoidable with reversible actions** and makes the
@@ -213,9 +253,13 @@ How fast does the tree outgrow the state space? From the slides' 8-puzzle state:
 
 | depth $d$ | tree nodes up to depth $d$ | distinct states within $d$ moves |
 |---|---|---|
-| 5 | 201 | 51 |
-| 10 | 37 449 | 706 |
-| 12 | 299 593 | 1 850 |
+| 5 | 292 | 61 |
+| 10 | 51 492 | 771 |
+| 12 | 411 940 | 2 021 |
+
+```fig search-growth
+Log-scale plot of the search-tree nodes up to depth d against the distinct states within d moves, d = 0…12, computed for three 8-puzzle start states. From the slides' state 8 2 7 / 3 4 _ / 5 1 6 (blank on an edge): d = 5: 292 nodes vs 61 states; d = 10: 51 492 vs 771; d = 12: 411 940 vs 2 021 (the table above). From a start with the blank in a corner (e.g. 1 2 3 / 4 5 6 / 7 8 _): 201 vs 51, 37 449 vs 706, 299 593 vs 1 850, smaller, because a corner blank has only 2 moves. In both cases the tree at depth 12 has more nodes than the 181 440 reachable states of the whole puzzle.
+```
 
 | | tree search | graph search |
 |---|---|---|
@@ -259,6 +303,10 @@ def best_first_search(problem: Problem, f: Callable[[Node], float]) -> Node:
 | depth `len(n)` | breadth-first (BFS is usually written with a FIFO queue and early goal test) |
 | $h(n)$ | greedy best-first |
 | $g(n) + h(n)$ | A* |
+
+```fig search-bestfirst
+Four copies of one graph (S–A–C–D–G costs 1 each; S–B 4, B–G 4; S–E 3, E–G 8; h = 4, 3, 2, 1, 0 along the top path, h(B) = 3, h(E) = 2), each running the same best_first_search with a different f. f = depth (breadth-first): returns S-B-G, cost 8, the fewest actions. f = g (uniform-cost): S-A-C-D-G, cost 4, after 7 selections. f = h (greedy): S-E-G, cost 11, after only 3 selections. f = g + h (A*): S-A-C-D-G, cost 4, after 5 selections.
+```
 
 > **Exam trap:** the `child.path_cost < reached[s].path_cost` condition matters only when step costs differ;
 > without it, a state first reached by an expensive path keeps that path forever.

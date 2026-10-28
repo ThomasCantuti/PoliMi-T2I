@@ -59,10 +59,31 @@ export function box(el: HTMLElement, tag: string, title: string, body: string): 
   return root;
 }
 
-export function card(el: HTMLElement, tag: 'figure' | 'stepper' | 'interactive', title: string, viewBox: string): Card {
+export function card(el: HTMLElement, tag: 'figure' | 'stepper' | 'interactive' | 'simulation', title: string, viewBox: string): Card {
   const root = box(el, tag, title, '<div class="fg-sv"></div><div class="fg-c"></div>');
   const svg = s(root.querySelector('.fg-sv')!, 'svg', { viewBox, 'aria-hidden': 'true' });
   return { root, svg, cap: root.querySelector('.fg-c')!, title };
+}
+
+/** A control row under the SVG (above the caption), for buttons, selects and sliders. */
+export function bar(c: Card): HTMLElement {
+  const b = document.createElement('div');
+  b.className = 'fg-bar';
+  c.root.insertBefore(b, c.cap);
+  return b;
+}
+
+/** A labelled range input that shows its value; `on` runs on every move. */
+export function slider(parent: HTMLElement, name: string, min: number, max: number, step: number, value: number, on: (v: number) => void) {
+  const l = document.createElement('label');
+  l.className = 'fg-sl';
+  l.innerHTML = `<span></span><input type="range" min="${min}" max="${max}" step="${step}" value="${value}"><b></b>`;
+  l.querySelector('span')!.textContent = name;
+  const inp = l.querySelector('input')!, out = l.querySelector('b')!;
+  out.textContent = String(value);
+  inp.oninput = () => { out.textContent = inp.value; on(+inp.value); };
+  parent.append(l);
+  return inp;
 }
 
 /** Wires ⏮ ◀ ▶ play, dots and ←/→/space to `frames`; `show` redraws the SVG for a frame. */
@@ -137,6 +158,9 @@ const CSS = `
 .fg-c .no{color:var(--bad)}
 .fg-bar{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:8px 14px;border-top:1px solid var(--border)}
 .fg-sp{flex:1}
+.fg-sl{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text-2)}
+.fg-sl input{width:110px;accent-color:var(--accent)}
+.fg-sl b{font:600 12px var(--mono);color:var(--text);min-width:34px}
 .fg-dots{display:flex;gap:4px;flex-wrap:wrap}
 .fg-dots i{width:8px;height:8px;border-radius:50%;background:var(--panel-3);cursor:pointer;transition:background .2s,transform .2s}
 .fg-dots i.gap{margin-left:7px}

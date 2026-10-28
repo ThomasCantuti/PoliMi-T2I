@@ -36,6 +36,11 @@ Graph search (p. 116) adds a **reached** table: a child is added only if its sta
 | tree-like search | frontier only (maybe `is_cycle` on the current path) | little memory | may re-explore states, loops forever without a cycle check |
 | graph search | frontier + `reached` | each state handled (almost) once | memory for `reached` |
 
+```viz search
+Repeated states: tree vs graph search (BFS)
+Breadth-first search on a state space of six states with loops (S, A, B, C, D, G), next to the search tree it builds. As tree search (with the is_cycle check) the same state appears in several nodes of the tree; switch "Repeated states" to the reached table to see graph search handle each state once.
+```
+
 Tree search works well when the state space *is* a tree (8-queens: no repeated states); graph search
 is the general case (8-puzzle, route finding: many repeated states) (p. 107, 170). Variants differ in
 *when* repeated states are checked (at generation or at expansion): a trade-off between the memory of
@@ -60,6 +65,10 @@ is the general case (8-puzzle, route finding: many repeated states) (p. 107, 170
 
 Level $i$ of a uniform tree has $b^i$ nodes, so the last level dominates:
 $1 + b + \dots + b^d = O(b^d)$. A large $b$ makes the tree explode; a large $d$ forces deep exploration.
+
+```fig search-cost
+A log-scale plot of the nodes breadth-first search generates against the goal depth d, for a branching factor b chosen with a slider (default 10), with the early goal test (b + … + b^d) and the late test in the worst case (adding b^(d+1) − b), next to a table of nodes, time and memory for d = 2, 4, …, 16 at a million nodes per second and 1 KB per node (AIMA §3.4.1). For b = 10: d = 5 gives 111,110 nodes; d = 10 gives about 1.1·10^10 nodes, 3.1 hours and 11 TB; d = 14 takes 3.5 years. Reference lines show that 16 GB of memory is exceeded at depth 8 while the time passes one hour only at depth 10.
+```
 
 ## Breadth-first search
 
@@ -125,6 +134,10 @@ On the example it stops when 3 generates 7: 3 expansions, 6 generated nodes inst
 Worst case $O(b^d)$ (p. 128). Still complete and optimal, because BFS generates nodes in order of
 depth: the first goal *generated* is a shallowest one.
 
+```fig search-bfstest
+The slides' BFS example (binary tree, goal 7) run twice side by side, one pop per frame, with the frontier after each pop and counters. Goal test at selection (left): pops 1 to 6, frontier ⟨7, 8, …, 13⟩, and 7 is recognized only when popped: 6 expansions, 12 nodes generated, 7 goal tests. Goal test at generation (right): the root is tested first, then each child when generated; expanding 3 generates 7 and returns it: 3 expansions, 6 nodes generated.
+```
+
 **BFS as best-first** (p. 132): BFS = best-first search with $f(n) = $ depth. The native version is
 faster (FIFO instead of a priority queue), `reached` can be a plain **set** (the first path found to a
 state is already a shallowest one) and the early test is allowed.
@@ -178,6 +191,10 @@ def uniform_cost_search(problem: Problem) -> Node:
 
 > **Exam trap:** the goal is *generated* first with cost 310 and *selected* first with cost 278. An early
 > goal test returns the wrong (310) path, and so does a `reached` **set** that refuses the cheaper path.
+
+```fig search-ucstest
+The Sibiu → Bucharest example run twice side by side, one pop per frame, with the g values, the frontier and counters. Goal test at selection (left, the course best_first_search): pops Sibiu 0, Rimnicu 80, Fagaras 99 (adds Bucharest 310), Pitesti 177 (adds Bucharest 278, cheaper than 310, so the reached table is updated) and returns Bucharest with cost 278 via Rimnicu and Pitesti. Goal test at generation (right): Fagaras generates Bucharest with g = 310 and it is returned at once, a non-optimal path.
+```
 
 With the course code an outdated frontier entry (here Bucharest 310) stays in the queue; if it is ever
 popped it is just re-expanded uselessly. In a hand simulation you can cross it out when it is replaced.
@@ -277,6 +294,10 @@ def depth_limited_search(problem: Problem, limit: int = 10) -> Node:            
 | `cutoff` | no goal within $L$, but some node was cut off: a solution **might** exist deeper |
 | `failure` | the whole cycle-free tree was explored: **no solution at any depth** |
 
+```fig search-dlimit
+Depth-limited search with the course code (goal test at pop, then the limit test, then is_cycle; left child first) on the slides' tree of p. 143, with a slider for the limit L, the pop order on each node, the nodes popped at the limit marked "cut" and the result in a badge. With goal 12 (depth 3): L = 0, 1, 2 give cutoff, L ≥ 3 the solution, found at the 10th goal test when L = 3. Without the goal: cutoff up to L = 4 (even at L = 4, where the nodes at the limit are leaves, because the code does not look at their children) and failure at L = 5. On a loop of three states with is_cycle: cutoff up to L = 3 (a cycle node at depth L still counts as cutoff), failure from L = 4; without is_cycle the tree is infinite and the answer is cutoff for every L.
+```
+
 > **Exam trap:** `cutoff` is "I don't know", `failure` is a proof. Without `is_cycle`, a loop always
 > reaches the limit, so the answer can never be `failure`.
 
@@ -354,6 +375,10 @@ Left: one search from S whose ball of radius d = 6 reaches G, about b^d = 1,000,
 ⁴ complete only if $L \ge d$. The table gives BFS space $O(b^d)$; p. 125 gives $O(b^{d+1})$ for both time and
 space with the late goal test. Safest exam answer: $O(b^{d+1})$ with the goal test at selection, $O(b^d)$
 with the early test. Bidirectional is not in the slide table.
+
+```fig search-memory
+Breadth-first, depth-first and iterative deepening search run side by side on the same uniform tree (branching b = 3, maximum depth m = 5, one goal at depth d = 4; sliders for b and d, a selector for the goal's position), one expansion each per tick, each tree drawn level by level with the frontier, the expanded nodes and the current path. A live plot shows the nodes held in memory against the nodes generated. With the goal rightmost at depth 4: BFS generates 120 nodes and keeps all 121 in memory; IDS generates 174 (54 re-generated, 1.45 times BFS, tending to b/(b − 1) = 1.5) and never stores more than 13; DFS generates 360, going down to depth 5 in the subtrees to the left, and stores at most 16. With the goal leftmost DFS finds it after 12 nodes. For b = 10, d = 5 the same code gives the table above: 111,110 for BFS and 123,450 for IDS.
+```
 
 > **Exam trap:** "optimal" always means *cost*-optimal. BFS and IDS are optimal only for equal step costs;
 > UCS is the only optimal one for arbitrary positive costs.

@@ -2,14 +2,14 @@
 import { edge } from './bn-burglary';
 import { arrow, card, md, s, style } from './shell';
 
-type V = 'D' | 'K' | 'G' | 'T' | 'L';
-const NODE: Record<V, [number, number, string, string[]]> = {
+export type V = 'D' | 'K' | 'G' | 'T' | 'L';
+export const NODE: Record<V, [number, number, string, string[]]> = {
   D: [200, 50, 'Difficulty', ['d0', 'd1']], K: [480, 50, 'Knowledge', ['k0', 'k1']], G: [300, 180, 'Grade', ['g1', 'g2', 'g3']],
   T: [600, 180, 'Test', ['s0', 's1']], L: [300, 305, 'Letter', ['L0', 'L1']],
 };
-const PARENTS: Record<V, V[]> = { D: [], K: [], G: ['K', 'D'], T: ['K'], L: ['G'] };
+export const PARENTS: Record<V, V[]> = { D: [], K: [], G: ['K', 'D'], T: ['K'], L: ['G'] };
 /** One row per combination of the parents' values (first parent slowest), one column per value of the node. */
-const CPT: Record<V, number[][]> = {
+export const CPT: Record<V, number[][]> = {
   D: [[0.1, 0.9]], K: [[0.7, 0.3]],
   G: [[0.3, 0.4, 0.3], [0.05, 0.25, 0.7], [0.9, 0.08, 0.02], [0.5, 0.3, 0.2]],
   T: [[0.95, 0.05], [0.2, 0.8]], L: [[0.1, 0.9], [0.4, 0.6], [0.99, 0.01]],

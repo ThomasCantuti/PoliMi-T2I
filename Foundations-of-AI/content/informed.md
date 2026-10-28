@@ -27,6 +27,10 @@ frontier changes — and with it optimality, speed and memory (slides p. 174–2
 > **Intuition:** greedy only looks **ahead** ("how close am I?"), uniform-cost only looks **back**
 > ("how much have I paid?"), A* looks both ways ("how much will the whole trip cost through here?").
 
+```fig search-race
+Uniform-cost search (f = g), greedy best-first (f = h) and A* (f = g + h) run side by side on the same grid, one expansion each per tick, with the course best_first_search (FIFO ties). On the slides' navigation grid: 29, 27 and 25 nodes expanded; path costs 11, 25 and 11. On the "two walls" map: 238, 92 and 121 expanded; costs 26, 32 and 26. In an open field: 211, 18 and 18 expanded, all cost 18.
+```
+
 ## The best-first search template
 
 The course code (aima-python, p. 186). The `reached` table maps each state to the best node found
@@ -176,6 +180,10 @@ From $(0,0)$ to $(4,4)$ with diagonals: $h^* = 4\sqrt 2 \approx 5.66$ but Manhat
 The exact cost without obstacles is the **octile distance**
 $\sqrt 2 \min(dx, dy) + \lvert dx - dy\rvert$: admissible and better than Euclidean.
 
+```fig search-admissible
+A 7 × 12 robot grid with a wall; every cell shows h(n) and the true cost h*(n) (computed by Dijkstra from G), red where h overestimates. With 8 moves (diagonal √2) the optimal cost is C* = 13.07. Euclidean and octile are admissible and A* returns 13.07; Manhattan overestimates (a diagonal step counts 2) and A* returns 15.41; octile × 1.5 also overestimates and A* returns 13.9. With 4 moves Manhattan is admissible. A slider scales h from 0 to 3.
+```
+
 ## Consistent heuristics
 
 $$h \text{ is consistent} \iff h(n) \le c(n, a, n') + h(n') \text{ for every } n \text{ and successor } n', \quad h(\text{goal}) = 0$$
@@ -282,6 +290,10 @@ $h_1$: it is more accurate, more informed. A* with $h_2$ expands no more nodes, 
 with $g + h_2 < C^*$ also has $g + h_1 < C^*$. In the 8-puzzle $h_2$ dominates $h_1$ (a misplaced
 tile has Manhattan distance $\ge 1$). On `5 _ 8 / 4 2 1 / 7 3 6` ($C^* = 21$): **5802** expansions
 with $h_1$, **932** with $h_2$.
+
+```fig search-dominance
+A breadth-first search from the goal labels all 181,440 reachable 8-puzzle states with their true cost h* (at most 31 moves) and checks h1 ≤ h2 ≤ h* in every one. Left: mean h1 and h2 against h*, both below the diagonal h = h*, h2 closer. Right: A* with h1 and with h2 on random instances of depth 2 to 24 (log scale), with the effective branching factor b* in a table; h2 expands several times fewer nodes at depth 24, and the gap grows with the depth.
+```
 
 If several admissible heuristics are available and none dominates, $\max(h_a, h_b)$ is admissible
 and dominates both.

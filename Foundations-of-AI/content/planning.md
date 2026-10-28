@@ -152,6 +152,14 @@ schema per value (exam 6 Feb 2026: `Move-Fuel2`, …, `Move-Fuel5`).
 > (`¬Holding(Ba1) ∧ ¬Holding(Ba2)`), keep a positive predicate (`Handfree`), or use a universally quantified
 > precondition (a PDDL extension). (The official solutions of 18 Jan 2023 and 18 Jan 2024 use the flawed form.)
 
+```fig plan-pddl
+Side by side, grounded from the schema text and run on one shared state. Exam 18 Jan 2024: STRIPS with Handfree (6 predicates),
+the official PDDL PickUp(b, k, x) with ¬Holding(x) (5 predicates), and PDDL with ¬Holding(Ba1) ∧ ¬Holding(Ba2); same 4 constants and 3 schemas.
+In the initial state all three allow the same moves (the official PDDL grounds each PickUp 4 times, once per x). After PickUp(Ba1, Bk1),
+only the official PDDL still allows PickUp(Ba2, Bk1, x) for x ∈ {Ba2, Bk1, Bk2}: the robot can end up holding two balls.
+Exam 6 Feb 2026: PDDL Move(x, y, z) with z ≥ 2 and Fuel(z − 2) vs STRIPS Move-Fuel2 … Move-Fuel5; in every state both list the same applicable actions.
+```
+
 **Fluents vs static predicates.** A predicate that some action adds or deletes is **time-dependent** (a
 **fluent**: `In(x,y)`, `Hot(x)`, `Empty(x)`); one that no action changes is **time-independent / static**
 (`Water(x)`, `Kettle(x)`, `Connected(x,y)`, `Smaller(x,y)`). Static predicates are used for **typing** (which
@@ -164,6 +172,13 @@ Wumpus world gives $16^2 = 256$ ground actions, 240 with $c_1 \ne c_2$, 48 if on
 (exam 9 Feb 2023). Typing preconditions (`Box(x)`, `Table(y)`) and static relations whose atoms are false in
 the initial state make most groundings useless, and planners only generate the **possible** ones (exam 16 Jan
 2025: 8 Move actions for 2 boxes and 2 tables, instead of $4^3 = 64$).
+
+```fig plan-ground
+Log-scale plot of the number of ground actions as the objects grow, for air cargo (AIMA Fig. 11.1: Load, Unload, Fly over n cargo, n planes,
+n airports), boxes and tables (exam 16 Jan 2025) and the Wumpus Move(c1, c2) (exam 9 Feb 2023). Air cargo with n = 2: 3 · 6^3 = 648 groundings
+over all constants, 24 type-correct, 12 ground fluents. Boxes and tables with 2 + 2: 4^3 = 64, 8 type-correct, 4 fluents, 28 exclusion axioms.
+Wumpus 4 × 4: 256 typed, 240 with c1 ≠ c2, 48 adjacent. The SATPlan exclusion axioms grow with the square of the ground actions.
+```
 
 A description whose "actions" have **no parameters** (`mix-dry-ingredients`, `bake-cake`, exam 11 Jun 2025)
 really lists ground actions, not schemas: calling them actions is correct.
@@ -337,6 +352,13 @@ them back to A): $h(s) = 2\,U_s(A) + P_s(B)$ is admissible, because every unpain
 two `move-object` actions (A→B and B→A) and every painted object at B at least one, and `move-object` moves a
 single object; $3\,U_s(A) + P_s(B)$ would overestimate (one `paint` serves three objects).
 
+```fig plan-heuristics
+Painting problem of exam 12 Jul 2024 with six objects (the exam's PDDL schemas); click objects and the robot to change the state.
+In the initial state: h* = 17 (breadth-first search; the shortest plan paints two objects at a time), 2·U(A) + P(B) = 12,
+3·U(A) + P(B) = 18 (overestimates), ignore delete lists = 8 (carry all six to B, paint twice), unsatisfied goal literals = 6,
+ignore preconditions = 2 (two paint actions), h = 0. Checking all 8192 states: only 3·U(A) + P(B) ever exceeds h* (in 52 states, by 1).
+```
+
 > **Exam trap:** "one action can reduce the heuristic by at most $k$ and the goal has $h = 0$" ⇒
 > $h(s) \le k \cdot h^*(s)$, so $h/k$ is admissible. Argue it in exactly these terms.
 
@@ -423,6 +445,18 @@ When the environment is partially observable or nondeterministic, the agent plan
 - **Online planning and replanning**: execute, **monitor** (action monitoring: is the next action still
   applicable? plan monitoring: does the rest of the plan still work? goal monitoring: is there a better goal?)
   and replan when something unexpected happens.
+
+Contingent plans for a nondeterministic environment are found by **AND-OR search** (AIMA §4.3): at an **OR** node
+(a state) the agent chooses one action that works; at an **AND** node (the possible outcomes of that action) every
+outcome needs its own plan. A state that repeats on the current path is a loop and counts as a failure.
+
+```fig plan-andor
+AND-OR search (AIMA Fig. 4.11) on the erratic vacuum world (AIMA Fig. 4.9): Suck on a dirty square sometimes cleans the other square too,
+on a clean square it sometimes deposits dirt. OR nodes (states, the agent chooses an action) and AND nodes (outcomes, every one needs a plan);
+a state already on the path is a loop (failure). From state 1, trying Suck, Right, Left: Suck gives {5, 7}; in 5 Suck loops (5 → {5, 1}),
+Right then Suck solves it; 7 is a goal. Plan [Suck, if State = 5 then [Right, Suck] else []]. With the order Left, Right, Suck the first
+plan found is longer: [Right, Suck, if State = 4 then [Left, Suck] else []].
+```
 
 ## Summary
 
